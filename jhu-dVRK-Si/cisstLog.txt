@@ -1,0 +1,5 @@
+M- cisst 1.1.0 (git: 1.1.0-46-gf90dbbcb2)
+M- CISST_ROOT: /home/anton/catkin_ws/build/cisst
+M- cisst share: /home/anton/catkin_ws/build/cisst/share/cisst-1.1
+M- cmn_m: 1, cmn_kg: 1, CISST_USE_SI_UNITS is set to 1
+M- Class cmnClassRegister: SetLogMaskClassMatching: log LoD has been set to "-D -M -W -E D- M- W- E- " for the following classes matching "mtsIntuitiveResearchKit": mtsIntuitiveResearchKitArm, mtsIntuitiveResearchKitArmQtWidget, mtsIntuitiveResearchKitArmTypesProxy, mtsIntuitiveResearchKitConsole, mtsIntuitiveResearchKitConsoleQt, mtsIntuitiveResearchKitConsoleQtWidget, mtsIntuitiveResearchKitECM, mtsIntuitiveResearchKitECMQtWidget, mtsIntuitiveResearchKitEndoscopeTypesProxy, mtsIntuitiveResearchKitMTM, mtsIntuitiveResearchKitMTMQtWidget, mtsIntuitiveResearchKitPSM, mtsIntuitiveResearchKitPSMQtWidget, mtsIntuitiveResearchKitSUJ, mtsIntuitiveResearchKitSUJQtWidget, mtsIntuitiveResearchKitSUJSi, mtsIntuitiveResearchKitToolDescriptionProxy, mtsIntuitiveResearchKitToolTypesProxy, mtsIntuitiveResearchKitUDPStreamer, 
