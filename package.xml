@@ -9,8 +9,7 @@
   <license>cisst</license>
   <url>https://github.com/jhu-dvrk/dvrk-config-jhu</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
-
   <export>
+    <build_type>cmake</build_type>
   </export>
 </package>
