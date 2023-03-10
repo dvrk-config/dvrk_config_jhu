@@ -1,0 +1,75 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+
+/* This configuration file is used to dynamically load the shared
+ library sawForceDimensionSDK and create a component of type
+ mtsForceDimension.  When used with a single Novint Falcon, the
+ interface name is Falcon00 by default.  We can use this as an
+ alternate MTM.
+
+ Since we don't have any footpedal, we use two buttons on the Falcon
+ to emulate the operator present and clutch.
+
+ For the teleoperation component, we also set the ignore jaw parameter
+ since the Falcon doesn't have a gripper.  We also set the threshold
+ to start to zero since we can't wiggle the gripper. */
+
+{
+    "component-manager": {
+        "components":
+        [
+            {
+                "shared-library": "sawForceDimensionSDK",
+                "class-name": "mtsForceDimension",
+                "constructor-arg": {
+                    "Name": "ForceDimensionSDK"
+                }
+            }
+        ]
+    }
+    ,
+    "console-inputs":
+    {
+        "operator-present": {
+            "component": "ForceDimensionSDK",
+            "interface": "Falcon00-Center"
+        }
+        ,
+        "clutch": {
+            "component": "ForceDimensionSDK",
+            "interface": "Falcon00-Top"
+        }
+    }
+    ,
+    "arms":
+    [
+        {
+            // created previously using custom components
+            "name": "MTMR",
+            "type": "MTM_GENERIC",
+            "component": "ForceDimensionSDK",
+            "interface": "Falcon00"
+        }
+        ,
+        {
+            "name": "PSM1",
+            "type": "PSM_Si",
+            "serial": "334809"
+        }
+    ]
+    ,
+    "psm-teleops":
+    [
+        {
+            "mtm": "MTMR",
+            "psm": "PSM1",
+            "configure-parameter": {
+                "start-gripper-threshold": 0.0,
+                "ignore-jaw": true,
+                "scale": 0.4,
+                "rotation" : [[ 0.0000, -1.0000,  0.0000],
+                              [ 1.0000,  0.0000,  0.0000],
+                              [ 0.0000,  0.0000,  1.0000]]
+            }
+        }
+    ]
+}
