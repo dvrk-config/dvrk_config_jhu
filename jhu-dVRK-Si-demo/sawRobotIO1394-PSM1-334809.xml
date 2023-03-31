@@ -8,7 +8,7 @@
                 <NmToAmps Scale="0.1990050547" />
                 <MaxCurrent Unit="A" Value="3.400" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="SOFTWARE">
                 <BitsToPosSI Scale="0.000052734396094" Unit="deg" />
             </Encoder>
             <AnalogBrake AxisID="7" BoardID="6">
@@ -28,7 +28,7 @@
                 <NmToAmps Scale="0.1951029168" />
                 <MaxCurrent Unit="A" Value="3.400" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="SOFTWARE">
                 <BitsToPosSI Scale="-0.000051700367647" Unit="deg" />
             </Encoder>
             <AnalogBrake AxisID="8" BoardID="6">
@@ -48,7 +48,7 @@
                 <NmToAmps Scale="0.0268907310" />
                 <MaxCurrent Unit="A" Value="1.100" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="SOFTWARE">
                 <BitsToPosSI Scale="-0.000130098829083" Unit="mm" />
             </Encoder>
             <AnalogBrake AxisID="9" BoardID="6">
@@ -68,7 +68,7 @@
                 <NmToAmps Scale="1.8804043998" />
                 <MaxCurrent Unit="A" Value="1.100" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="FIRMWARE">
                 <BitsToPosSI Scale="-0.006515601245204" Unit="deg" />
             </Encoder>
         </Actuator>
@@ -79,7 +79,7 @@
                 <NmToAmps Scale="1.8804043998" />
                 <MaxCurrent Unit="A" Value="1.100" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="FIRMWARE">
                 <BitsToPosSI Scale="-0.006515601245204" Unit="deg" />
             </Encoder>
         </Actuator>
@@ -90,7 +90,7 @@
                 <NmToAmps Scale="1.8804043998" />
                 <MaxCurrent Unit="A" Value="1.100" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="FIRMWARE">
                 <BitsToPosSI Scale="0.006515601245204" Unit="deg" />
             </Encoder>
         </Actuator>
@@ -101,7 +101,7 @@
                 <NmToAmps Scale="1.8804043998" />
                 <MaxCurrent Unit="A" Value="1.100" />
             </Drive>
-            <Encoder>
+            <Encoder VelocitySource="FIRMWARE">
                 <BitsToPosSI Scale="0.006515601245204" Unit="deg" />
             </Encoder>
         </Actuator>
