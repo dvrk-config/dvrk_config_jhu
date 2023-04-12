@@ -1,8 +1,8 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml",
+    "io": {
+        // "port": "udp"
+        // "port": "fw"
     }
     ,
     "component-manager": {
@@ -16,7 +16,29 @@
                 },
                 "configure-parameter": "omega7-11311.json"
             }
+            ,
+            {
+                "shared-library": "sawJoystick",
+                "class-name": "mtsJoystick",
+                "constructor-arg": {
+                    "Name": "joystick"
+                },
+                "configure-parameter": "misc/sawJoystickConfiguration.json"
+            }
         ]
+    }
+    ,
+    "console-inputs":
+    {
+        "operator-present": {
+            "component": "joystick",
+            "interface": "OperatorPresent"
+        }
+        ,
+        "clutch": {
+            "component": "joystick",
+            "interface": "Clutch"
+        }
     }
     ,
     "arms":
@@ -31,7 +53,11 @@
         {
             "name": "PSM1",
             "type": "PSM_Si",
-            "serial": "586288"
+            "serial": "334809"
+            // ,
+            // "socket-server": true,
+            // "remote-ip": "127.0.0.1",
+            // "port": 10001
         }
     ]
     ,
@@ -41,8 +67,11 @@
             "mtm": "MTMR",
             "psm": "PSM1",
             "configure-parameter": {
-                "ignore-jaw": true,
-                "scale": 0.4,
+                "gripper-scaling": {
+                    "max": 0.492,
+                    "zero": 0.05
+                },
+                "align-mtm": false,
                 "rotation" : [[ 0.0000, -1.0000,  0.0000],
                               [ 1.0000,  0.0000,  0.0000],
                               [ 0.0000,  0.0000,  1.0000]]
