@@ -1,7 +1,7 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
     "io": {
-        // "port": "udp"
+        "port": "udp"
         // "port": "fw"
         // , "firewire-protocol": "broadcast-read-write"
     }
@@ -52,13 +52,16 @@
         }
         ,
         {
-            "name": "PSM1",
-            "type": "PSM_Si",
-            "serial": "334809"
-            // ,
-            // "socket-server": true,
-            // "remote-ip": "127.0.0.1",
-            // "port": 10001
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "28007",
+            "base-frame": {
+                "reference-frame": "Touch",
+                "transform": [[ -1.0,  0.0,  0.0,  0.0],
+                              [  0.0,  0.0,  1.0,  0.0 ],
+                              [  0.0,  1.0,  0.0,  0.0 ],
+                              [  0.0,  0.0,  0.0,  1.0 ]]
+            }
         }
     ]
     ,
@@ -66,14 +69,10 @@
     [
         {
             "mtm": "MTMR",
-            "psm": "PSM1",
+            "psm": "PSM3",
             "configure-parameter": {
                 "ignore-jaw": true,
                 "align-mtm": false
-                ,
-                "rotation" : [[-1.0000,  0.0000,  0.0000],
-                              [ 0.0000,  0.0000,  1.0000],
-                              [ 0.0000,  1.0000,  0.0000]]
             }
         }
     ]
