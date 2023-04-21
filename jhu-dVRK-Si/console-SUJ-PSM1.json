@@ -10,8 +10,8 @@
         ,
         {
             "name": "PSM1",
-            "type": "PSM_Si",
-            "serial": "586288"
+            "type": "PSM",
+            "serial": "292409"
         }
     ]
 }
