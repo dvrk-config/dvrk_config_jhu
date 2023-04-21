@@ -10,7 +10,13 @@
     [
         {
             "name": "PSM1",
-            "type": "PSM_Si",
+            "type": "PSM",
+            "serial": "292409"
+        }
+        ,
+        {
+            "name": "PSM2",
+            "type": "PSM",
             "serial": "586288"
         }
         ,
@@ -19,6 +25,12 @@
             "type": "MTM",
             "serial": "30924"
         }
+        ,
+        {
+            "name": "ECM",
+            "type": "ECM",
+            "serial": "438610"
+        }
     ]
     ,
     "psm-teleops":
@@ -26,6 +38,16 @@
         {
             "mtm": "MTMR",
             "psm": "PSM1",
+            "configure-parameter": {
+                "rotation" : [[-1.0000,  0.0000,  0.0000],
+                              [ 0.0000, -1.0000,  0.0000],
+                              [ 0.0000,  0.0000,  1.0000]]
+            }
+        }
+        ,
+        {
+            "mtm": "MTMR",
+            "psm": "PSM2",
             "configure-parameter": {
                 "rotation" : [[-1.0000,  0.0000,  0.0000],
                               [ 0.0000, -1.0000,  0.0000],

@@ -1,4 +1,5 @@
 {
     "kinematic": "kinematic/ecm-si.json",
+    "generation": "Si",
     "endoscope": "HD_STRAIGHT"
 }

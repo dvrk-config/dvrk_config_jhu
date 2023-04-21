@@ -15,15 +15,9 @@
         }
         ,
         {
-            "name": "PSM2",
+            "name": "PSM1",
             "type": "PSM",
-            "serial": "586288"
-        }
-        ,
-        {
-            "name": "ECM",
-            "type": "ECM",
-            "serial": "438610"
+            "serial": "292409"
         }
     ]
     ,
@@ -31,7 +25,7 @@
     [
         {
             "mtm": "MTMR",
-            "psm": "PSM2",
+            "psm": "PSM1",
             "configure-parameter": {
                 "rotation" : [[-1.0000,  0.0000,  0.0000],
                               [ 0.0000, -1.0000,  0.0000],

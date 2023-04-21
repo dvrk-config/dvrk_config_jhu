@@ -4,7 +4,7 @@
     [
         {
             "name": "PSM2",
-            "type": "PSM_Si",
+            "type": "PSM",
             "serial": "586288"
         }
     ]
