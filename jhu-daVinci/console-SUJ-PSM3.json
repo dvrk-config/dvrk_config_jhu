@@ -4,7 +4,7 @@
     [
         {
             "name": "SUJ",
-            "type": "SUJ",
+            "type": "SUJ_Classic",
             "io": "sawRobotIO1394-SUJ.xml",
             "kinematic": "suj-ECM-1-2-3.json"
         }
