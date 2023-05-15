@@ -18,7 +18,7 @@
     [
         {
             "name": "SUJ",
-            "type": "SUJ",
+            "type": "SUJ_Classic",
             "io": "sawRobotIO1394-SUJ.xml",
             "kinematic": "suj-ECM-1-2-3-PSM2-is-reference.json"  // special case, we don't use the ECM!
         }
