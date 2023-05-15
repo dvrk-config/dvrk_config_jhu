@@ -35,7 +35,7 @@
         ,
         {
             "name": "SUJ",
-            "type": "SUJ",
+            "type": "SUJ_Classic",
             "simulation": "KINEMATIC",
             "kinematic": "arm/suj-simulated.json"
         }
