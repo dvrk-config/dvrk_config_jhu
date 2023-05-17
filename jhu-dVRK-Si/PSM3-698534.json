@@ -1,0 +1,6 @@
+{
+  "kinematic": "kinematic/psm-si.json"
+  , "generation": "Si"
+  // , "tool-detection": "MANUAL"
+  , "tool-detection": "AUTOMATIC"
+}
