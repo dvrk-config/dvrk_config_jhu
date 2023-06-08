@@ -2,8 +2,8 @@
 {
     "io":
     {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml",
-        "firewire-protocol": "sequential-read-write" // for debugging
+        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+        //, "firewire-protocol": "sequential-read-write" // for debugging
     }
     ,
     "arms":
@@ -17,7 +17,14 @@
         {
             "name": "PSM1",
             "type": "PSM",
-            "serial": "292409"
+            "serial": "292409",
+            "base-frame": {
+                "reference-frame": "Cart",
+                "transform": [[ -1.0,  0.0,  0.0,  0.0],
+                              [  0.0, -1.0,  0.0,  0.0 ],
+                              [  0.0,  0.0,  1.0,  0.0 ],
+                              [  0.0,  0.0,  0.0,  1.0 ]]
+            }
         }
     ]
     ,
@@ -25,12 +32,7 @@
     [
         {
             "mtm": "MTMR",
-            "psm": "PSM1",
-            "configure-parameter": {
-                "rotation" : [[-1.0000,  0.0000,  0.0000],
-                              [ 0.0000, -1.0000,  0.0000],
-                              [ 0.0000,  0.0000,  1.0000]]
-            }
+            "psm": "PSM1"
         }
     ]
 }

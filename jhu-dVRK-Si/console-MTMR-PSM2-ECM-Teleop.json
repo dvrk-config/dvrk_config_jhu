@@ -2,8 +2,8 @@
 {
     "io":
     {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml",
-        "firewire-protocol": "sequential-read-write" // for debugging
+        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals-DQLA.xml",
+        "firewire-protocol": "broadcast-read-write" // for debugging
     }
     ,
     "arms":
@@ -31,12 +31,7 @@
     [
         {
             "mtm": "MTMR",
-            "psm": "PSM2",
-            "configure-parameter": {
-                "rotation" : [[-1.0000,  0.0000,  0.0000],
-                              [ 0.0000, -1.0000,  0.0000],
-                              [ 0.0000,  0.0000,  1.0000]]
-            }
+            "psm": "PSM2"
         }
     ]
 }

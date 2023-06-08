@@ -1,0 +1,127 @@
+<Config Version="5">
+  <Robot Name="MTMR" ControllerType="DQLA" NumOfActuator="7" NumOfJoint="7" SN="22403">
+    <Actuator ActuatorID="0" AxisID="0" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32740" Scale="-5242.8800" />
+        <BitsToFeedbackAmps Offset="6.227124" Scale="-0.000190735" />
+        <NmToAmps Scale="0.3600544114" />
+        <MaxCurrent Unit="A" Value="0.670" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="-0.001419334489828" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-185.1331585799022" Scale="76.75362591338104" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="1" AxisID="1" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32541" Scale="5242.8800" />
+        <BitsToFeedbackAmps Offset="-6.186329" Scale=" 0.000190735" />
+        <NmToAmps Scale="0.4577195314" />
+        <MaxCurrent Unit="A" Value="0.670" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="0.001804330392943" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-143.43737574139573" Scale="74.92408378341932" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="2" AxisID="2" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32755" Scale="5242.8800" />
+        <BitsToFeedbackAmps Offset="-6.232734" Scale=" 0.000190735" />
+        <NmToAmps Scale="0.3822375729" />
+        <MaxCurrent Unit="A" Value="0.670" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="0.001506780512305" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-165.59809697411515" Scale="76.52777986286503" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="3" AxisID="3" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32764" Scale="5242.8800" />
+        <BitsToFeedbackAmps Offset="-6.245057" Scale=" 0.000190735" />
+        <NmToAmps Scale="2.1681909049" />
+        <MaxCurrent Unit="A" Value="0.670" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="0.008547008547009" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="231.5851687565201" Scale="-76.31629177720816" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="4" AxisID="4" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32959" Scale="5242.8800" />
+        <BitsToFeedbackAmps Offset="-6.255777" Scale=" 0.000190735" />
+        <NmToAmps Scale="6.0922859475" />
+        <MaxCurrent Unit="A" Value="0.590" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="0.169632086851629" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-131.80728946624941" Scale="77.59189958453027" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="5" AxisID="5" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32951" Scale="5242.8800" />
+        <BitsToFeedbackAmps Offset="-6.255501" Scale=" 0.000190735" />
+        <NmToAmps Scale="6.0922859475" />
+        <MaxCurrent Unit="A" Value="0.590" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="0.169632086851629" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-177.5644516406624" Scale="76.5465832372178" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Actuator ActuatorID="6" AxisID="6" BoardID="2" Type="Revolute">
+      <Drive>
+        <AmpsToBits Offset="32969" Scale="-5242.8800" />
+        <BitsToFeedbackAmps Offset="6.258130" Scale="-0.000190735" />
+        <NmToAmps Scale="17.7916315282" />
+        <MaxCurrent Unit="A" Value="0.407" />
+      </Drive>
+      <Encoder VelocitySource="FIRMWARE">
+        <BitsToPosSI Scale="-0.339264173703257" Unit="deg" />
+      </Encoder>
+      <AnalogIn>
+        <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
+        <VoltsToPosSI Offset="-80.77954933354845" Scale="-41.08907250001044" Unit="deg" />
+      </AnalogIn>
+    </Actuator>
+    <Potentiometers>
+      <Tolerance Axis="0" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="1" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="2" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="3" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="4" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="5" Distance="5.0" Latency="0.01" Unit="deg" />
+      <Tolerance Axis="6" Distance="0.0" Latency="0.0" Unit="deg" />
+      <JointToActuatorPosition>
+        <Row Val="1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000" />
+        <Row Val="0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000" />
+        <Row Val="0.0000 1.0000 1.0000 0.0000 0.0000 0.0000 0.0000" />
+        <Row Val="0.0000 0.0000 0.6697 1.0000 0.0000 0.0000 0.0000" />
+        <Row Val="0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000" />
+        <Row Val="0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 0.0000" />
+        <Row Val="0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000" />
+      </JointToActuatorPosition>
+    </Potentiometers>
+  </Robot>
+</Config>
