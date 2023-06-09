@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Config Version="5">
-   <Robot Name="MTML" ControllerType="QLA1" NumOfActuator="7" NumOfJoint="7" SN="22723">
+   <Robot Name="MTML" HardwareVersion="QLA1" NumOfActuator="7" NumOfJoint="7" SN="22723">
       <Actuator ActuatorID="0" AxisID="0" BoardID="0" Type="Revolute">
          <Drive>
             <AmpsToBits Offset="32947" Scale="-5242.88"/>

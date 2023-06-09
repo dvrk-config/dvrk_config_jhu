@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='us-ascii'?>
 <Config Version="5">
-    <Robot Name="PSM3" ControllerType="dRA1" NumOfActuator="7" NumOfJoint="7" SN="698534">
+    <Robot Name="PSM3" HardwareVersion="dRA1" NumOfActuator="7" NumOfJoint="7" SN="698534">
         <Actuator ActuatorID="0" AxisID="0" BoardID="10" Type="Revolute">
             <Drive>
                 <AmpsToBits Offset="32768" Scale="-4800.0000" />

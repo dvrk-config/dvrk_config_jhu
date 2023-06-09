@@ -1,5 +1,5 @@
 <Config Version="5">
-  <Robot Name="MTMR" ControllerType="DQLA" NumOfActuator="7" NumOfJoint="7" SN="22403">
+  <Robot Name="MTMR" HardwareVersion="DQLA" NumOfActuator="7" NumOfJoint="7" SN="22403">
     <Actuator ActuatorID="0" AxisID="0" BoardID="2" Type="Revolute">
       <Drive>
         <AmpsToBits Offset="32740" Scale="-5242.8800" />
