@@ -1,9 +1,11 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-  "arms": [
-    {
-      "name": "PSM3",
-      "type": "PSM"
-,      "serial": "698534"
-    }
-  ]
+    "arms":
+    [
+        {
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "28007"
+        }
+    ]
 }
