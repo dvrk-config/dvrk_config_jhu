@@ -3,7 +3,8 @@
     "io":
     {
         "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals-DQLA.xml"
-        // , "firewire-protocol": "sequential-read-write" // for debugging
+        //, "firewire-protocol": "broadcast-read-write" // for debugging,
+        //, "port": "fw"
     }
     ,
     "arms":
@@ -21,6 +22,19 @@
             "base-frame": {
                 "component": "SUJ",
                 "interface": "ECM"
+            }
+        }
+        ,
+        {
+            "name": "MTMR",
+            "type": "MTM",
+            "serial": "22403",
+            "base-frame": {
+                "reference-frame": "HRSV",
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
             }
         }
         ,
@@ -50,8 +64,26 @@
             "serial": "698534",
             "base-frame": {
                 "component": "SUJ",
-                "interface": "PSM3"
+                "interface": "PSM2"
             }
+        }
+    ]
+    ,
+    "psm-teleops":
+    [
+        {
+            "mtm": "MTMR",
+            "psm": "PSM1"
+        }
+        ,
+        {
+            "mtm": "MTMR",
+            "psm": "PSM2"
+        }
+        ,
+        {
+            "mtm": "MTMR",
+            "psm": "PSM3"
         }
     ]
 }
