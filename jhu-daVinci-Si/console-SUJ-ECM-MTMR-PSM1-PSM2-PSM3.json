@@ -3,8 +3,8 @@
     "io":
     {
         "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals-DQLA.xml"
-        //, "firewire-protocol": "broadcast-read-write" // for debugging,
-        //, "port": "fw"
+        , "firewire-protocol": "broadcast-read-write" // for debugging,
+        //, "port": "udp"
     }
     ,
     "arms":
@@ -64,7 +64,7 @@
             "serial": "698534",
             "base-frame": {
                 "component": "SUJ",
-                "interface": "PSM2"
+                "interface": "PSM3"
             }
         }
     ]
