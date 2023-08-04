@@ -8,10 +8,10 @@
             "name": "ECM",
             "arduino-mac": "68:7E:57:32:FD:63",
             "serial-number": "0000",
-            "primary-offsets":   [ 0.039, -2.4, -2.3, -2.39],
-            "primary-scales":    [-1.7e-05, 7.3e-05, 7.3e-05, 7.3e-05],
-            "secondary-offsets": [ 0.039, -2.4, -2.3, -2.39],
-            "secondary-scales":  [-1.7e-05, 7.3e-05, 7.3e-05, 7.3e-05],
+            "primary-offsets":   [ 0.039, -2.4, -2.88, -2.39],
+            "primary-scales":    [-1.7e-05, 7.3e-05, 8.76e-05, 7.3e-05],
+            "secondary-offsets": [ 0.039, -2.4, -2.88, -2.39],
+            "secondary-scales":  [-1.7e-05, 7.3e-05, 8.76e-05, 7.3e-05],
             "DH": {
                 "links": [
                     {
@@ -44,16 +44,14 @@
                     },
                     {
                         "convention": "modified",
-                        // "alpha": 1.5708 in ISI Research API documentation but the ECM class handles this
-                        "alpha": 0.0, "A": 0.1352, "theta":-1.2217, "D": 0.0000, // -70 degrees = -1.2217 rad
+                        "alpha": 1.5708, "A": 0.1352, "theta":-1.2217, "D": 0.0000, // -70 degrees = -1.2217 rad
                         "type": "revolute",
                         "mode": "passive",
                         "offset": 0.0
                     },
                     {
                         "convention": "modified",
-                        // "alpha": 1.5708 in ISI Research API documentation but the ECM class handles this
-                        "alpha": 0.0, "A": 0.0000, "theta": 0.0000, "D": 0.0000,
+                        "alpha":-1.5708, "A": 0.0000, "theta": 0.0000, "D": 0.0000,
                         "type": "revolute",
                         "mode": "passive",
                         "offset": 0.0
@@ -189,7 +187,7 @@
                     },
                     {
                         "convention": "modified",
-                        "alpha":-1.5708, "A": 0.0000, "theta": 1.5708, "D": 0.0000,
+                        "alpha":-1.5708, "A": 0.0000, "theta": 0.0000, "D": 0.0000,
                         "type": "revolute",
                         "mode": "passive",
                         "offset": 0.0
@@ -214,10 +212,10 @@
             "name": "PSM3",
             "arduino-mac": "B1:C8:4A:41:32:E3",
             "serial-number": "0000",
-            "primary-offsets":   [ 0.036, -2.39, 1.87, -2.39, 1.88],
-            "primary-scales":    [-1.7e-05, 7.3e-05, -7.3e-05, 7.3e-05, -7.3e-05],
-            "secondary-offsets": [ 0.036, -2.39, 1.87, -2.39, 1.88],
-            "secondary-scales":  [-1.7e-05, 7.3e-05, -7.3e-05, 7.3e-05, -7.3e-05],
+            "primary-offsets":   [ 0.036, -2.39, 1.87, -2.88, 1.88],
+            "primary-scales":    [-1.7e-05, 7.3e-05, -7.3e-05, 8.76e-05, -7.3e-05],
+            "secondary-offsets": [ 0.036, -2.39, 1.87, -2.88, 1.88],
+            "secondary-scales":  [-1.7e-05, 7.3e-05, -7.3e-05, 8.76e-05, -7.3e-05],
             "DH": {
                 "links": [
                     {
