@@ -73,7 +73,10 @@
     [
         {
             "mtm": "MTMR",
-            "psm": "PSM1"
+            "psm": "PSM1",
+            "configure-parameter": {
+                "use-mtm-velocity": true // false, this just for testing - true is default
+            }
         }
         ,
         {

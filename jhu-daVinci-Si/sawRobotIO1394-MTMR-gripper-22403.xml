@@ -3,8 +3,8 @@
   <Robot Name="MTMR-Gripper" HardwareVersion="DQLA" NumOfActuator="1" NumOfJoint="1" SN="22403" Type="io-only">
     <Actuator ActuatorID="0" AxisID="7" BoardID="2" Type="Revolute">
       <Drive>
-        <AmpsToBits Offset="32907" Scale="-5242.8800"/>
-        <BitsToFeedbackAmps Offset="6.250214" Scale="-0.000190735"/>
+        <AmpsToBits Offset="32945" Scale="-5242.8800"/>
+        <BitsToFeedbackAmps Offset="6.250081" Scale="-0.000190735"/>
         <NmToAmps Scale="0.3600544114"/>
         <MaxCurrent Unit="A" Value="0.000"/>
       </Drive>
