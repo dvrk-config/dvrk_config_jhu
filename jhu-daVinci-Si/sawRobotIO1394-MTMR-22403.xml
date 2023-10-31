@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='us-ascii'?>
 <Config Version="5">
   <Robot Name="MTMR" HardwareVersion="DQLA" NumOfActuator="7" NumOfJoint="7" SN="22403">
     <Actuator ActuatorID="0" AxisID="0" BoardID="2" Type="Revolute">
@@ -9,6 +10,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="-0.001419334489828" Unit="deg" />
+        <PositionLimitsSoft Lower="-65.0" Upper="40.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -24,6 +26,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="0.001804330392943" Unit="deg" />
+        <PositionLimitsSoft Lower="-18.0" Upper="65.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -39,6 +42,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="0.001506780512305" Unit="deg" />
+        <PositionLimitsSoft Lower="-15.0" Upper="42.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -54,6 +58,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="0.008547008547009" Unit="deg" />
+        <PositionLimitsSoft Lower="-120.0" Upper="240.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -69,6 +74,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="0.169632086851629" Unit="deg" />
+        <PositionLimitsSoft Lower="-95.0" Upper="185.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -84,6 +90,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="0.169632086851629" Unit="deg" />
+        <PositionLimitsSoft Lower="-45.0" Upper="45.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />
@@ -99,6 +106,7 @@
       </Drive>
       <Encoder VelocitySource="FIRMWARE">
         <BitsToPosSI Scale="-0.339264173703257" Unit="deg" />
+        <PositionLimitsSoft Lower="-475.0" Upper="445.0" Unit="deg" />
       </Encoder>
       <AnalogIn>
         <BitsToVolts Offset="0" Scale="6.866455078125e-05" />

@@ -1,9 +1,11 @@
 {
-  "arms": [
-    {
-      "name": "PSM3",
-      "type": "PSM"
-,      "serial": "698534"
-    }
-  ]
+    // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
+    "arms":
+    [
+        {
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "698534"
+        }
+    ]
 }

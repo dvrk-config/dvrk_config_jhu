@@ -1,9 +1,5 @@
 {
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals-DQLA.xml"
-    }
-    ,
+    // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
     "arms":
     [
         {

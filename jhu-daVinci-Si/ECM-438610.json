@@ -1,5 +1,9 @@
 {
-    "kinematic": "kinematic/ecm-si.json",
-    "generation": "Si",
-    "endoscope": "HD_STRAIGHT"
+    // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
+    "kinematic": "kinematic/ecm-si.json"
+    , "generation": "Si"
+    // , "endoscope": "SD_STRAIGHT"
+    // , "endoscope": "SD_UP"
+    // , "endoscope": "SD_DOWN"
+    , "endoscope": "HD_STRAIGHT"
 }
