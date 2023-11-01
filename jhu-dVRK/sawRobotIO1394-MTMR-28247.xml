@@ -10,6 +10,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="-0.00141933" Unit="deg"/>
+            <PositionLimitsSoft Lower="-65.0" Upper="40.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -25,6 +26,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.00180433" Unit="deg"/>
+            <PositionLimitsSoft Lower="-18.0" Upper="65.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -40,6 +42,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.00150678" Unit="deg"/>
+            <PositionLimitsSoft Lower="-15.0" Upper="42.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -55,6 +58,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.00854701" Unit="deg"/>
+            <PositionLimitsSoft Lower="-120.0" Upper="240.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -70,6 +74,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.16963209" Unit="deg"/>
+            <PositionLimitsSoft Lower="-95.0" Upper="185.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -85,6 +90,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.16963209" Unit="deg"/>
+            <PositionLimitsSoft Lower="-45.0" Upper="45.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
@@ -100,6 +106,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="-0.33926417" Unit="deg"/>
+            <PositionLimitsSoft Lower="-475.0" Upper="445.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
