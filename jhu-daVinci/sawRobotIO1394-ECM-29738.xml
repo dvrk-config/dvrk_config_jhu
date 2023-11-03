@@ -18,6 +18,7 @@
          </AnalogBrake>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.00037500" Unit="deg" />
+            <PositionLimitsSoft Lower="-90.0" Upper="90.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05" />
@@ -42,6 +43,7 @@
          </AnalogBrake>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.00037500" Unit="deg" />
+            <PositionLimitsSoft Lower="-45.0" Upper="64.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05" />
@@ -66,6 +68,7 @@
          </AnalogBrake>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="-0.00357188" Unit="mm" />
+            <PositionLimitsSoft Lower="0.0" Upper="255.0" Unit="mm" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05" />
@@ -81,6 +84,7 @@
          </Drive>
          <Encoder VelocitySource="FIRMWARE">
             <BitsToPosSI Scale="0.01874063" Unit="deg" />
+            <PositionLimitsSoft Lower="-89.0" Upper="89.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05" />

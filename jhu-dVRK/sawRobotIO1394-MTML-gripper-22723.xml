@@ -10,6 +10,7 @@
          </Drive>
          <Encoder>
             <BitsToPosSI Scale="1.0" Unit="deg"/>
+            <PositionLimitsSoft Lower="0.0" Upper="0.0" Unit="deg" />
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
