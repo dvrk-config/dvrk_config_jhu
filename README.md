@@ -14,7 +14,7 @@ based on this one.  If you want to add this to your ROS workspace,
 don't forget to edit the `CMakeLists.txt` and `package.xml` to rename
 the package (query replace the `dvrkconfig_jhu` with `dvrk_config_XXX`
 (`XXX` being your institution's acronym). Once this is done and after
-you rebuild your workspace, you will be able to do `roscd
+you rebuilt your workspace, you will be able to do `roscd
 dvrk_config_jhu` or use this path to locate the dVRK configuration
 files in your own launch files.
 
