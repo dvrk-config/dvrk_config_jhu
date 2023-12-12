@@ -26,6 +26,19 @@
         }
         ,
         {
+            "name": "MTML",
+            "type": "MTM",
+            "serial": "28989",
+            "base-frame": {
+                "reference-frame": "HRSV",
+                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+        ,
+        {
             "name": "MTMR",
             "type": "MTM",
             "serial": "30924",
@@ -80,7 +93,7 @@
         }
         ,
         {
-            "mtm": "MTMR",
+            "mtm": "MTML",
             "psm": "PSM2"
         }
         ,
@@ -89,4 +102,11 @@
             "psm": "PSM3"
         }
     ]
+    ,
+    "ecm-teleop":
+    {
+        "mtm-left": "MTML",
+        "mtm-right": "MTMR",
+        "ecm": "ECM"
+    }
 }
