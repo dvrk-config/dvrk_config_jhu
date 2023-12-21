@@ -5,7 +5,7 @@
         {
             "name": "SUJ",
             "type": "SUJ_Si",
-            "arm": "suj.json"
+            "arm": "suj-si.json"
         }
         ,
         {
