@@ -5,5 +5,5 @@
     // , "endoscope": "SD_STRAIGHT"
     // , "endoscope": "SD_UP"
     // , "endoscope": "SD_DOWN"
-    , "endoscope": "HD_STRAIGHT"
+    , "endoscope": "HD_DOWN"
 }
