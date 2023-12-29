@@ -7,6 +7,6 @@ if (ament_cmake_FOUND)
 endif ()
 
 install (
-  DIRECTORY jhu-dVRK jhu-daVinci jhu-dVRK-Si
+  DIRECTORY jhu-dVRK jhu-daVinci jhu-dVRK-Si jhu-daVinci-Si
   DESTINATION share
   )
