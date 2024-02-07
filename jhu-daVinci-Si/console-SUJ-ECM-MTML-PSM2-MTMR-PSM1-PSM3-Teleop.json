@@ -7,6 +7,11 @@
         //, "port": "udp"
     }
     ,
+    "operator-present":
+    {
+        "hid": "hid/goovis-hd.json"
+    }
+    ,
     "arms":
     [
         {
