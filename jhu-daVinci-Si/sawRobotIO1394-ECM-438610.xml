@@ -59,7 +59,7 @@
         <BitsToFeedbackAmps Offset="-2.048" Scale="6.25e-05" />
         <MaxCurrent Unit="A" Value="1.1" />
         <ReleaseCurrent Unit="A" Value="1.1" />
-        <ReleaseTime Unit="s" Value="0.5" />
+        <ReleaseTime Unit="s" Value="1.0" />
         <ReleasedCurrent Unit="A" Value="0.25" />
         <EngagedCurrent Unit="A" Value="0.0" />
       </AnalogBrake>
