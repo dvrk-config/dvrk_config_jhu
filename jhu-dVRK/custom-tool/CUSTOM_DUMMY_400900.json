@@ -8,7 +8,7 @@
         "convention": "modified",
         "joints": [
             {
-                "name": "outer_roll",
+                "name": "roll",
                 // CUSTOM: changed the length of the shaft to emulate a shorter instrument
                 "alpha":  0.0000, "A":  0.0000, "theta":  0.0000, "D":  0.3162,  // CUSTOM: standard D for large needle driver is 0.4162
                 "type": "revolute",
@@ -19,7 +19,7 @@
                 "ftmax": 0.33
             },
             {
-                "name": "outer_wrist_pitch",
+                "name": "wrist_pitch",
                 "alpha": -1.5708, "A":  0.0000, "theta":  0.0000, "D":  0.0000,
                 "type": "revolute",
                 "mode": "active",
@@ -29,7 +29,7 @@
                 "ftmax": 0.25
             },
             {
-                "name": "outer_wrist_yaw",
+                "name": "wrist_yaw",
                 "alpha": -1.5708, "A":  0.0091, "theta":  0.0000, "D":  0.0000,
                 "type": "revolute",
                 "mode": "active",
