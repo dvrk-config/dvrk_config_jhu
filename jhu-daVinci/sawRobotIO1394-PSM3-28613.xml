@@ -13,7 +13,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="98.330387" Scale="-43.5698216827" Unit="deg" />
+            <VoltsToPosSI Offset="98.330387" Scale="-43.5732074941006" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="1" AxisID="1" BoardID="10" Type="Revolute">
@@ -29,7 +29,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="64.964361" Scale="-28.6846776388" Unit="deg" />
+            <VoltsToPosSI Offset="64.964361" Scale="-28.681326490028912" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="2" AxisID="2" BoardID="10" Type="Prismatic">
@@ -45,7 +45,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="-8.229006" Scale="59.2422830849" Unit="mm" />
+            <VoltsToPosSI Offset="-8.229006" Scale="59.31517563515912" Unit="mm" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="3" AxisID="3" BoardID="10" Type="Revolute">
@@ -61,7 +61,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="176.568044337" Scale="-78.5137480879" Unit="deg" />
+            <VoltsToPosSI Offset="176.568044337" Scale="-78.52538229289587" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="4" AxisID="0" BoardID="11" Type="Revolute">
@@ -77,7 +77,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="176.103605183" Scale="-78.5303346566" Unit="deg" />
+            <VoltsToPosSI Offset="176.103605183" Scale="-78.555617380107" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="5" AxisID="1" BoardID="11" Type="Revolute">
@@ -93,7 +93,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="179.443625817" Scale="-78.7701202758" Unit="deg" />
+            <VoltsToPosSI Offset="179.443625817" Scale="-78.78406026077036" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Actuator ActuatorID="6" AxisID="2" BoardID="11" Type="Revolute">
@@ -109,7 +109,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86656e-05" />
-            <VoltsToPosSI Offset="176.107714619" Scale="-78.6043207034" Unit="deg" />
+            <VoltsToPosSI Offset="176.107714619" Scale="-78.6419991028815" Unit="deg" />
          </AnalogIn>
       </Actuator>
       <Potentiometers Position="Actuators">
