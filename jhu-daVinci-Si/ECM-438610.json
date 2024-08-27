@@ -3,5 +3,5 @@
     "kinematic": "kinematic/ecm-si.json"
     , "generation": "Si"
     , "endoscope": "Si_HD_STRAIGHT"
-    , "gravity-tilt": -1.22173
+    , "mounting-pitch": -1.22173
 }
