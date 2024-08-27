@@ -5,4 +5,5 @@
     // , "tool-detection": "MANUAL"
     // , "tool-detection": "FIXED"
     , "tool-detection": "AUTOMATIC"
+    // , "mounting_pitch": -0.26180 // -15.0 for Si PSM3 on SUJ
 }
