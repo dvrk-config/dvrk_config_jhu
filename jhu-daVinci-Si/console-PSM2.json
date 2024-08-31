@@ -1,7 +1,7 @@
 {
     // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
     "io": {
-	"close-all-relays": true
+        // "close-all-relays": true  // uncomment to avoid calling qlacommand -c close-relays
     }
     ,
     "arms":

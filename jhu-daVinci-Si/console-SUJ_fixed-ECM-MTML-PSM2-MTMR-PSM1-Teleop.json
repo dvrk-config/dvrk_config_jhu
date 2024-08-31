@@ -16,10 +16,11 @@
     [
         {
             "name": "SUJ",
-            "type": "SUJ_Si",
-            "arm": "suj-si.json"
+            "type": "SUJ_Fixed",
+            "kinematic": "suj-fixed.json"
         }
         ,
+
         {
             "name": "ECM",
             "type": "ECM",
@@ -75,16 +76,6 @@
                 "interface": "PSM2"
             }
         }
-        ,
-        {
-            "name": "PSM3",
-            "type": "PSM",
-            "serial": "698534",
-            "base-frame": {
-                "component": "SUJ",
-                "interface": "PSM3"
-            }
-        }
     ]
     ,
     "psm-teleops":
@@ -100,11 +91,6 @@
         {
             "mtm": "MTML",
             "psm": "PSM2"
-        }
-        ,
-        {
-            "mtm": "MTMR",
-            "psm": "PSM3"
         }
     ]
     ,
