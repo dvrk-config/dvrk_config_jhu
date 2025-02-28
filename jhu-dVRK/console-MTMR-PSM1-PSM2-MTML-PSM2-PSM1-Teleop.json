@@ -4,6 +4,11 @@
         "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
     }
     ,
+    "operator-present":
+    {
+        "hid": "hid/goovis-hd.json"
+    }
+    ,
     "arms":
     [
         {
