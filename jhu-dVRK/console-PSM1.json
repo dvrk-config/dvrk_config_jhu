@@ -1,19 +1,23 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io": {
-        //"port": "udp"
-        // "port": "fw"
-        // , "firewire-protocol": "broadcast-read-write"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
     "arms":
     [
         {
             "name": "PSM1",
             "type": "PSM",
+            "IO": "IO_1",
             "serial": "28007",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,         -0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
