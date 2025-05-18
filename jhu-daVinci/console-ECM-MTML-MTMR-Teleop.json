@@ -25,10 +25,10 @@
         }
     ]
     ,
-    "ecm-teleop":
+    "ECM-teleop":
     {
-        "mtm-left": "MTML",
-        "mtm-right": "MTMR",
-        "ecm": "ECM"
+        "MTM-left": "MTML",
+        "MTM-right": "MTMR",
+        "ECM": "ECM"
     }
 }

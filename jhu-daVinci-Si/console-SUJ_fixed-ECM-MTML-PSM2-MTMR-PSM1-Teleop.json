@@ -25,7 +25,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
             }
@@ -35,8 +35,8 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "28989",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -48,8 +48,8 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "30924",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -61,7 +61,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "292409",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
             }
@@ -71,33 +71,33 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
             }
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM1",
+            "MTM": "MTMR",
+            "PSM": "PSM1",
             "configure-parameter": {
-                "use-mtm-velocity": true // false, this just for testing - true is default
+                "use-MTM-velocity": true // false, this just for testing - true is default
             }
         }
         ,
         {
-            "mtm": "MTML",
-            "psm": "PSM2"
+            "MTM": "MTML",
+            "PSM": "PSM2"
         }
     ]
     ,
-    "ecm-teleop":
+    "ECM-teleop":
     {
-        "mtm-left": "MTML",
-        "mtm-right": "MTMR",
-        "ecm": "ECM"
+        "MTM-left": "MTML",
+        "MTM-right": "MTMR",
+        "ECM": "ECM"
     }
 }

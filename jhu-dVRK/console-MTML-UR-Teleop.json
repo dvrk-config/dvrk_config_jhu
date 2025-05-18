@@ -36,11 +36,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTML",
-            "psm": "UR",
+            "MTM": "MTML",
+            "PSM": "UR",
             "configure-parameter": {
                 "ignore-jaw": true
             }

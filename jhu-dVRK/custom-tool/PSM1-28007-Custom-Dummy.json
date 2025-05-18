@@ -8,7 +8,7 @@
     // used to reduce the range of motion of the translation stage if
     // the tool "base" is bigger than usual and mighe collide with the
     // cannula
-    "kinematic": "jhu-dVRK/custom-tool/psm-Custom-Dummy.json",
+    "kinematic": "jhu-dVRK/custom-tool/PSM-Custom-Dummy.json",
 
     //
     // You CAN'T use automatic for custom tools, the Dallas chip will automatically set the tool type!

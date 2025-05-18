@@ -12,8 +12,8 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "27374",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,          0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
@@ -25,8 +25,8 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "28247",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -35,11 +35,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM2"
+            "MTM": "MTMR",
+            "PSM": "PSM2"
         }
     ]
 }

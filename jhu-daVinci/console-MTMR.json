@@ -1,15 +1,19 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io": {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml",
-        "close-all-relays": true
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw"
+        }
+    ]
     ,
     "arms":
     [
         {
             "name": "MTMR",
             "type": "MTM",
+            "IO": "IO_1",
             "serial": "32336"
         }
     ]

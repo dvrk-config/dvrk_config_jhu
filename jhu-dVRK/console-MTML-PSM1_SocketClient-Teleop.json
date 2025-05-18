@@ -21,11 +21,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTML",
-            "psm": "PSM1",
+            "MTM": "MTML",
+            "PSM": "PSM1",
             "configure-parameter": {
                 "rotation" : [[-1.0000,  0.0000,  0.0000],
                               [ 0.0000, -1.0000,  0.0000],

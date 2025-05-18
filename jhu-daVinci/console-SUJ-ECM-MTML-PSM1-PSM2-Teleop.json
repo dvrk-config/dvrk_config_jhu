@@ -27,7 +27,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "49695",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
             }
@@ -37,7 +37,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "32204",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
             }
@@ -47,7 +47,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "29738",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
             }
@@ -57,8 +57,8 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "34863",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -67,16 +67,16 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTML",
-            "psm": "PSM1"
+            "MTM": "MTML",
+            "PSM": "PSM1"
         }
         ,
         {
-            "mtm": "MTML",
-            "psm": "PSM2"
+            "MTM": "MTML",
+            "PSM": "PSM2"
         }
     ]
 }

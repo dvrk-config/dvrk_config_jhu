@@ -122,11 +122,11 @@
       <Tolerance Axis="6" Distance="3.0" Latency="0.01" Unit="deg" />
     </Potentiometers>
   </Robot>
-  <DallasChip BoardID="8" Name="PSM2-Dallas" />
+  <DallasChip BoardID="8" Name="PSM2_dallas" />
   <DigitalIn BitID="1" BoardID="8" Debounce="0.01" Name="PSM2-SUJClutch2" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="4" BoardID="8" Debounce="0.01" Name="PSM2-SUJClutch" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="9" BoardID="8" Debounce="1.5" Name="PSM2-Tool" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="10" BoardID="8" Debounce="1.6" Name="PSM2-Adapter" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="13" BoardID="8" Debounce="0.01" Name="PSM2-ManipClutch" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="4" BoardID="8" Debounce="0.01" Name="PSM2_SUJ_clutch" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="9" BoardID="8" Debounce="1.5" Name="PSM2_tool" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="10" BoardID="8" Debounce="1.6" Name="PSM2_adapter" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="13" BoardID="8" Debounce="0.01" Name="PSM2_arm_clutch" Pressed="0" Trigger="all" />
   <DigitalOut BitID="0" BoardID="8" Name="PSM2-SUJBrake" />
 </Config>

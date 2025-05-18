@@ -36,11 +36,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM1"
+            "MTM": "MTMR",
+            "PSM": "PSM1"
         }
     ]
 

@@ -18,7 +18,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
             }
@@ -28,7 +28,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "292409",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
             }
@@ -38,7 +38,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
             }
@@ -48,7 +48,7 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "698534",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM3"
             }

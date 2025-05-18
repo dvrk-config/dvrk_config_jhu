@@ -1,22 +1,36 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io":
-    {
-        "footpedals" : "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "configuration_files": ["io/sawRobotIO1394-MTMR-foot-pedals.xml"]
+        }
+    ]
     ,
     "arms":
     [
         {
             "name": "MTML",
             "type": "MTM",
+            "IO": "IO_1",
             "serial": "34863"
         }
         ,
         {
             "name": "MTMR",
             "type": "MTM",
+            "IO": "IO_1",
             "serial": "32336"
+        }
+    ]
+    ,
+    "consoles": [
+        {
+            "name": "console1",
+            "input_type": "PEDALS_ONLY",
+            "IO": "IO_1"
         }
     ]
 }

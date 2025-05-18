@@ -18,8 +18,8 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "28007",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,         -0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
@@ -31,8 +31,8 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "27374",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,          0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
@@ -44,8 +44,8 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "28247",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -57,8 +57,8 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "22723",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -67,19 +67,19 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM1",
+            "MTM": "MTMR",
+            "PSM": "PSM1",
             "configure-parameter": {
                 "scale": 0.4
             }
         }
         ,
         {
-            "mtm": "MTML",
-            "psm": "PSM2",
+            "MTM": "MTML",
+            "PSM": "PSM2",
             "configure-parameter": {
                 "scale": 0.4
             }

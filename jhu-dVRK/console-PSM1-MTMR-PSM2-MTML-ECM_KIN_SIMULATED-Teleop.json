@@ -11,8 +11,8 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "22723",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -24,8 +24,8 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "28247",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -38,8 +38,8 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "arm": "arm/PSM_KIN_SIMULATED_LARGE_NEEDLE_DRIVER_400006.json",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,         -0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
@@ -52,8 +52,8 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "arm": "arm/PSM_KIN_SIMULATED_LARGE_NEEDLE_DRIVER_400006.json",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,          0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
@@ -66,27 +66,27 @@
             "type": "ECM",
             "simulation": "KINEMATIC",
             "pid": "sawControllersPID-ECM.xml",
-            "kinematic": "ecm-straight.json"
+            "kinematic": "ECM-straight.json"
         }
     ]
     ,
-    "ecm-teleop":
+    "ECM-teleop":
     {
-        "mtm-left": "MTML",
-        "mtm-right": "MTMR",
-        "ecm": "ECM"
+        "MTM-left": "MTML",
+        "MTM-right": "MTMR",
+        "ECM": "ECM"
     }
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM1"
+            "MTM": "MTMR",
+            "PSM": "PSM1"
         }
         ,
         {
-            "mtm": "MTML",
-            "psm": "PSM2"
+            "MTM": "MTML",
+            "PSM": "PSM2"
         }
     ]
 }

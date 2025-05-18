@@ -12,8 +12,8 @@
             "io": "sawRobotIO1394-MTMR-32336.xml",
             "pid": "sawControllersPID-MTMR.xml",
             "arm": "MTMR-32336.json",
-            "base-frame": {
-                "reference-frame": "HRSV",
+            "base_frame": {
+                "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -27,9 +27,9 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "pid": "sawControllersPID-PSM.xml",
-            "kinematic": "psm-large-needle-driver.json",
-            "base-frame": {
-                "reference-frame": "ECM",
+            "kinematic": "PSM-large-needle-driver.json",
+            "base_frame": {
+                "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,          0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],

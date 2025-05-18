@@ -43,11 +43,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM3",
+            "MTM": "MTMR",
+            "PSM": "PSM3",
             "configure-parameter": {
                 "ignore-jaw": true,
                 "scale": 0.4,

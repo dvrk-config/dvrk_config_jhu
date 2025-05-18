@@ -12,8 +12,8 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "arm": "arm/PSM_KIN_SIMULATED_LARGE_NEEDLE_DRIVER_400006.json",
-            "base-frame": {
-                "reference-frame": "Mount",
+            "base_frame": {
+                "reference_frame": "Mount",
                 "transform": [[ -1.0,  0.0,  0.0,  0.0],
                               [  0.0, -1.0,  0.0,  0.0 ],
                               [  0.0,  0.0,  1.0,  0.0 ],
@@ -28,11 +28,11 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTML",
-            "psm": "PSM2",
+            "MTM": "MTML",
+            "PSM": "PSM2",
             "configure-parameter": {
                 "scale": 0.4,
                 "gripper-scaling": {

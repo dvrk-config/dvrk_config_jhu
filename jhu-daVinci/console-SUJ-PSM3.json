@@ -13,7 +13,7 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "28613",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM3"
             }

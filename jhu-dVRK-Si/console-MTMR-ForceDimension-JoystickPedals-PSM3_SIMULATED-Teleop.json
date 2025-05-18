@@ -55,8 +55,8 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "arm": "PSM_KIN_SIMULATED_CADIERE_FORCEPS_400049.json",
-            "base-frame": {
-                "reference-frame": "FD",
+            "base_frame": {
+                "reference_frame": "FD",
                 "transform": [[  1.0,  0.0,  0.0,  0.0],
                               [  0.0,  1.0,  0.0,  0.0 ],
                               [  0.0,  0.0,  1.0,  0.0 ],
@@ -65,17 +65,17 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM3",
+            "MTM": "MTMR",
+            "PSM": "PSM3",
             "configure-parameter": {
                 "gripper-scaling": {
                     "max": 0.492,
                     "zero": 0.25
                 },
-                "align-mtm": false,
+                "align-MTM": false,
                 "ignore-jaw": true,
                 "scale": 0.5
             }

@@ -19,7 +19,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
-            "base-frame": {
+            "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
             }

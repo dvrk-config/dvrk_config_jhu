@@ -37,23 +37,23 @@
         }
     ]
     ,
-    "psm-teleops":
+    "teleop_PSMs":
     [
         {
-            "mtm": "MTMR",
-            "psm": "PSM1"
+            "MTM": "MTMR",
+            "PSM": "PSM1"
         }
         ,
         {
-            "mtm": "MTML",
-            "psm": "PSM2"
+            "MTM": "MTML",
+            "PSM": "PSM2"
         }
     ]
     ,
-    "ecm-teleop":
+    "ECM-teleop":
     {
-        "mtm-left": "MTML",
-        "mtm-right": "MTMR",
-        "ecm": "ECM"
+        "MTM-left": "MTML",
+        "MTM-right": "MTMR",
+        "ECM": "ECM"
     }
 }
