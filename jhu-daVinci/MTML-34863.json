@@ -2,5 +2,5 @@
 {
     "kinematic": "kinematic/MTML.json",
     "generation": "Classic",
-    "gravity-compensation": "gc-MTML-34863.json"
+    "gravity_compensation": "gc-MTML-34863.json"
 }

@@ -2,5 +2,5 @@
 {
     "kinematic": "kinematic/PSM.json",
     "generation": "Classic",
-    "tool-detection": "MANUAL"
+    "tool_detection": "MANUAL"
 }

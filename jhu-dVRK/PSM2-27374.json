@@ -3,7 +3,7 @@
     // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
     "kinematic": "kinematic/PSM.json"
     , "generation": "Classic"
-    // , "tool-detection": "MANUAL"
-    // , "tool-detection": "FIXED"
-    , "tool-detection": "AUTOMATIC"
+    // , "tool_detection": "MANUAL"
+    // , "tool_detection": "FIXED"
+    , "tool_detection": "AUTOMATIC"
 }

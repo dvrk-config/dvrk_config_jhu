@@ -3,5 +3,5 @@
     "kinematic": "kinematic/ECM-si.json"
     , "generation": "Si"
     , "endoscope": "Si_HD_STRAIGHT"
-    , "mounting-pitch": -1.22173
+    , "mounting_pitch": -1.22173
 }

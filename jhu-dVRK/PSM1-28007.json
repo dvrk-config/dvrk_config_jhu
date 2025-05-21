@@ -2,8 +2,8 @@
 {
     "kinematic": "kinematic/PSM.json"
     , "generation": "Classic"
-    // "tool-detection": "AUTOMATIC"
-    , "tool-detection": "MANUAL"
-    // "tool-detection": "FIXED",
+    // "tool_detection": "AUTOMATIC"
+    , "tool_detection": "MANUAL"
+    // "tool_detection": "FIXED",
     // "tool": "LARGE_NEEDLE_DRIVER:420006[12]"
 }

@@ -40,7 +40,7 @@
             "MTM": "MTMR",
             "PSM": "PSM3",
             "configure-parameter": {
-                "ignore-jaw": true,
+                "ignore_jaw": true,
                 "scale": 0.4,
                 "rotation": [[ 0.0000, -1.0000,  0.0000],
                              [ 1.0000,  0.0000,  0.0000],

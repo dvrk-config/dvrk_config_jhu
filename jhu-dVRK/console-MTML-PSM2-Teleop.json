@@ -41,7 +41,7 @@
             "PSM": "PSM2",
             "configure-parameter": {
                 "scale": 0.4,
-                "jaw-rate": 6.3 // rad per second
+                "jaw_rate": 6.3 // rad per second
             }
         }
     ]

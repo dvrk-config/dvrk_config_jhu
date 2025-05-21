@@ -42,7 +42,7 @@
             "MTM": "MTML",
             "PSM": "UR",
             "configure-parameter": {
-                "ignore-jaw": true
+                "ignore_jaw": true
             }
         }
     ]

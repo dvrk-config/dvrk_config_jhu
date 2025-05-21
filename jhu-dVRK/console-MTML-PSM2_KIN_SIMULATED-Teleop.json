@@ -35,7 +35,7 @@
             "PSM": "PSM2",
             "configure-parameter": {
                 "scale": 0.4,
-                "gripper-scaling": {
+                "gripper_scaling": {
                     "max": 1.0472, // 60 degrees
                     "zero": -0.52  // set value below zero, MTM can go much lower - zero will correspond to PSM jaws at 0 position
                 }

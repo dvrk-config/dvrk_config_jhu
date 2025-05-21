@@ -70,12 +70,12 @@
             "MTM": "MTMR",
             "PSM": "PSM3",
             "configure-parameter": {
-                "gripper-scaling": {
+                "gripper_scaling": {
                     "max": 0.492,
                     "zero": 0.35
                 },
                 "align-MTM": false,
-                "ignore-jaw": false,
+                "ignore_jaw": false,
                 "scale": 0.5
             }
         }

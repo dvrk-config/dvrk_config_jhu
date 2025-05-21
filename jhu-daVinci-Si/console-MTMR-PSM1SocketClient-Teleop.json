@@ -27,7 +27,7 @@
             "MTM": "MTMR",
             "PSM": "PSM1",
             "configure-parameter": {
-                "ignore-jaw" : true
+                "ignore_jaw" : true
                 ,
                 "rotation" : [[ 0.0000, -1.0000,  0.0000],
                               [ 1.0000,  0.0000,  0.0000],

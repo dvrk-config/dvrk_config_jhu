@@ -40,11 +40,11 @@
             "MTM": "MTML",
             "PSM": "PSM2",
             "configure-parameter": {
-                "jaw-rate": 6.28,
-                "jaw-rate-back-from-clutch": 0.628,
-                "start-orientation-tolerance": 0.087,
-                "start-gripper-threshold": 0.087,
-                "start-roll-threshold": 0.05
+                "jaw_rate": 6.28,
+                "jaw_rate-back-from-clutch": 0.628,
+                "start_orientation_tolerance": 0.087,
+                "start_gripper_threshold": 0.087,
+                "start_roll_threshold": 0.05
             }
         }
     ]

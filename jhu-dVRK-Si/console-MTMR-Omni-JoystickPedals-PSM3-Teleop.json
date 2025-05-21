@@ -71,7 +71,7 @@
             "MTM": "MTMR",
             "PSM": "PSM3",
             "configure-parameter": {
-                "ignore-jaw": true,
+                "ignore_jaw": true,
                 "align-MTM": false
             }
         }
