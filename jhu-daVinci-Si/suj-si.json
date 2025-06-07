@@ -1,12 +1,12 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "base-arduino-mac": "2B:0D:3D:47:80:A3"
+    "base_arduino_mac": "2B:0D:3D:47:80:A3"
     ,
     "arms":
     [
         {
             "name": "ECM",
-            "arduino-mac": "68:7E:57:32:FD:63",
+            "arduino_mac": "68:7E:57:32:FD:63",
             "serial_number": "0000",
             "primary_offsets": [0.5211392160972542, -2.3412033757314443, -3.0229780728541717, -2.339505967873306],
             "primary_scales": [-1.6858799692587158e-05, 7.114065469640816e-05, 9.257320694699654e-05, 7.123518567301949e-05],
@@ -58,13 +58,13 @@
                     }
                 ]
             },
-            "world-origin-to-SUJ": {
+            "world_origin_to_SUJ": {
                 "Translation": [0.0 , 0.1262, 0.0],
                 "Rotation" : [[ 0.0, -1.0,  0.0],
                               [ 1.0,  0.0,  0.0],
                               [ 0.0,  0.0,  1.0]]
             },
-            "SUJ-tip-to-tool-origin": {
+            "SUJ_tip_to_tool_origin": {
                 "Translation": [0.8343, 0.0, 0.0],
                 "Rotation" : [[ 0.0,  1.0,  0.0],
                               [-1.0,  0.0,  0.0],
@@ -74,7 +74,7 @@
         ,
         {
             "name": "PSM1",
-            "arduino-mac": "6A:2D:0C:DF:CB:9D",
+            "arduino_mac": "6A:2D:0C:DF:CB:9D",
             "serial_number": "0000",
             "primary_offsets": [0.513782968130982, -2.3498756816729003, -3.728162227630164, 2.32125734928165],
             "primary_scales": [-1.6919678855660344e-05, 7.062197757026209e-05, 7.136426814893805e-05, -7.160381773774961e-05],
@@ -126,13 +126,13 @@
                     }
                 ]
             },
-            "world-origin-to-SUJ": {
+            "world_origin_to_SUJ": {
                 "Translation": [-0.2019 , -0.0757, 0.0],
                 "Rotation" : [[-1.0,  0.0,  0.0],
                               [ 0.0, -1.0,  0.0],
                               [ 0.0,  0.0,  1.0]]
             },
-            "SUJ-tip-to-tool-origin": {
+            "SUJ_tip_to_tool_origin": {
                 "Translation": [0.8343, 0.0, 0.0],
                 "Rotation" : [[ 0.0,  1.0,  0.0],
                               [-1.0,  0.0,  0.0],
@@ -142,7 +142,7 @@
         ,
         {
             "name": "PSM2",
-            "arduino-mac": "48:CF:9D:1F:41:C9",
+            "arduino_mac": "48:CF:9D:1F:41:C9",
             "serial_number": "0000",
             "primary_offsets": [0.5221951480001414, -2.311625981055614, -0.9397776771768083, 2.3630666926328754],
             "primary_scales": [-1.7066874137992007e-05, 7.093923712807997e-05, 7.160059703219126e-05, -6.999598736296283e-05],
@@ -194,13 +194,13 @@
                     }
                 ]
             },
-            "world-origin-to-SUJ": {
+            "world_origin_to_SUJ": {
                 "Translation": [0.2019 , -0.0757, 0.0],
                 "Rotation" : [[ 1.0,  0.0,  0.0],
                               [ 0.0,  1.0,  0.0],
                               [ 0.0,  0.0,  1.0]]
             },
-            "SUJ-tip-to-tool-origin": {
+            "SUJ_tip_to_tool_origin": {
                 "Translation": [0.8343, 0.0, 0.0],
                 "Rotation" : [[ 0.0,  1.0,  0.0],
                               [-1.0,  0.0,  0.0],
@@ -210,7 +210,7 @@
         ,
         {
             "name": "PSM3",
-            "arduino-mac": "B1:C8:4A:41:32:E3",
+            "arduino_mac": "B1:C8:4A:41:32:E3",
             "serial_number": "0000",
             "primary_offsets": [0.6161849926921953, -2.3348291775722343, 1.813108648800154, -3.0174420998710954,  1.8181237450279812],
             "primary_scales": [-1.7076878105817013e-05, 7.089956963916719e-05, -7.092639965920218e-05, 9.207012109144399e-05, -7.148769791575175e-05],
@@ -269,13 +269,13 @@
                     }
                 ]
             },
-            "world-origin-to-SUJ": {
+            "world_origin_to_SUJ": {
                 "Translation": [0.0 , -0.2776, 0.0],
                 "Rotation" : [[ 0.0,  1.0,  0.0],
                               [-1.0,  0.0,  0.0],
                               [ 0.0,  0.0,  1.0]]
             },
-            "SUJ-tip-to-tool-origin": {
+            "SUJ_tip_to_tool_origin": {
                 "Translation": [0.8343, 0.0, 0.0],
                 "Rotation" : [[ 0.0,  1.0,  0.0],
                               [-1.0,  0.0,  0.0],
