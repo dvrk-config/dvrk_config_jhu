@@ -1,0 +1,20 @@
+{
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "udpfw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
+    ,
+    "arms":
+    [
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "292409",
+            "IO": "IO_1"
+        }
+    ]
+}

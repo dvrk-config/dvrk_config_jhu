@@ -1,30 +1,27 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals-DQLA.xml"
-        , "firewire-protocol": "broadcast-read-write" // for debugging,
-        //, "port": "udp"
-    }
-    ,
-    "operator-present":
-    {
-        "hid": "hid/goovis-hd.json"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "udpfw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
     "arms":
     [
         {
             "name": "SUJ",
-            "type": "SUJ_Fixed",
-            "kinematic": "suj-fixed.json"
+            "type": "SUJ_Si",
+            "arm_file": "suj-si.json"
         }
         ,
-
         {
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
@@ -35,6 +32,7 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "28989",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -48,6 +46,7 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "30924",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -61,6 +60,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "292409",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -71,6 +71,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
@@ -78,26 +79,43 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "consoles":
     [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM1",
-            "configure-parameter": {
-                "use-MTM-velocity": true // false, this just for testing - true is default
+            "name": "console",
+            "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
+            "IO_pedals" :
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTML-foot-pedals.xml"
             }
-        }
-        ,
-        {
-            "MTM": "MTML",
-            "PSM": "PSM2"
+            ,
+            "HID_file": "hid/goovis-hd.json"
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "configure_parameter": {
+                        "use_MTM_velocity": true // false, this just for testing - true is default
+                    }
+                }
+                ,
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM2"
+                }
+            ]
+            ,
+            "teleop_ECMs":
+            [
+                {
+                    "MTML": "MTML",
+                    "MTMR": "MTMR",
+                    "ECM": "ECM"
+                }
+            ]
         }
     ]
-    ,
-    "ECM-teleop":
-    {
-        "MTM-left": "MTML",
-        "MTM-right": "MTMR",
-        "ECM": "ECM"
-    }
 }
