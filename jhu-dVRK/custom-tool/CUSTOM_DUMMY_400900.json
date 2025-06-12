@@ -49,7 +49,7 @@
     }
     ,
     // rotation to match ISI convention (for read-only research API on commercial da Vinci)
-    "tooltip-offset" : [[ 0.0, -1.0,  0.0,  0.0],
+    "tooltip_offset" : [[ 0.0, -1.0,  0.0,  0.0],
                         [ 0.0,  0.0,  1.0,  0.0],
                         [-1.0,  0.0,  0.0,  0.0],
                         [ 0.0,  0.0,  0.0,  1.0]]
@@ -72,7 +72,7 @@
     // your just spent weeks building :-).  This means that you might
     // have to move your instrument's joints by hand to make sure all
     // the disks are properly engaged.
-    "tool-engage-position" : {
+    "tool_engage_position" : {
         "lower" : [-0.0, -0.0, -0.0, 0.0],
         "upper" : [ 0.0,  0.0,  0.0, 0.0]
     }
