@@ -1,19 +1,24 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io": {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
     "arms":
     [
         {
             "name": "PSM1",
             "type": "PSM",
-            "simulation": "KINEMATIC",
-            "arm": "arm/PSM_KIN_SIMULATED_LARGE_NEEDLE_DRIVER_400006.json",
+            "IO": "IO_1",
+            "serial": "28007",
             "base_frame": {
                 "reference_frame": "ECM",
-                "transform": [[  1.0,  0.0,          0.0,          0.0 ],
+                "transform": [[  1.0,  0.0,          0.0,         -0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
                               [  0.0,  0.0,          0.0,          1.0 ]]
@@ -23,6 +28,7 @@
         {
             "name": "MTMR",
             "type": "MTM",
+            "IO": "IO_1",
             "serial": "28247",
             "base_frame": {
                 "reference_frame": "HRSV",
@@ -34,11 +40,23 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "consoles":
     [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM1"
+            "name": "console1",
+            "input_type": "PEDALS_ONLY",
+            "IO_pedals": {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1"
+                }
+            ]
         }
     ]
 }

@@ -5,21 +5,20 @@
         {
             "name": "IO_1",
             "port": "fw",
-            "protocol": "broadcast-query-read-write",
-            "configuration_files": ["io/sawRobotIO1394-MTMR-foot-pedals.xml"]
+            "protocol": "broadcast-query-read-write"
         }
     ]
     ,
     "arms":
     [
         {
-            "name": "PSM1",
+            "name": "PSM2",
             "type": "PSM",
+            "serial": "27374",
             "IO": "IO_1",
-            "serial": "28007",
             "base_frame": {
                 "reference_frame": "ECM",
-                "transform": [[  1.0,  0.0,          0.0,         -0.20],
+                "transform": [[  1.0,  0.0,          0.0,          0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
                               [  0.0,  0.0,          0.0,          1.0 ]]
@@ -27,13 +26,13 @@
         }
         ,
         {
-            "name": "MTML",
+            "name": "MTMR",
             "type": "MTM",
+            "serial": "28247",
             "IO": "IO_1",
-            "serial": "22723",
             "base_frame": {
                 "reference_frame": "HRSV",
-                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
                               [  0.0,  0.0,          0.0,          1.0]]
@@ -44,14 +43,18 @@
     "consoles":
     [
         {
-            "name": "console1",
+            "name": "console",
             "input_type": "PEDALS_ONLY",
-            "IO": "IO_1",
+            "IO_pedals": {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
             "teleop_PSMs":
             [
                 {
-                    "MTM": "MTML",
-                    "PSM": "PSM1"
+                    "MTM": "MTMR",
+                    "PSM": "PSM2"
                 }
             ]
         }

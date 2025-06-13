@@ -1,9 +1,12 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw"
+        }
+    ]
     ,
     "arms":
     [
@@ -11,6 +14,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "27374",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,          0.20],
@@ -21,12 +25,13 @@
         }
         ,
         {
-            "name": "MTMR",
+            "name": "MTML",
             "type": "MTM",
-            "serial": "28247",
+            "serial": "22723",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
-                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                "transform": [[ -1.0,  0.0,          0.0,          0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
                               [  0.0,  0.0,          0.0,          1.0]]
@@ -34,11 +39,23 @@
         }
     ]
     ,
-    "teleop_PSMs":
-    [
+    "consoles": [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM2"
+            "name": "console_1",
+            "input_type": "PEDALS_ONLY",
+            "IO_pedals" :
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM2"
+                }
+            ]
         }
     ]
 }

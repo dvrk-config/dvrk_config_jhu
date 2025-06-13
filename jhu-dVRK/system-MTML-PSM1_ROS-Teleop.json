@@ -1,6 +1,6 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "component-manager": {
+    "component_manager": {
         "components":
         [
             // this is to use the dvrk_arm_from_ros class
@@ -15,10 +15,14 @@
         ]
     }
     ,
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTML-foot-pedals.xml"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
     "arms":
     [
@@ -27,21 +31,35 @@
             "type": "PSM_GENERIC",
             "component": "PSM1",
             "interface": "PSM1",
-            "skip-ros-bridge": true // this is to make sure we don't republish on the same topics as the remote PSM
+            "skip_ROS_bridge": true // this is to make sure we don't republish on the same topics as the remote PSM
         }
         ,
         {
             "name": "MTML",
             "type": "MTM",
+            "IO": "IO_1",
             "serial": "22723"
         }
     ]
     ,
-    "teleop_PSMs":
+    "consoles":
     [
         {
-            "MTM": "MTML",
-            "PSM": "PSM1"
+            "name": "console1",
+            "input_type": "PEDALS_ONLY",
+            "IO_pedals": {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM1"
+                }
+            ]
         }
     ]
 }
+

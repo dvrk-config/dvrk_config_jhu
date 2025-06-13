@@ -1,6 +1,6 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "component-manager": {
+    "component_manager": {
         "components":
         [
             // to use derived teleop with force feedback
@@ -8,27 +8,32 @@
                 "shared-library": "sawIntuitiveResearchKitDerivedTeleOperationPSM",
                 "class-name": "mtsDerivedTeleOperationPSM",
                 "constructor-arg": {
-                    "Name": "MTML-PSM2",
+                    "Name": "MTMR_PSM1",
                     "Period": 0.001
                 }
             }
         ]
     }
     ,
-    "io":
-    {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
     "arms":
     [
         {
-            "name": "PSM2",
+            "name": "PSM1",
             "type": "PSM",
-            "serial": "27374",
+            "serial": "28007",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "ECM",
-                "transform": [[  1.0,  0.0,          0.0,          0.20],
+                "transform": [[  1.0,  0.0,          0.0,         -0.20],
                               [  0.0, -0.866025404,  0.5,          0.0 ],
                               [  0.0, -0.5,         -0.866025404,  0.0 ],
                               [  0.0,  0.0,          0.0,          1.0 ]]
@@ -36,12 +41,13 @@
         }
         ,
         {
-            "name": "MTML",
+            "name": "MTMR",
             "type": "MTM",
-            "serial": "22723",
+            "serial": "28247",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
-                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
                               [  0.0,  0.0,          0.0,          1.0]]
@@ -49,12 +55,23 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "consoles":
     [
         {
-            "type": "TELEOP_PSM_DERIVED",
-            "MTM": "MTML",
-            "PSM": "PSM2"
+            "name": "console1",
+            "input_type": "PEDALS_ONLY",
+            "IO_pedals": {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1"
+                }
+            ]
         }
     ]
 }
