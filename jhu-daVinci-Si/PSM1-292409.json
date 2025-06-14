@@ -1,9 +1,9 @@
 {
     // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
-    "kinematic": "kinematic/psm-si.json"
+    "kinematic": "kinematic/PSM_Si.json"
     , "generation": "Si"
-    // , "tool-detection": "MANUAL"
-    // , "tool-detection": "FIXED"
-    , "tool-detection": "AUTOMATIC"
-    // , "mounting_pitch": -0.78540 // -45 for Si PSM1 on SUJ
+    // , "tool_detection": "MANUAL"
+    // , "tool_detection": "FIXED"
+    , "tool_detection": "AUTOMATIC"
+    , "mounting_pitch": -0.78540 // -45 for Si PSM1 on SUJ
 }
