@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.16)
+cmake_minimum_required (VERSION 3.10)
 project (dvrk_config_jhu VERSION 2.3.0)
 
 find_package (ament_cmake QUIET)

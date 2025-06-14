@@ -122,11 +122,11 @@
       <Tolerance Axis="6" Distance="1.0" Latency="0.01" Unit="deg" />
     </Potentiometers>
   </Robot>
-  <DallasChip BoardID="6" Name="PSM1_dallas" />
-  <DigitalIn BitID="1" BoardID="6" Debounce="0.01" Name="PSM1_SUJ_clutch_2" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="4" BoardID="6" Debounce="0.01" Name="PSM1_SUJ_clutch" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="9" BoardID="6" Debounce="1.5" Name="PSM1_tool" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="10" BoardID="6" Debounce="0.5" Name="PSM1_adapter" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="13" BoardID="6" Debounce="0.01" Name="PSM1_arm_clutch" Pressed="0" Trigger="all" />
-  <DigitalOut BitID="0" BoardID="6" Name="PSM1_SUJ_brake" />
+  <DallasChip BoardID="6" Name="PSM1-Dallas" />
+  <DigitalIn BitID="1" BoardID="6" Debounce="0.01" Name="PSM1-SUJClutch2" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="4" BoardID="6" Debounce="0.01" Name="PSM1-SUJClutch" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="9" BoardID="6" Debounce="1.5" Name="PSM1-Tool" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="10" BoardID="6" Debounce="0.5" Name="PSM1-Adapter" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="13" BoardID="6" Debounce="0.01" Name="PSM1-ManipClutch" Pressed="0" Trigger="all" />
+  <DigitalOut BitID="0" BoardID="6" Name="PSM1-SUJBrake" />
 </Config>

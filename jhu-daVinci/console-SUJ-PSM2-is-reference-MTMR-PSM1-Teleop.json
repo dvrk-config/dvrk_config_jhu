@@ -27,7 +27,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "49695",
-            "base_frame": {
+            "base-frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
             }
@@ -37,7 +37,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "32204",
-            "base_frame": {
+            "base-frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
             }
@@ -47,8 +47,8 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "32336",
-            "base_frame": {
-                "reference_frame": "HRSV",
+            "base-frame": {
+                "reference-frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
@@ -57,12 +57,12 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "psm-teleops":
     [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM1",
-            "PSM-base_frame": {
+            "mtm": "MTMR",
+            "psm": "PSM1",
+            "psm-base-frame": {
                 "component": "PSM2",  // special case, we assume the PSM2 is holding a camera
                 "interface": "Arm"
             }

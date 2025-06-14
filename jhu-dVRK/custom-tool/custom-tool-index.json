@@ -2,7 +2,7 @@
 {
     // All new instruments will be listed at the end of the drop down
     // menu to select an instrument in the PSM widget if the
-    // "tool_detection" is set to manual.
+    // "tool-detection" is set to manual.
 
     // See the example file PSM1-28007-Custom-Dummy.json in this
     // directory.

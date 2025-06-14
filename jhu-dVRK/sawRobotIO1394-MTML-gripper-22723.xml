@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config Version="5">
-   <Robot Name="MTML_gripper" HardwareVersion="QLA1" NumOfActuator="1" NumOfJoint="1" SN="22723" Type="io-only">
+   <Robot Name="MTML-Gripper" HardwareVersion="QLA1" NumOfActuator="1" NumOfJoint="1" SN="22723" Type="io-only">
       <Actuator ActuatorID="0" AxisID="3" BoardID="1" Type="Revolute">
          <Drive>
             <AmpsToBits Offset="32768" Scale="-5242.88"/>

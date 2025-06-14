@@ -1,6 +1,6 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "kinematic": "kinematic/PSM.json",
-    "tool_detection": "FIXED",
+    "kinematic": "kinematic/psm.json",
+    "tool-detection": "FIXED",
     "tool": "CADIERE_FORCEPS:400049"
 }

@@ -1,6 +1,6 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "kinematic": "kinematic/PSM.json",
+    "kinematic": "kinematic/psm.json",
     "generation": "Classic",
-    "tool_detection": "MANUAL"
+    "tool-detection": "MANUAL"
 }

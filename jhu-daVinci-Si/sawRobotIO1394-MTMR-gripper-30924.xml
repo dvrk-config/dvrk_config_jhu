@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Config Version="5">
-  <Robot Name="MTMR_gripper" HardwareVersion="DQLA" NumOfActuator="1" NumOfJoint="1" SN="30924" Type="io-only">
+  <Robot Name="MTMR-Gripper" HardwareVersion="DQLA" NumOfActuator="1" NumOfJoint="1" SN="30924" Type="io-only">
     <Actuator ActuatorID="0" AxisID="7" BoardID="2" Type="Revolute">
       <Drive>
         <AmpsToBits Offset="32777" Scale="-5242.8800"/>

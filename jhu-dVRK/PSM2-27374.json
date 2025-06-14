@@ -1,9 +1,9 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
     // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
-    "kinematic": "kinematic/PSM.json"
+    "kinematic": "kinematic/psm.json"
     , "generation": "Classic"
-    // , "tool_detection": "MANUAL"
-    // , "tool_detection": "FIXED"
-    , "tool_detection": "AUTOMATIC"
+    // , "tool-detection": "MANUAL"
+    // , "tool-detection": "FIXED"
+    , "tool-detection": "AUTOMATIC"
 }

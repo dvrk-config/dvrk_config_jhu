@@ -7,8 +7,8 @@
             "type": "PSM",
             "simulation": "KINEMATIC",
             "arm": "PSM_KIN_SIMULATED_CADIERE_FORCEPS_400049.json",
-            "base_frame": {
-                "reference_frame": "FD",
+            "base-frame": {
+                "reference-frame": "FD",
                 "transform": [[  1.0,  0.0,  0.0,  0.0],
                               [  0.0,  1.0,  0.0,  0.0 ],
                               [  0.0,  0.0,  1.0,  0.0 ],

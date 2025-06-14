@@ -54,8 +54,8 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "28007",
-            "base_frame": {
-                "reference_frame": "FD",
+            "base-frame": {
+                "reference-frame": "FD",
                 "transform": [[  1.0,  0.0,  0.0,  0.0],
                               [  0.0,  1.0,  0.0,  0.0 ],
                               [  0.0,  0.0,  1.0,  0.0 ],
@@ -64,18 +64,18 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "psm-teleops":
     [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM3",
+            "mtm": "MTMR",
+            "psm": "PSM3",
             "configure-parameter": {
-                "gripper_scaling": {
+                "gripper-scaling": {
                     "max": 0.492,
                     "zero": 0.35
                 },
-                "align-MTM": false,
-                "ignore_jaw": false,
+                "align-mtm": false,
+                "ignore-jaw": false,
                 "scale": 0.5
             }
         }
