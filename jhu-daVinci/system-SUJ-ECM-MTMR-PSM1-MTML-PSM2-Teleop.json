@@ -1,17 +1,17 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "io": {
-        "footpedals": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-        , "watchdog-timeout": 0.04 // in seconds
-        , "firewire-protocol": "broadcast-read-write"
-    }
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
     ,
-    "operator-present": {
-        "io": "io/sawRobotIO1394-MTMR-dv-head-sensor.xml"
-    }
-    ,
-    "endoscope-focus": {
-        "io": "io/sawRobotIO1394-MTML-dv-endoscope-focus.xml"
+    "ISI_focus_controller": {
+        "IO": "IO_1",
+        "IO_file": "io/sawRobotIO1394-MTML-dv-endoscope-focus.xml"
     }
     ,
     "arms":
@@ -19,14 +19,16 @@
         {
             "name": "SUJ",
             "type": "SUJ_Classic",
-            "io": "sawRobotIO1394-SUJ.xml",
-            "kinematic": "suj-ECM-1-2-3.json"
+            "IO": "IO_1",
+            "IO_file": "sawRobotIO1394-SUJ.xml",
+            "arm_file": "suj-ECM-1-2-3.json"
         }
         ,
         {
             "name": "PSM1",
             "type": "PSM",
             "serial": "49695",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -37,6 +39,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "32204",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
@@ -47,6 +50,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "29738",
+            "IO": "IO_1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
@@ -57,6 +61,7 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "32336",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -70,6 +75,7 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "34863",
+            "IO": "IO_1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -80,31 +86,52 @@
         }
     ]
     ,
-    "teleop_PSMs":
+    "consoles":
     [
         {
-            "MTM": "MTMR",
-            "PSM": "PSM1",
-            "PSM-base_frame": {
-                "component": "ECM",
-                "interface": "Arm"
+            "name": "console",
+            "input_type": "PEDALS_ISI_HEAD_SENSOR",
+            "IO_pedals" :
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
             }
-        }
-        ,
-        {
-            "MTM": "MTML",
-            "PSM": "PSM2",
-            "PSM-base_frame": {
-                "component": "ECM",
-                "interface": "Arm"
+            ,
+            "IO_head_sensor":
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-dv-head-sensor.xml"
             }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "PSM_base_frame": {
+                        "component": "ECM",
+                        "interface": "Arm"
+                    }
+                }
+                ,
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM2",
+                    "PSM_base_frame": {
+                        "component": "ECM",
+                        "interface": "Arm"
+                    }
+                }
+            ]
+            ,
+            "teleop_ECMs":
+            [
+                {
+                    "MTML": "MTML",
+                    "MTMR": "MTMR",
+                    "ECM": "ECM"
+                }
+            ]
         }
     ]
-    ,
-    "ECM-teleop":
-    {
-        "MTM-left": "MTML",
-        "MTM-right": "MTMR",
-        "ECM": "ECM"
-    }
 }

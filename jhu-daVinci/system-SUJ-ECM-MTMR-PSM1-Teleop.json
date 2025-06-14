@@ -1,0 +1,94 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    "IOs":
+    [
+        {
+            "name": "IO_1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
+    ,
+    "ISI_focus_controller": {
+        "IO": "IO_1",
+        "IO_file": "io/sawRobotIO1394-MTML-dv-endoscope-focus.xml"
+    }
+    ,
+    "arms":
+    [
+        {
+            "name": "SUJ",
+            "type": "SUJ_Classic",
+            "IO": "IO_1",
+            "IO_file": "sawRobotIO1394-SUJ.xml",
+            "arm_file": "suj-ECM-1-2-3.json"
+        }
+        ,
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "49695",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM1"
+            }
+        }
+        ,
+        {
+            "name": "ECM",
+            "type": "ECM",
+            "serial": "29738",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "ECM"
+            }
+        }
+        ,
+        {
+            "name": "MTMR",
+            "type": "MTM",
+            "serial": "32336",
+            "IO": "IO_1",
+            "base_frame": {
+                "reference_frame": "HRSV",
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+    ]
+    ,
+    "consoles":
+    [
+        {
+            "name": "console",
+            "input_type": "PEDALS_ISI_HEAD_SENSOR",
+            "IO_pedals" :
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "IO_head_sensor":
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTMR-dv-head-sensor.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "PSM_base_frame": {
+                        "component": "ECM",
+                        "interface": "Arm"
+                    }
+                }
+            ]
+        }
+    ]
+}
