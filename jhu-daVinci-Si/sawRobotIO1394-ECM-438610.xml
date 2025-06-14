@@ -83,8 +83,8 @@
       <Tolerance Axis="3" Distance="3.0" Latency="0.01" Unit="deg" />
     </Potentiometers>
   </Robot>
-  <DigitalIn BitID="4" BoardID="4" Debounce="0.01" Name="ECM-SUJClutch" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="13" BoardID="4" Debounce="0.01" Name="ECM-ManipClutch" Pressed="0" Trigger="all" />
-  <DigitalIn BitID="16" BoardID="4" Debounce="0.01" Name="ECM-SUJClutch2" Pressed="0" Trigger="all" />
-  <DigitalOut BitID="0" BoardID="4" Name="ECM-SUJBrake" />
+  <DigitalIn BitID="4" BoardID="4" Debounce="0.01" Name="ECM_SUJ_clutch" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="13" BoardID="4" Debounce="0.01" Name="ECM_arm_clutch" Pressed="0" Trigger="all" />
+  <DigitalIn BitID="16" BoardID="4" Debounce="0.01" Name="ECM_SUJ_clutch_2" Pressed="0" Trigger="all" />
+  <DigitalOut BitID="0" BoardID="4" Name="ECM_SUJ_brake" />
 </Config>
