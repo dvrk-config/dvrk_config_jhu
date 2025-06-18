@@ -9,11 +9,6 @@
         }
     ]
     ,
-    "operator-present":
-    {
-        "hid": "hid/goovis-hd.json"
-    }
-    ,
     "arms":
     [
         {
