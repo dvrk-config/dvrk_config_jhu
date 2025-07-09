@@ -1,0 +1,222 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    "settings": {
+        "audio_volume": 0.2,
+        "path": ["../jhu-dVRK"],
+        "chatty": true
+    }
+    ,
+    "IOs":
+    [
+        // IO for daVinci-Si system, all PSMs, ECM, MTML1 and MTMR1 + console1 use this IO
+        {
+            "name": "IO_1",
+            "port": "udpfw",
+            "protocol": "broadcast-query-read-write"
+        }
+        ,
+        // IO for dVRK system, MTML2 and MTMR2 + console2 use this IO
+        {
+            "name": "IO_2",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
+    ,
+    "arms":
+    [
+        // JHU daVinci Si
+        {
+            "name": "SUJ",
+            "type": "SUJ_Si",
+            "arm_file": "suj-si.json"
+        }
+        ,
+        {
+            "name": "ECM",
+            "type": "ECM",
+            "serial": "438610",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "ECM"
+            }
+        }
+        ,
+        {
+            "name": "MTML1",
+            "name_on_IO": "MTML",
+            "type": "MTM",
+            "serial": "28989",
+            "IO": "IO_1",
+            "base_frame": {
+                "reference_frame": "HRSV1",
+                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+        ,
+        {
+            "name": "MTMR1",
+            "name_on_IO": "MTMR",
+            "type": "MTM",
+            "serial": "30924",
+            "IO": "IO_1",
+            "base_frame": {
+                "reference_frame": "HRSV1",
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+        ,
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "292409",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM1"
+            }
+        }
+        ,
+        {
+            "name": "PSM2",
+            "type": "PSM",
+            "serial": "586288",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM2"
+            }
+        }
+        ,
+        {
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "698534",
+            "IO": "IO_1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM3"
+            }
+        }
+        ,
+        // JHU dVRK Classic
+        {
+            "name": "MTML2",
+            "name_on_IO": "MTML",
+            "type": "MTM",
+            "serial": "22723",
+            "IO": "IO_2",
+            "base_frame": {
+                "reference_frame": "HRSV2",
+                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+        ,
+        {
+            "name": "MTMR2",
+            "name_on_IO": "MTMR",
+            "type": "MTM",
+            "serial": "28247",
+            "IO": "IO_2",
+            "base_frame": {
+                "reference_frame": "HRSV2",
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        }
+    ]
+    ,
+    "consoles":
+    [
+        {
+            "name": "console1",
+            "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
+            "IO_pedals" :
+            {
+                "IO": "IO_1",
+                "IO_file": "io/sawRobotIO1394-MTML-foot-pedals.xml"
+            }
+            ,
+            "HID_file": "hid/goovis-hd.json"
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR1",
+                    "PSM": "PSM1",
+                    "configure_parameter": {
+                        "use_MTM_velocity": true // false, this just for testing - true is default
+                    }
+                }
+                ,
+                {
+                    "MTM": "MTML1",
+                    "PSM": "PSM2"
+                }
+                ,
+                {
+                    "MTM": "MTMR1",
+                    "PSM": "PSM3"
+                }
+            ]
+            ,
+            "teleop_ECMs":
+            [
+                {
+                    "MTML": "MTML1",
+                    "MTMR": "MTMR1",
+                    "ECM": "ECM"
+                }
+            ]
+        }
+        ,
+        {
+            "name": "console2",
+            "input_type": "PEDALS_ONLY",
+            "IO_pedals" :
+            {
+                "IO": "IO_2",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR2",
+                    "PSM": "PSM1"
+                }
+                ,
+                {
+                    "MTM": "MTML2",
+                    "PSM": "PSM2"
+                }
+                ,
+                {
+                    "MTM": "MTML2",
+                    "PSM": "PSM3"
+                }
+            ]
+            ,
+            "teleop_ECMs":
+            [
+                {
+                    "MTML": "MTML2",
+                    "MTMR": "MTMR2",
+                    "ECM": "ECM"
+                }
+            ]
+        }
+    ]
+}
