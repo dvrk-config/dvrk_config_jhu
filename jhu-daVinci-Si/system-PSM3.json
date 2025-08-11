@@ -1,10 +1,10 @@
 {
+    // see https://dvrk.readthedocs.io
     "IOs":
     [
         {
-            "name": "IO_1",
-            "port": "udpfw",
-            "protocol": "broadcast-query-read-write"
+            "name": "IO1",
+            "port": "fw" // or udpfw or udp
         }
     ]
     ,
@@ -14,7 +14,7 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "698534",
-            "IO": "IO_1"
+            "IO": "IO1" // defined in IOs
         }
     ]
 }

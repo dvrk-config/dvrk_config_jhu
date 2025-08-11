@@ -3,8 +3,8 @@
     "IOs":
     [
         {
-            "name": "IO_1",
-            "port": "fw"
+            "name": "IO1",
+            "port": "udpfw"
         }
     ]
     ,
@@ -13,8 +13,8 @@
         {
             "name": "SUJ",
             "type": "SUJ_Classic",
-            "IO": "IO_1",
-            "IO_file": "sawRobotIO1394-SUJ.xml",
+            "IO": "IO1",
+            "IO_file": "sawRobotIO1394-SUJ.json",
             "arm_file": "suj-ECM-1-2-3.json"
         }
     ]
