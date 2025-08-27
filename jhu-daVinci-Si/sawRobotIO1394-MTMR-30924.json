@@ -1,0 +1,447 @@
+{
+    "Version": 5,
+    "Robots": [
+        {
+            "Name": "MTMR",
+            "HardwareVersion": "DQLA",
+            "NumOfActuator": 7,
+            "NumOfJoint": 7,
+            "SerialNumber": "30924",
+            "Actuators": [
+                {
+                    "ActuatorID": 0,
+                    "AxisID": 0,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": -5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": 6.25,
+                            "Scale": -0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 0.3600544114
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.67
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": -0.001419334489828,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -65.0,
+                            "Upper": 40.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -178.23863299,
+                            "Scale": 75.62024304,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 1,
+                    "AxisID": 1,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": 5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": -6.25,
+                            "Scale": 0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 0.4577195314
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.67
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 0.001804330392943,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -18.0,
+                            "Upper": 65.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -146.47368094,
+                            "Scale": 75.2551798,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 2,
+                    "AxisID": 2,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": 5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": -6.25,
+                            "Scale": 0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 0.3822375729
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.67
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 0.001506780512305,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -15.0,
+                            "Upper": 42.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -152.77793556,
+                            "Scale": 76.29821763,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 3,
+                    "AxisID": 3,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": 5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": -6.25,
+                            "Scale": 0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 2.1681909049
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.67
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 0.008547008547009,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -120.0,
+                            "Upper": 240.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": 208.77625215,
+                            "Scale": -76.5068252,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 4,
+                    "AxisID": 4,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": 5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": -6.25,
+                            "Scale": 0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 6.0922859475
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.59
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 0.169632086851629,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -95.0,
+                            "Upper": 185.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -130.09763043,
+                            "Scale": 78.33214141,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 5,
+                    "AxisID": 5,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": 5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": -6.25,
+                            "Scale": 0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 6.0922859475
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.59
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 0.169632086851629,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -45.0,
+                            "Upper": 45.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -171.49119552,
+                            "Scale": 78.17568574,
+                            "Unit": "deg"
+                        }
+                    }
+                },
+                {
+                    "ActuatorID": 6,
+                    "AxisID": 6,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": -5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": 6.25,
+                            "Scale": -0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 17.7916315282
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.407
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": -0.339264173703257,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "FIRMWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": -475.0,
+                            "Upper": 445.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": -107.51381138,
+                            "Scale": 40.05265287,
+                            "Unit": "deg"
+                        }
+                    }
+                }
+            ],
+            "Potentiometers": {
+                "Tolerances": [
+                    {
+                        "Axis": 0,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 1,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 2,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 3,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 4,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 5,
+                        "Distance": 5.0,
+                        "Latency": 0.01,
+                        "Unit": "deg"
+                    },
+                    {
+                        "Axis": 6,
+                        "Distance": 0.0,
+                        "Latency": 0.0,
+                        "Unit": "deg"
+                    }
+                ],
+                "JointToActuatorPosition": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.6697,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ]
+            }
+        }
+    ]
+}

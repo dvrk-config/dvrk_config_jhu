@@ -13,9 +13,9 @@
     "arms":
     [
         {
-            "name": "ECM",
-            "type": "ECM",
-            "serial": "29738",
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "334809",
             "IO": "IO1" // defined in IOs
         }
     ]

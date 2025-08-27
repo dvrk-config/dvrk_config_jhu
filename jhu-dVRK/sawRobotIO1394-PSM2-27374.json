@@ -1,0 +1,455 @@
+{
+    "$id:" : "saw-robot-io.schema.json",
+    "$version" : 6,
+    "dallas_chips" : 
+    [
+        {
+            "board_id" : 9,
+            "name" : "PSM2_dallas"
+        }
+    ],
+    "digital_inputs" : 
+    [
+        {
+            "bit_id" : 0,
+            "board_id" : 8,
+            "debounce_time" : 0.20000000000000001,
+            "name" : "PSM2_SUJ_clutch",
+            "pressed" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 2,
+            "board_id" : 8,
+            "debounce_time" : 0.20000000000000001,
+            "name" : "PSM2_arm_clutch",
+            "pressed" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 7,
+            "board_id" : 9,
+            "debounce_time" : 0.20000000000000001,
+            "name" : "PSM2_tool",
+            "pressed" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 10,
+            "board_id" : 9,
+            "debounce_time" : 0.20000000000000001,
+            "name" : "PSM2_adapter",
+            "pressed" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        }
+    ],
+    "robots" : 
+    [
+        {
+            "actuators" : 
+            [
+                {
+                    "actuator_id" : 0,
+                    "axis_id" : 0,
+                    "board_id" : 8,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : 6.2542047045969893,
+                            "scale" : -0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32812.885299302645,
+                            "scale" : -5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 0.40408938459999999
+                        },
+                        "maximum_current" : 1.3400000000000001
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : -7.7226958050000005e-06
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -1.5882496193148399,
+                            "upper" : 1.5882496193148399
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 1.735579,
+                            "scale" : -0.77368888999999996
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 1,
+                    "axis_id" : 1,
+                    "board_id" : 8,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : 6.2623295538234434,
+                            "scale" : -0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32820.023621967593,
+                            "scale" : -5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 0.40408938459999999
+                        },
+                        "maximum_current" : 1.3400000000000001
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : -7.7226958050000005e-06
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -0.92502450355699462,
+                            "upper" : 0.92502450355699462
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 1.1873940000000001,
+                            "scale" : -0.51154489000000003
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 2,
+                    "axis_id" : 2,
+                    "board_id" : 8,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : -6.2507525531443759,
+                            "scale" : 0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32851.62170453932,
+                            "scale" : 5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 0.067828432100000002
+                        },
+                        "maximum_current" : 0.67000000000000004
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : 1.296293265e-06
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : 0.0,
+                            "upper" : 0.23999999999999999
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "PRISMATIC",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : -0.014153000000000001,
+                            "scale" : 0.060074669999999997
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 3,
+                    "axis_id" : 3,
+                    "board_id" : 8,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : 6.2382746435400058,
+                            "scale" : -0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32835.245519472817,
+                            "scale" : -5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 1.9497053995
+                        },
+                        "maximum_current" : 0.67000000000000004
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : -0.000134141445499
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -3.0368728984701332,
+                            "upper" : 3.0368728984701332
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 3.0777030000000001,
+                            "scale" : -1.3680639999999999
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 4,
+                    "axis_id" : 0,
+                    "board_id" : 9,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : 6.288646872912607,
+                            "scale" : -0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32942.966107857967,
+                            "scale" : -5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 1.9497053995
+                        },
+                        "maximum_current" : 0.67000000000000004
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : -0.000134141445499
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -3.0368728984701332,
+                            "upper" : 3.0368728984701332
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 3.0823710000000002,
+                            "scale" : -1.35896178
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 5,
+                    "axis_id" : 1,
+                    "board_id" : 9,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : -6.2824125921597291,
+                            "scale" : 0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 33016.337749237035,
+                            "scale" : 5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 1.9497053995
+                        },
+                        "maximum_current" : 0.67000000000000004
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : 0.000134141445499
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -3.0368728984701332,
+                            "upper" : 3.0368728984701332
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 3.0529449999999998,
+                            "scale" : -1.36624356
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 6,
+                    "axis_id" : 2,
+                    "board_id" : 9,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : -6.3025460877029822,
+                            "scale" : 0.00019073500000000001
+                        },
+                        "current_to_bits" : 
+                        {
+                            "offset" : 33152.914029912172,
+                            "scale" : 5242.8800000000001
+                        },
+                        "effort_to_current" : 
+                        {
+                            "scale" : 1.9497053995
+                        },
+                        "maximum_current" : 0.67000000000000004
+                    },
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : 0.000134141445499
+                        },
+                        "position_limits_soft" : 
+                        {
+                            "lower" : -3.0368728984701332,
+                            "upper" : 3.0368728984701332
+                        },
+                        "velocity_source" : "FIRMWARE"
+                    },
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.866455078125e-05
+                        },
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 3.1402730000000001,
+                            "scale" : -1.38626844
+                        }
+                    }
+                }
+            ],
+            "hardware_version" : "QLA1",
+            "name" : "PSM2",
+            "number_of_actuators" : 7,
+            "number_of_brakes" : 0,
+            "potentiometers" : 
+            {
+                "potentiometers_type" : "ANALOG",
+                "tolerances" : 
+                [
+                    {
+                        "axis_id" : 0,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 1,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 2,
+                        "distance" : 0.0050000000000000001,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 3,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 4,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 5,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    },
+                    {
+                        "axis_id" : 6,
+                        "distance" : 0.087266462599716474,
+                        "latency" : 0.01
+                    }
+                ]
+            },
+            "serial_number" : "27374"
+        }
+    ]
+}

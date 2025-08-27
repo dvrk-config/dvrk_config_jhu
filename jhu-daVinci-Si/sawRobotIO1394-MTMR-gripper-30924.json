@@ -1,0 +1,61 @@
+{
+    "Version": 5,
+    "Robots": [
+        {
+            "Name": "MTMR_gripper",
+            "HardwareVersion": "DQLA",
+            "NumOfActuator": 1,
+            "NumOfJoint": 1,
+            "SerialNumber": "30924",
+            "Actuators": [
+                {
+                    "ActuatorID": 0,
+                    "AxisID": 7,
+                    "BoardID": 2,
+                    "JointType": "REVOLUTE",
+                    "Drive": {
+                        "CurrentToBits": {
+                            "Offset": 32768.0,
+                            "Scale": -5242.88
+                        },
+                        "BitsToCurrent": {
+                            "Offset": 6.25,
+                            "Scale": -0.000190735
+                        },
+                        "EffortToCurrent": {
+                            "Scale": 0.3600544114
+                        },
+                        "MaxCurrent": {
+                            "Unit": "A",
+                            "Value": 0.0
+                        }
+                    },
+                    "Encoder": {
+                        "BitsToPosition": {
+                            "Scale": 360.0,
+                            "Unit": "deg"
+                        },
+                        "VelocitySource": "SOFTWARE",
+                        "PositionLimitsSoft": {
+                            "Lower": 0.0,
+                            "Upper": 0.0,
+                            "Unit": "deg"
+                        }
+                    },
+                    "AnalogIn": {
+                        "BitsToVolts": {
+                            "Offset": 0.0,
+                            "Scale": 6.866455078125e-05
+                        },
+                        "VoltsToPosSI": {
+                            "Offset": 300.0,
+                            "Scale": -100.0,
+                            "Unit": "deg"
+                        }
+                    }
+                }
+            ],
+            "Type": "io-only"
+        }
+    ]
+}
