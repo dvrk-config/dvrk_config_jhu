@@ -1,78 +1,34 @@
 {
     "$id:": "saw-robot-io.schema.json",
     "$version": 6,
-    "dallas_chips": [
-        {
-            "board_id": 9,
-            "name": "PSM2_dallas"
-        }
-    ],
-    "digital_inputs": [
-        {
-            "bit_id": 0,
-            "board_id": 8,
-            "debounce_time": 0.2,
-            "name": "PSM2_SUJ_clutch",
-            "pressed_value": true,
-            "trigger_when_pressed": true,
-            "trigger_when_released": true
-        },
-        {
-            "bit_id": 2,
-            "board_id": 8,
-            "debounce_time": 0.2,
-            "name": "PSM2_arm_clutch",
-            "pressed_value": true,
-            "trigger_when_pressed": true,
-            "trigger_when_released": true
-        },
-        {
-            "bit_id": 7,
-            "board_id": 9,
-            "debounce_time": 0.2,
-            "name": "PSM2_tool",
-            "pressed_value": true,
-            "trigger_when_pressed": true,
-            "trigger_when_released": true
-        },
-        {
-            "bit_id": 10,
-            "board_id": 9,
-            "debounce_time": 0.2,
-            "name": "PSM2_adapter",
-            "pressed_value": true,
-            "trigger_when_pressed": true,
-            "trigger_when_released": true
-        }
-    ],
     "robots": [
         {
             "actuators": [
                 {
                     "actuator_id": 0,
                     "axis_id": 0,
-                    "board_id": 8,
+                    "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.254399720912287,
+                            "offset": 6.222625317853868,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32814.903487232215,
+                            "offset": 32773.75956286587,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
-                            "scale": 0.4040893846
+                            "scale": 0.3600544114
                         },
-                        "maximum_current": 1.34
+                        "maximum_current": 0.67
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": -7.722695805e-06
+                            "scale": -2.4772060035e-05
                         },
                         "position_limits_soft": {
-                            "lower": -1.5882496193148399,
-                            "upper": 1.5882496193148399
+                            "lower": -1.1344640137963142,
+                            "upper": 0.6981317007977318
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -83,36 +39,36 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 1.7122173181439813,
-                            "scale": -0.7595906819044197
+                            "offset": -3.224444,
+                            "scale": 1.3038684058426966
                         }
                     }
                 },
                 {
                     "actuator_id": 1,
                     "axis_id": 1,
-                    "board_id": 8,
+                    "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.2621981125886315,
-                            "scale": -0.000190735
+                            "offset": -6.220634733067335,
+                            "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32820.30937372643,
-                            "scale": -5242.88
+                            "offset": 32757.493744077234,
+                            "scale": 5242.88
                         },
                         "effort_to_current": {
-                            "scale": 0.4040893846
+                            "scale": 0.4577195314
                         },
-                        "maximum_current": 1.34
+                        "maximum_current": 0.67
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": -7.722695805e-06
+                            "scale": 3.1491506151e-05
                         },
                         "position_limits_soft": {
-                            "lower": -0.9250245035569946,
-                            "upper": 0.9250245035569946
+                            "lower": -0.3141592653589793,
+                            "upper": 1.1344640137963142
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -123,76 +79,76 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 1.1654738909136644,
-                            "scale": -0.5011424662647981
+                            "offset": -2.50848,
+                            "scale": 1.2952421909326461
                         }
                     }
                 },
                 {
                     "actuator_id": 2,
                     "axis_id": 2,
-                    "board_id": 8,
+                    "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.25071653012989,
+                            "offset": -6.264405846929799,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32851.51048368478,
+                            "offset": 32964.42876781197,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
-                            "scale": 0.0678284321
+                            "scale": 0.3822375729
                         },
                         "maximum_current": 0.67
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": 1.296293265e-06
+                            "scale": 2.6298281045e-05
                         },
                         "position_limits_soft": {
-                            "lower": 0.0,
-                            "upper": 0.24
+                            "lower": -0.2617993877991494,
+                            "upper": 0.7330382858376184
                         },
                         "velocity_source": "FIRMWARE"
                     },
-                    "joint_type": "PRISMATIC",
+                    "joint_type": "REVOLUTE",
                     "potentiometer": {
                         "bits_to_voltage": {
                             "offset": 0.0,
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -0.009615227778624506,
-                            "scale": 0.059470477300971714
+                            "offset": -2.831874,
+                            "scale": 1.309258254158736
                         }
                     }
                 },
                 {
                     "actuator_id": 3,
                     "axis_id": 3,
-                    "board_id": 8,
+                    "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.238255273951712,
-                            "scale": -0.000190735
+                            "offset": -6.254880792428367,
+                            "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32835.8957857862,
-                            "scale": -5242.88
+                            "offset": 32934.88691051995,
+                            "scale": 5242.88
                         },
                         "effort_to_current": {
-                            "scale": 1.9497053995
+                            "scale": 2.1681909049
                         },
                         "maximum_current": 0.67
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": -0.000134141445499
+                            "scale": 0.000149173440341
                         },
                         "position_limits_soft": {
-                            "lower": -3.036872898470133,
-                            "upper": 3.036872898470133
+                            "lower": -2.0943951023931953,
+                            "upper": 4.1887902047863905
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -203,36 +159,36 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.089329955008091,
-                            "scale": -1.3726119560883274
+                            "offset": 3.935723,
+                            "scale": -1.3406639794724058
                         }
                     }
                 },
                 {
                     "actuator_id": 4,
                     "axis_id": 0,
-                    "board_id": 9,
+                    "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.288842369737163,
-                            "scale": -0.000190735
+                            "offset": -6.248799952951289,
+                            "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32944.54666787631,
-                            "scale": -5242.88
+                            "offset": 32839.182450873035,
+                            "scale": 5242.88
                         },
                         "effort_to_current": {
-                            "scale": 1.9497053995
+                            "scale": 6.0922859475
                         },
-                        "maximum_current": 0.67
+                        "maximum_current": 0.59
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": -0.000134141445499
+                            "scale": 0.00296063843259
                         },
                         "position_limits_soft": {
-                            "lower": -3.036872898470133,
-                            "upper": 3.036872898470133
+                            "lower": -1.6580627893946132,
+                            "upper": 3.2288591161895095
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -243,36 +199,36 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.0989102331979783,
-                            "scale": -1.3623092821051213
+                            "offset": -2.375138,
+                            "scale": 1.3680650226776332
                         }
                     }
                 },
                 {
                     "actuator_id": 5,
                     "axis_id": 1,
-                    "board_id": 9,
+                    "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.2824189372432775,
+                            "offset": -6.244661386014327,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 33016.37762768566,
+                            "offset": 32837.23791513905,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
-                            "scale": 1.9497053995
+                            "scale": 6.0922859475
                         },
-                        "maximum_current": 0.67
+                        "maximum_current": 0.59
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": 0.000134141445499
+                            "scale": 0.00296063843259
                         },
                         "position_limits_soft": {
-                            "lower": -3.036872898470133,
-                            "upper": 3.036872898470133
+                            "lower": -0.7853981633974483,
+                            "upper": 0.7853981633974483
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -283,36 +239,36 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.069155110269338,
-                            "scale": -1.3694230107612735
+                            "offset": -3.222258,
+                            "scale": 1.3119795823385059
                         }
                     }
                 },
                 {
                     "actuator_id": 6,
                     "axis_id": 2,
-                    "board_id": 9,
+                    "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.302717408297678,
-                            "scale": 0.000190735
+                            "offset": 6.240303118590258,
+                            "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 33153.06861582235,
-                            "scale": 5242.88
+                            "offset": 32858.36683119475,
+                            "scale": -5242.88
                         },
                         "effort_to_current": {
-                            "scale": 1.9497053995
+                            "scale": 17.7916315282
                         },
-                        "maximum_current": 0.67
+                        "maximum_current": 0.407
                     },
                     "encoder": {
                         "bits_to_position": {
-                            "scale": 0.000134141445499
+                            "scale": -0.00592127686518
                         },
                         "position_limits_soft": {
-                            "lower": -3.036872898470133,
-                            "upper": 3.036872898470133
+                            "lower": -8.290313946973065,
+                            "upper": 7.766715171374766
                         },
                         "velocity_source": "FIRMWARE"
                     },
@@ -323,18 +279,85 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.133906180847165,
-                            "scale": -1.3808385984880216
+                            "offset": 1.383157,
+                            "scale": -0.7117907033828218
                         }
                     }
                 }
             ],
             "brakes": [],
             "hardware_version": "QLA1",
-            "name": "PSM2",
+            "name": "MTMR",
             "number_of_actuators": 7,
             "number_of_brakes": 0,
             "potentiometers": {
+                "coupling": {
+                    "JointToActuatorPosition": [
+                        [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            1.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.6697,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ]
+                    ]
+                },
                 "potentiometers_type": "ANALOG",
                 "tolerances": [
                     {
@@ -349,7 +372,7 @@
                     },
                     {
                         "axis_id": 2,
-                        "distance": 0.005,
+                        "distance": 0.08726646259971647,
                         "latency": 0.01
                     },
                     {
@@ -369,12 +392,12 @@
                     },
                     {
                         "axis_id": 6,
-                        "distance": 0.08726646259971647,
-                        "latency": 0.01
+                        "distance": 0.0,
+                        "latency": 0.0
                     }
                 ]
             },
-            "serial_number": "27374"
+            "serial_number": "28247"
         }
     ]
 }

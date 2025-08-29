@@ -3,43 +3,43 @@
     "$version": 6,
     "dallas_chips": [
         {
-            "board_id": 9,
-            "name": "PSM2_dallas"
+            "board_id": 7,
+            "name": "PSM1_dallas"
         }
     ],
     "digital_inputs": [
         {
             "bit_id": 0,
-            "board_id": 8,
+            "board_id": 6,
             "debounce_time": 0.2,
-            "name": "PSM2_SUJ_clutch",
+            "name": "PSM1_SUJ_clutch",
             "pressed_value": true,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 2,
-            "board_id": 8,
+            "board_id": 6,
             "debounce_time": 0.2,
-            "name": "PSM2_arm_clutch",
+            "name": "PSM1_arm_clutch",
             "pressed_value": true,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 7,
-            "board_id": 9,
+            "board_id": 7,
             "debounce_time": 0.2,
-            "name": "PSM2_tool",
+            "name": "PSM1_tool",
             "pressed_value": true,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 10,
-            "board_id": 9,
+            "board_id": 7,
             "debounce_time": 0.2,
-            "name": "PSM2_adapter",
+            "name": "PSM1_adapter",
             "pressed_value": true,
             "trigger_when_pressed": true,
             "trigger_when_released": true
@@ -51,14 +51,14 @@
                 {
                     "actuator_id": 0,
                     "axis_id": 0,
-                    "board_id": 8,
+                    "board_id": 6,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.254399720912287,
+                            "offset": 6.295391917639751,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32814.903487232215,
+                            "offset": 33032.43877763718,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -83,22 +83,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 1.7122173181439813,
-                            "scale": -0.7595906819044197
+                            "offset": 1.7138683043787908,
+                            "scale": -0.7616248335465226
                         }
                     }
                 },
                 {
                     "actuator_id": 1,
                     "axis_id": 1,
-                    "board_id": 8,
+                    "board_id": 6,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.2621981125886315,
+                            "offset": 6.272024846956522,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32820.30937372643,
+                            "offset": 32883.35482463628,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -123,22 +123,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 1.1654738909136644,
-                            "scale": -0.5011424662647981
+                            "offset": 1.1307062307729148,
+                            "scale": -0.5006799745764942
                         }
                     }
                 },
                 {
                     "actuator_id": 2,
                     "axis_id": 2,
-                    "board_id": 8,
+                    "board_id": 6,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.25071653012989,
+                            "offset": -6.231019351428571,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32851.51048368478,
+                            "offset": 32692.516158918526,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -163,22 +163,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -0.009615227778624506,
-                            "scale": 0.059470477300971714
+                            "offset": -0.013326617598001848,
+                            "scale": 0.05883856426178845
                         }
                     }
                 },
                 {
                     "actuator_id": 3,
                     "axis_id": 3,
-                    "board_id": 8,
+                    "board_id": 6,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.238255273951712,
+                            "offset": 6.258217067391304,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32835.8957857862,
+                            "offset": 32850.61852008206,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -203,22 +203,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.089329955008091,
-                            "scale": -1.3726119560883274
+                            "offset": 3.11665986818579,
+                            "scale": -1.371624313641449
                         }
                     }
                 },
                 {
                     "actuator_id": 4,
                     "axis_id": 0,
-                    "board_id": 9,
+                    "board_id": 7,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.288842369737163,
+                            "offset": 6.249977904534162,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32944.54666787631,
+                            "offset": 32912.7366212718,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -243,22 +243,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.0989102331979783,
-                            "scale": -1.3623092821051213
+                            "offset": 3.121538337779708,
+                            "scale": -1.3711852167462315
                         }
                     }
                 },
                 {
                     "actuator_id": 5,
                     "axis_id": 1,
-                    "board_id": 9,
+                    "board_id": 7,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.2824189372432775,
+                            "offset": -6.2481960355590065,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 33016.37762768566,
+                            "offset": 32827.63245828207,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -283,22 +283,22 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.069155110269338,
-                            "scale": -1.3694230107612735
+                            "offset": 3.0745305411875448,
+                            "scale": -1.3826942105528806
                         }
                     }
                 },
                 {
                     "actuator_id": 6,
                     "axis_id": 2,
-                    "board_id": 9,
+                    "board_id": 7,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.302717408297678,
+                            "offset": -6.24314010121118,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 33153.06861582235,
+                            "offset": 32831.47358329311,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -323,15 +323,15 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.133906180847165,
-                            "scale": -1.3808385984880216
+                            "offset": 3.1034752041602522,
+                            "scale": -1.3747480703420276
                         }
                     }
                 }
             ],
             "brakes": [],
             "hardware_version": "QLA1",
-            "name": "PSM2",
+            "name": "PSM1",
             "number_of_actuators": 7,
             "number_of_brakes": 0,
             "potentiometers": {
@@ -364,17 +364,17 @@
                     },
                     {
                         "axis_id": 5,
-                        "distance": 0.08726646259971647,
-                        "latency": 0.01
+                        "distance": 0.1,
+                        "latency": 0.05
                     },
                     {
                         "axis_id": 6,
-                        "distance": 0.08726646259971647,
-                        "latency": 0.01
+                        "distance": 0.15,
+                        "latency": 0.5
                     }
                 ]
             },
-            "serial_number": "27374"
+            "serial_number": "28007"
         }
     ]
 }
