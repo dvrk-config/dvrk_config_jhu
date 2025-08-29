@@ -1,59 +1,117 @@
-/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
-    "IOs":
+    "$id" : "dvrk-system.schema.json",
+    "$version" : 1,
+    "IOs" : 
     [
         {
-            "name": "IO_1",
-            "port": "fw"
+            "name" : "IO",
+            "port" : "fw",
+            "protocol" : "broadcast-read-write"
         }
-    ]
-    ,
-    "arms":
+    ],
+    "arms" : 
     [
         {
-            "name": "PSM2",
-            "type": "PSM",
-            "serial": "27374",
-            "IO": "IO_1",
-            "base_frame": {
-                "reference_frame": "ECM",
-                "transform": [[  1.0,  0.0,          0.0,          0.20],
-                              [  0.0, -0.866025404,  0.5,          0.0 ],
-                              [  0.0, -0.5,         -0.866025404,  0.0 ],
-                              [  0.0,  0.0,          0.0,          1.0 ]]
-            }
-        }
-        ,
-        {
-            "name": "MTML",
-            "type": "MTM",
-            "serial": "22723",
-            "IO": "IO_1",
-            "base_frame": {
-                "reference_frame": "HRSV",
-                "transform": [[ -1.0,  0.0,          0.0,          0.180],
-                              [  0.0,  0.866025404,  0.5,          0.400],
-                              [  0.0,  0.5,         -0.866025404,  0.475],
-                              [  0.0,  0.0,          0.0,          1.0]]
-            }
-        }
-    ]
-    ,
-    "consoles": [
-        {
-            "name": "console_1",
-            "input_type": "PEDALS_ONLY",
-            "IO_pedals" :
+            "IO" : "IO",
+            "IO_file" : "/home/adeguet1/io_ws/src/dvrk/dvrk_config_jhu/jhu-dVRK/sawRobotIO1394-MTML-22723.json",
+            "IO_gripper_file" : "/home/adeguet1/io_ws/src/dvrk/dvrk_config_jhu/jhu-dVRK/sawRobotIO1394-MTML-gripper-22723.json",
+            "arm_file" : "/home/adeguet1/io_ws/src/dvrk/dvrk_config_jhu/jhu-dVRK/MTML-22723.json",
+            "base_frame" : 
             {
-                "IO": "IO_1",
-                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
-            }
-            ,
-            "teleop_PSMs":
+                "reference_frame" : "HRSV",
+                "transform" : 
+                [
+                    [
+                        -1.0,
+                        -8.6595605623549329e-17,
+                        8.6595605623549341e-17,
+                        0.0
+                    ],
+                    [
+                        6.1629758220391547e-33,
+                        0.70710678118654746,
+                        0.70710678118654757,
+                        0.40000000000000002
+                    ],
+                    [
+                        -1.2246467991473535e-16,
+                        0.70710678118654757,
+                        -0.70710678118654746,
+                        0.47499999999999998
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ]
+            },
+            "name" : "MTML",
+            "serial" : "22723",
+            "type" : "MTM"
+        },
+        {
+            "IO" : "IO",
+            "IO_file" : "/home/adeguet1/io_ws/src/dvrk/dvrk_config_jhu/jhu-dVRK/sawRobotIO1394-PSM2-27374.json",
+            "arm_file" : "/home/adeguet1/io_ws/src/dvrk/dvrk_config_jhu/jhu-dVRK/PSM2-27374.json",
+            "base_frame" : 
+            {
+                "reference_frame" : "ECM",
+                "transform" : 
+                [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        -0.70710678118654746,
+                        0.70710678118654768,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        -0.70710678118654768,
+                        -0.70710678118654746,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ]
+            },
+            "name" : "PSM2",
+            "serial" : "27374",
+            "type" : "PSM"
+        }
+    ],
+    "consoles" : 
+    [
+        {
+            "HID_file" : "hid/goovis-hd.json",
+            "IO_pedals" : 
+            {
+                "IO" : "IO",
+                "IO_file" : "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
+            },
+            "input_type" : "PEDALS_GOOVIS_HEAD_SENSOR",
+            "name" : "Console",
+            "teleop_ECMs" : [],
+            "teleop_PSMs" : 
             [
                 {
-                    "MTM": "MTML",
-                    "PSM": "PSM2"
+                    "MTM" : "MTML",
+                    "PSM" : "PSM2",
+                    "configure_parameter" : 
+                    {
+                        "scale" : 0.5
+                    }
                 }
             ]
         }

@@ -47,7 +47,7 @@
             "input_type": "PEDALS_ONLY",
             "IO_pedals": {
                 "IO": "IO_1",
-                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals.xml"
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
             }
             ,
             "teleop_PSMs":

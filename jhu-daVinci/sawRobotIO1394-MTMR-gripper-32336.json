@@ -1,0 +1,57 @@
+{
+    "$id:": "saw-robot-io.schema.json",
+    "$version": 6,
+    "robots": [
+        {
+            "name": "MTMR_gripper",
+            "hardware_version": "QLA1",
+            "number_of_actuators": 1,
+            "number_of_brakes": 0,
+            "serial_number": "32336",
+            "actuators": [
+                {
+                    "actuator_id": 0,
+                    "axis_id": 3,
+                    "board_id": 3,
+                    "joint_type": "REVOLUTE",
+                    "drive": {
+                        "current_to_bits": {
+                            "offset": 32768.0,
+                            "scale": -5242.88
+                        },
+                        "bits_to_current": {
+                            "offset": 6.25,
+                            "scale": -0.000190735
+                        },
+                        "effort_to_current": {
+                            "scale": 0.3600544114
+                        },
+                        "maximum_current": 0.0
+                    },
+                    "encoder": {
+                        "bits_to_position": {
+                            "scale": 6.283185307179586
+                        },
+                        "velocity_source": "SOFTWARE",
+                        "position_limits_soft": {
+                            "lower": 0.0,
+                            "upper": 0.0
+                        }
+                    },
+                    "potentiometer": {
+                        "bits_to_voltage": {
+                            "offset": 0.0,
+                            "scale": 6.866455078125e-05
+                        },
+                        "voltage_to_position": {
+                            "offset": 300.0,
+                            "scale": -100.0
+                        }
+                    }
+                }
+            ],
+            "brakes": [],
+            "type": "io-only"
+        }
+    ]
+}

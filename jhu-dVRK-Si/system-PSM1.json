@@ -13,9 +13,9 @@
     "arms":
     [
         {
-            "name": "PSM2",
+            "name": "PSM1",
             "type": "PSM",
-            "serial": "27374",
+            "serial": "334809",
             "IO": "IO1" // defined in IOs
         }
     ]

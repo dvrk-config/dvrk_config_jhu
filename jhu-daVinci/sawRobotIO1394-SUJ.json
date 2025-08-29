@@ -1,0 +1,216 @@
+{
+    "$id:" : "saw-robot-io.schema.json",
+    "$version" : 6,
+    "digital_inputs" :
+    [
+        {
+            "bit_id" : 0,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "SUJ_clutch_1",
+            "pressed_value" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 1,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "SUJ_clutch_2",
+            "pressed_value" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 2,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "SUJ_clutch_3",
+            "pressed_value" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 3,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "SUJ_clutch_4",
+            "pressed_value" : true,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 4,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "motor_up",
+            "pressed_value" : false,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        },
+        {
+            "bit_id" : 5,
+            "board_id" : 12,
+            "debounce_time" : 0.10000000000000001,
+            "name" : "motor_down",
+            "pressed_value" : false,
+            "trigger_when_pressed" : true,
+            "trigger_when_released" : true
+        }
+    ],
+    "digital_outputs" :
+    [
+        {
+            "bit_id" : 0,
+            "board_id" : 12,
+            "is_PWM" : false,
+            "low_duration" : 0.0001,
+            "name" : "no_mux_reset"
+        },
+        {
+            "bit_id" : 1,
+            "board_id" : 12,
+            "high_duration" : 0.0001,
+            "is_PWM" : false,
+            "name" : "mux_increment"
+        },
+        {
+            "bit_id" : 2,
+            "board_id" : 12,
+            "PWM_frequency" : 40000.0,
+            "is_PWM" : true,
+            "name" : "control_PWM"
+        },
+        {
+            "bit_id" : 3,
+            "board_id" : 12,
+            "is_PWM" : false,
+            "name" : "disable_PWM"
+        }
+    ],
+    "robots" :
+    [
+        {
+            "actuators" :
+            [
+                {
+                    "actuator_id" : 0,
+                    "axis_id" : 0,
+                    "board_id" : 12,
+                    "drive" :
+                    {
+                        "bits_to_current" :
+                        {
+                            "offset" : -6.2306854212158749,
+                            "scale" : 0.000190738
+                        },
+                        "current_to_bits" :
+                        {
+                            "offset" : 32649.999274371472,
+                            "scale" : 5242.8800000000001
+                        },
+                        "maximum_current" : 2.2000000000000002
+                    },
+                    "potentiometer" :
+                    {
+                        "bits_to_voltage" :
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.8664600000000007e-05
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 1,
+                    "axis_id" : 1,
+                    "board_id" : 12,
+                    "drive" :
+                    {
+                        "bits_to_current" :
+                        {
+                            "offset" : -6.3264983574178011,
+                            "scale" : 0.000190738
+                        },
+                        "current_to_bits" :
+                        {
+                            "offset" : 33286.737543953452,
+                            "scale" : 5242.8800000000001
+                        },
+                        "maximum_current" : 2.2000000000000002
+                    },
+                    "potentiometer" :
+                    {
+                        "bits_to_voltage" :
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.8664600000000007e-05
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 2,
+                    "axis_id" : 2,
+                    "board_id" : 12,
+                    "drive" :
+                    {
+                        "bits_to_current" :
+                        {
+                            "offset" : -6.334813751881601,
+                            "scale" : 0.000190738
+                        },
+                        "current_to_bits" :
+                        {
+                            "offset" : 33251.849428783353,
+                            "scale" : 5242.8800000000001
+                        },
+                        "maximum_current" : 2.2000000000000002
+                    },
+                    "potentiometer" :
+                    {
+                        "bits_to_voltage" :
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.8664600000000007e-05
+                        }
+                    }
+                },
+                {
+                    "actuator_id" : 3,
+                    "axis_id" : 3,
+                    "board_id" : 12,
+                    "drive" :
+                    {
+                        "bits_to_current" :
+                        {
+                            "offset" : -6.3081609828361014,
+                            "scale" : 0.000190738
+                        },
+                        "current_to_bits" :
+                        {
+                            "offset" : 33084.239057369567,
+                            "scale" : 5242.8800000000001
+                        },
+                        "maximum_current" : 2.2000000000000002
+                    },
+                    "potentiometer" :
+                    {
+                        "bits_to_voltage" :
+                        {
+                            "offset" : 0.0,
+                            "scale" : 6.8664600000000007e-05
+                        }
+                    }
+                }
+            ],
+	    "potentiometers": {
+		"potentiometers_type" : "ANALOG"
+	    },
+            "hardware_version" : "QLA1",
+            "name" : "SUJ",
+            "number_of_actuators" : 4,
+            "number_of_brakes" : 0,
+	    "only_IO": true,
+            "serial_number" : "12345"
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 {
-    // see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats
+    // see https://dvrk.readthedocs.io
     "kinematic": "kinematic/PSM_Si.json"
     , "generation": "Si"
     // , "tool_detection": "MANUAL"
