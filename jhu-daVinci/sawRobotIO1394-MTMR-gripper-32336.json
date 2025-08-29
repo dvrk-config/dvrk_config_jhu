@@ -1,57 +1,74 @@
 {
-    "$id:": "saw-robot-io.schema.json",
-    "$version": 6,
-    "robots": [
+    "$id:" : "saw-robot-io.schema.json",
+    "$version" : 6,
+    "robots" : 
+    [
         {
-            "name": "MTMR_gripper",
-            "hardware_version": "QLA1",
-            "number_of_actuators": 1,
-            "number_of_brakes": 0,
-            "serial_number": "32336",
-            "actuators": [
+            "actuators" : 
+            [
                 {
-                    "actuator_id": 0,
-                    "axis_id": 3,
-                    "board_id": 3,
-                    "joint_type": "REVOLUTE",
-                    "drive": {
-                        "current_to_bits": {
-                            "offset": 32768.0,
-                            "scale": -5242.88
+                    "actuator_id" : 0,
+                    "axis_id" : 3,
+                    "board_id" : 3,
+                    "drive" : 
+                    {
+                        "bits_to_current" : 
+                        {
+                            "offset" : 6.2663769590402376,
+                            "scale" : -0.00019073500000000001
                         },
-                        "bits_to_current": {
-                            "offset": 6.25,
-                            "scale": -0.000190735
+                        "current_to_bits" : 
+                        {
+                            "offset" : 32827.559177378338,
+                            "scale" : -5242.8800000000001
                         },
-                        "effort_to_current": {
-                            "scale": 0.3600544114
+                        "effort_to_current" : 
+                        {
+                            "scale" : 0.3600544114
                         },
-                        "maximum_current": 0.0
+                        "maximum_current" : 0
                     },
-                    "encoder": {
-                        "bits_to_position": {
-                            "scale": 6.283185307179586
+                    "encoder" : 
+                    {
+                        "bits_to_position" : 
+                        {
+                            "scale" : 6.2831853071795862
                         },
-                        "velocity_source": "SOFTWARE",
-                        "position_limits_soft": {
-                            "lower": 0.0,
-                            "upper": 0.0
-                        }
+                        "position_limits_soft" : 
+                        {
+                            "lower" : 0,
+                            "upper" : 0
+                        },
+                        "velocity_source" : "SOFTWARE"
                     },
-                    "potentiometer": {
-                        "bits_to_voltage": {
-                            "offset": 0.0,
-                            "scale": 6.866455078125e-05
+                    "joint_type" : "REVOLUTE",
+                    "potentiometer" : 
+                    {
+                        "bits_to_voltage" : 
+                        {
+                            "offset" : 0,
+                            "scale" : 6.866455078125e-05
                         },
-                        "voltage_to_position": {
-                            "offset": 300.0,
-                            "scale": -100.0
+                        "voltage_to_position" : 
+                        {
+                            "offset" : 8.2827228312472805,
+                            "scale" : -2.7409992297795438
                         }
                     }
                 }
             ],
-            "brakes": [],
-            "type": "io-only"
+            "brakes" : [],
+            "hardware_version" : "QLA1",
+            "name" : "MTMR_gripper",
+            "number_of_actuators" : 1,
+            "number_of_brakes" : 0,
+            "potentiometers" : 
+            {
+                "potentiometers_type" : "ANALOG",
+                "tolerances" : null
+            },
+            "serial_number" : "32336",
+            "type" : "io-only"
         }
     ]
 }

@@ -4,7 +4,7 @@
     [
         {
             "name": "IO1",
-            "port": "udpfw"
+            "port": "fw"
         }
     ]
     ,

@@ -4,5 +4,5 @@
     "$version": "1",
     "kinematic": "kinematic/MTML.json",
     "generation": "Classic"
-    // , "gravity_compensation": "gc-MTML-34863.json"
+    , "gravity_compensation": "gc-MTML-34863.json"
 }
