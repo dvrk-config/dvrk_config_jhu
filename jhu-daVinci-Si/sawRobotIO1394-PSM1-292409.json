@@ -3,16 +3,16 @@
     "$version": 6,
     "robots": [
         {
-            "name": "PSM3",
+            "name": "PSM1",
             "hardware_version": "dRA1",
             "number_of_actuators": 7,
             "number_of_brakes": 3,
-            "serial_number": "698534",
+            "serial_number": "292409",
             "actuators": [
                 {
                     "actuator_id": 0,
                     "axis_id": 0,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -42,7 +42,7 @@
                 {
                     "actuator_id": 1,
                     "axis_id": 1,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -72,7 +72,7 @@
                 {
                     "actuator_id": 2,
                     "axis_id": 2,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "PRISMATIC",
                     "drive": {
                         "current_to_bits": {
@@ -102,7 +102,7 @@
                 {
                     "actuator_id": 3,
                     "axis_id": 3,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -132,7 +132,7 @@
                 {
                     "actuator_id": 4,
                     "axis_id": 4,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -162,7 +162,7 @@
                 {
                     "actuator_id": 5,
                     "axis_id": 5,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -192,7 +192,7 @@
                 {
                     "actuator_id": 6,
                     "axis_id": 6,
-                    "board_id": 10,
+                    "board_id": 6,
                     "joint_type": "REVOLUTE",
                     "drive": {
                         "current_to_bits": {
@@ -223,7 +223,7 @@
             "brakes": [
                 {
                     "axis_id": 7,
-                    "board_id": 10,
+                    "board_id": 6,
                     "drive": {
                         "current_to_bits": {
                             "offset": 32768.0,
@@ -242,7 +242,7 @@
                 },
                 {
                     "axis_id": 8,
-                    "board_id": 10,
+                    "board_id": 6,
                     "drive": {
                         "current_to_bits": {
                             "offset": 32768.0,
@@ -261,7 +261,7 @@
                 },
                 {
                     "axis_id": 9,
-                    "board_id": 10,
+                    "board_id": 6,
                     "drive": {
                         "current_to_bits": {
                             "offset": -32768.0,
@@ -318,58 +318,58 @@
                         "latency": 0.01
                     }
                 ],
-                "lookup_table_file": "sawRobotIO1394-PSM3-698534-PotentiometerLookupTable.json"
+                "lookup_table_file": "sawRobotIO1394-PSM1-292409-PotentiometerLookupTable.json"
             }
         }
     ],
     "dallas_chips": [
         {
-            "board_id": 10,
-            "name": "PSM3_dallas"
+            "board_id": 6,
+            "name": "PSM1_dallas"
         }
     ],
     "digital_inputs": [
         {
             "bit_id": 1,
-            "board_id": 10,
+            "board_id": 6,
             "debounce_time": 0.01,
-            "name": "PSM3_SUJ_clutch_2",
+            "name": "PSM1_SUJ_clutch_2",
             "pressed_value": false,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 4,
-            "board_id": 10,
+            "board_id": 6,
             "debounce_time": 0.01,
-            "name": "PSM3_SUJ_clutch",
+            "name": "PSM1_SUJ_clutch",
             "pressed_value": false,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 9,
-            "board_id": 10,
+            "board_id": 6,
             "debounce_time": 1.5,
-            "name": "PSM3_tool",
+            "name": "PSM1_tool",
             "pressed_value": false,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 10,
-            "board_id": 10,
+            "board_id": 6,
             "debounce_time": 1.6,
-            "name": "PSM3_adapter",
+            "name": "PSM1_adapter",
             "pressed_value": false,
             "trigger_when_pressed": true,
             "trigger_when_released": true
         },
         {
             "bit_id": 13,
-            "board_id": 10,
+            "board_id": 6,
             "debounce_time": 0.01,
-            "name": "PSM3_arm_clutch",
+            "name": "PSM1_arm_clutch",
             "pressed_value": false,
             "trigger_when_pressed": true,
             "trigger_when_released": true
@@ -378,8 +378,8 @@
     "digital_outputs": [
         {
             "bit_id": 0,
-            "board_id": 10,
-            "name": "PSM3_SUJ_brake"
+            "board_id": 6,
+            "name": "PSM1_SUJ_brake"
         }
     ]
 }

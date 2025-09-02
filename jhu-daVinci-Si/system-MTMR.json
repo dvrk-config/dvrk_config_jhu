@@ -1,10 +1,12 @@
 {
     // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
             "name": "IO1",
-            "port": "fw" // or udpfw or udp
+            "port": "udpfw" // fw, udpfw or udp
         }
     ]
     ,

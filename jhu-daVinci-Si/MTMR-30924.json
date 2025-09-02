@@ -1,6 +1,8 @@
 {
     // see https://dvrk.readthedocs.io
-    "kinematic": "kinematic/MTMR.json"
-    , "generation": "Classic"
-    // , "gravity_compensation": "gc-MTMR-30924.json"
+    "$id": "",
+    "$version": "1",
+    "kinematic": "kinematic/MTMR.json",
+    "generation": "Classic"
+    , "gravity_compensation": "gc-MTMR-30924.json"
 }

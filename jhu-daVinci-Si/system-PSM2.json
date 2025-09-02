@@ -1,10 +1,12 @@
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
-            "name": "IO_1",
-            "port": "udpfw",
-            "protocol": "broadcast-query-read-write"
+            "name": "IO1",
+            "port": "udpfw" // fw, udpfw or udp
         }
     ]
     ,
@@ -14,7 +16,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
-            "IO": "IO_1"
+            "IO": "IO1" // defined in IOs
         }
     ]
 }

@@ -8,18 +8,18 @@
             [
                 {
                     "actuator_id" : 0,
-                    "axis_id" : 7,
-                    "board_id" : 2,
+                    "axis_id" : 3,
+                    "board_id" : 1,
                     "drive" : 
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : 6.226395587383359,
+                            "offset" : 6.2647676892124569,
                             "scale" : -0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 32777.86705134681,
+                            "offset" : 32878.348286904911,
                             "scale" : -5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -51,15 +51,15 @@
                         },
                         "voltage_to_position" : 
                         {
-                            "offset" : 30,
-                            "scale" : -2
+                            "offset" : 9.71043782689698,
+                            "scale" : -3.2324967601724
                         }
                     }
                 }
             ],
             "brakes" : [],
-            "hardware_version" : "DQLA",
-            "name" : "MTMR_gripper",
+            "hardware_version" : "QLA1",
+            "name" : "MTML_gripper",
             "number_of_actuators" : 1,
             "number_of_brakes" : 0,
             "potentiometers" : 
@@ -67,7 +67,7 @@
                 "potentiometers_type" : "ANALOG",
                 "tolerances" : null
             },
-            "serial_number" : "30924",
+            "serial_number" : "28989",
             "type" : "io-only"
         }
     ]
