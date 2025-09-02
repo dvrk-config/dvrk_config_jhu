@@ -1,6 +1,6 @@
 {
     // see https://dvrk.readthedocs.io
-    "$id": "",
+    "$id": "dvrk-arm.schema.json",
     "$version": "1",
     "kinematic": "kinematic/PSM_Si.json",
     "generation": "Si"

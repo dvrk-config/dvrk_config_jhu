@@ -1,9 +1,12 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "fw",
             "protocol": "broadcast-query-read-write"
         }
@@ -14,8 +17,8 @@
         {
             "name": "SUJ",
             "type": "SUJ_Classic",
-            "IO": "IO_1",
-            "IO_file": "sawRobotIO1394-SUJ.xml",
+            "IO": "IO1",
+            "IO_file": "sawRobotIO1394-SUJ.json",
             "arm_file": "suj-ECM-1-2-3.json"
         }
         ,
@@ -23,7 +26,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "49695",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -34,7 +37,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "29738",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"

@@ -18,5 +18,6 @@
             "serial": "334809",
             "IO": "IO1" // defined in IOs
         }
-    ]
+    ],
+    "consoles" : []
 }

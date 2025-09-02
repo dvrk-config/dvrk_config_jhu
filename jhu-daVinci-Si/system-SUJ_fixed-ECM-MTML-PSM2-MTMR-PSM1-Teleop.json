@@ -1,9 +1,12 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "udpfw",
             "protocol": "broadcast-query-read-write"
         }
@@ -22,7 +25,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
@@ -33,7 +36,7 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "28989",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -47,7 +50,7 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "30924",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -61,7 +64,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "292409",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -72,7 +75,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
@@ -87,7 +90,7 @@
             "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
             "IO_pedals" :
             {
-                "IO": "IO_1",
+                "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
             }
             ,

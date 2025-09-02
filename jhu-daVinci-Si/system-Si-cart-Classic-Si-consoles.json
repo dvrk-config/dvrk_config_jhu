@@ -1,5 +1,8 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "settings": {
         "audio_volume": 0.2,
         "path": ["../jhu-dVRK"],
@@ -10,14 +13,14 @@
     [
         // IO for daVinci-Si system, all PSMs, ECM, MTML1 and MTMR1 + console1 use this IO
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "udpfw",
             "protocol": "broadcast-query-read-write"
         }
         ,
         // IO for dVRK system, MTML2 and MTMR2 + console2 use this IO
         {
-            "name": "IO_2",
+            "name": "IO2",
             "port": "fw",
             "protocol": "broadcast-query-read-write"
         }
@@ -36,7 +39,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "438610",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
@@ -48,7 +51,7 @@
             "name_on_IO": "MTML",
             "type": "MTM",
             "serial": "28989",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV1",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -63,7 +66,7 @@
             "name_on_IO": "MTMR",
             "type": "MTM",
             "serial": "30924",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV1",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -77,7 +80,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "292409",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -88,7 +91,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "586288",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
@@ -99,7 +102,7 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "698534",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM3"
@@ -112,7 +115,7 @@
             "name_on_IO": "MTML",
             "type": "MTM",
             "serial": "22723",
-            "IO": "IO_2",
+            "IO": "IO2",
             "base_frame": {
                 "reference_frame": "HRSV2",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -127,7 +130,7 @@
             "name_on_IO": "MTMR",
             "type": "MTM",
             "serial": "28247",
-            "IO": "IO_2",
+            "IO": "IO2",
             "base_frame": {
                 "reference_frame": "HRSV2",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -145,7 +148,7 @@
             "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
             "IO_pedals" :
             {
-                "IO": "IO_1",
+                "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
             }
             ,
@@ -187,7 +190,7 @@
             "input_type": "PEDALS_ONLY",
             "IO_pedals" :
             {
-                "IO": "IO_2",
+                "IO": "IO2",
                 "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
             }
             ,

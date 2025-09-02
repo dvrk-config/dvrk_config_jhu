@@ -1,16 +1,19 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "fw",
             "protocol": "broadcast-query-read-write"
         }
     ]
     ,
     "ISI_focus_controller": {
-        "IO": "IO_1",
+        "IO": "IO1",
         "IO_file": "io/sawRobotIO1394-MTML-dv-endoscope-focus.json"
     }
     ,
@@ -19,7 +22,7 @@
         {
             "name": "SUJ",
             "type": "SUJ_Classic",
-            "IO": "IO_1",
+            "IO": "IO1",
             "IO_file": "sawRobotIO1394-SUJ.json",
             "arm_file": "suj-ECM-1-2-3.json"
         }
@@ -28,7 +31,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "49695",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM1"
@@ -39,7 +42,7 @@
             "name": "PSM2",
             "type": "PSM",
             "serial": "32204",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM2"
@@ -50,7 +53,7 @@
             "name": "PSM3",
             "type": "PSM",
             "serial": "28613",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "PSM3"
@@ -61,7 +64,7 @@
             "name": "ECM",
             "type": "ECM",
             "serial": "29738",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
@@ -72,7 +75,7 @@
             "name": "MTMR",
             "type": "MTM",
             "serial": "32336",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
@@ -86,7 +89,7 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "34863",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -104,13 +107,13 @@
             "input_type": "PEDALS_ISI_HEAD_SENSOR",
             "IO_pedals" :
             {
-                "IO": "IO_1",
+                "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
             }
             ,
             "IO_head_sensor":
             {
-                "IO": "IO_1",
+                "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTMR-dv-head-sensor.json"
             }
             ,

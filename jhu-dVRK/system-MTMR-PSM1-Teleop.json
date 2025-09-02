@@ -1,9 +1,12 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
     "IOs":
     [
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "fw",
             "protocol": "broadcast-query-read-write"
         }
@@ -14,7 +17,7 @@
         {
             "name": "PSM1",
             "type": "PSM",
-            "IO": "IO_1",
+            "IO": "IO1",
             "serial": "28007",
             "base_frame": {
                 "reference_frame": "ECM",
@@ -28,7 +31,7 @@
         {
             "name": "MTMR",
             "type": "MTM",
-            "IO": "IO_1",
+            "IO": "IO1",
             "serial": "28247",
             "base_frame": {
                 "reference_frame": "HRSV",
@@ -46,7 +49,7 @@
             "name": "console1",
             "input_type": "PEDALS_ONLY",
             "IO_pedals": {
-                "IO": "IO_1",
+                "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
             }
             ,

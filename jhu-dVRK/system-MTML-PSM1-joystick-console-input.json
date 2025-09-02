@@ -1,5 +1,8 @@
 /* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 {
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
      "component_manager": {
         "components":
         [
@@ -17,7 +20,7 @@
     "IOs":
     [
         {
-            "name": "IO_1",
+            "name": "IO1",
             "port": "fw",
             "protocol": "broadcast-query-read-write"
         }
@@ -29,7 +32,7 @@
             "name": "MTML",
             "type": "MTM",
             "serial": "22723",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,          0.180],
@@ -43,7 +46,7 @@
             "name": "PSM1",
             "type": "PSM",
             "serial": "28007",
-            "IO": "IO_1",
+            "IO": "IO1",
             "base_frame": {
                 "reference_frame": "ECM",
                 "transform": [[  1.0,  0.0,          0.0,         -0.20],
