@@ -1,0 +1,23 @@
+{
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "IOs":
+    [
+        {
+            "name": "IO1",
+            "port": "fw", // fw, udpfw or udp,
+	    "configuration_files": ["sawRobotIO1394-PSM2-contact-sensor.json"]
+        }
+    ]
+    ,
+    "arms":
+    [
+        {
+            "name": "PSM2",
+            "type": "PSM",
+            "serial": "27374",
+            "IO": "IO1" // defined in IOs
+        }
+    ]
+}
