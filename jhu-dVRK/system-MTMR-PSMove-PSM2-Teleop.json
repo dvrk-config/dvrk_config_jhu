@@ -1,0 +1,94 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "component_manager": {
+        "components":
+        [
+            {
+                "shared-library": "sawPSMove",
+                "class-name": "mtsPSMove",
+                "constructor-arg": {
+                    "Name": "PSMove",
+                    "Period": 0.001
+                },
+                "configure-parameter": "system/sawPSMove-camera-MTMs.json"
+            }
+        ]
+    }
+    ,
+    "IOs":
+    [
+        {
+            "name": "IO1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
+    ,
+    "arms":
+    [
+        {
+            "name": "PSM2",
+            "type": "PSM",
+            "serial": "27374",
+            "IO": "IO1"
+            //,
+            // "base_frame": {
+            //     "reference_frame": "ECM",
+            //     "transform": [[  1.0,  0.0,          0.0,          0.20],
+            //                   [  0.0, -0.866025404,  0.5,          0.0 ],
+            //                   [  0.0, -0.5,         -0.866025404,  0.0 ],
+            //                   [  0.0,  0.0,          0.0,          1.0 ]]
+            // }
+        }
+        ,
+        {
+            "name": "MTMR",  // created previously using custom components
+            "type": "MTM_GENERIC",
+            "component": "PSMove",
+            "interface": "MTMR"
+        }
+    ]
+    ,
+    "consoles":
+    [
+        {
+            "name": "console",
+            "input_type": "COMPONENTS",
+            "operator_present" :
+            {
+                "component": "PSMove",
+                "interface": "MTMR/move"
+            }
+            ,
+            "clutch" :
+            {
+                "component": "PSMove",
+                "interface": "MTMR/circle"
+            }
+            ,
+            "camera" :
+            {
+                "component": "PSMove",
+                "interface": "MTMR/cross"
+            }
+            ,
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM2",
+                    "configure_parameter": {
+                        "scale": 0.1,
+                        "start_gripper_threshold": 0.0, // to start automatically when operator is present
+                        "align_MTM": false,
+                        "MTM_is_haptic": false,
+                        "use_MTM_velocity": false
+                    }
+                }
+            ]
+        }
+    ]
+}
