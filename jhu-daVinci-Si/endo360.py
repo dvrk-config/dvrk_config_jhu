@@ -28,11 +28,92 @@ import time
 
 # example of application using arm.py
 class example_application:
-    def __init__(self, ral, arm_name):
-        print('> configuring dvrk_psm_test for {}'.format(arm_name))
+
+
+    def __init__(self, ral, IO_name, console_name, MTM_name, PSM_name):
+        print('> configuring endo for {}'.format(PSM_name))
         self.ral = ral
-        self.arm = dvrk.psm(ral = ral,
-                            arm_name = arm_name)
+        self.PSM = dvrk.psm(ral = ral,
+                            arm_name = PSM_name)
+        self.system = dvrk.system(ral = ral)
+        self.console = dvrk.console(ral = ral,
+                                    console_name = console_name)
+        self.teleop_name = MTM_name + '_' + PSM_name
+        self.ready = False
+        self.running = False
+        self.full_drive_trigger = False
+
+        self.range = 265.0
+        self.rest = 20.0
+        self.center = 7.0
+        self.grab = (self.center - self.range / 2.0) * math.pi / 180.0
+        self.start = self.grab + (self.rest * math.pi / 180.0)
+        self.end = (self.center + self.range / 2.0) * math.pi / 180.0
+
+        self.coag = crtk.joystick_button(ral, 'IO/' + IO_name + '/coag', 0)
+        self.coag.set_callback(self.coag_callback)
+        self.clutch = crtk.joystick_button(ral, 'IO/' + IO_name + '/clutch', 0)
+        self.clutch.set_callback(self.clutch_callback)
+
+
+    def clutch_callback(self, value):
+        self.update_state()
+
+
+    def coag_callback(self, value):
+        self.update_state()
+
+
+    def update_state(self):
+        print(f'clutch: {self.clutch.value()}, coag: {self.coag.value()}')
+        if self.clutch.value() == 1 and self.coag.value() == 1:
+            self.running = True
+
+
+    def full_drive(self):
+        ts = 0.0
+        while ts == 0.0:
+            jp, ts = self.PSM.jaw.setpoint_jp()
+            print('.')
+        goal = numpy.copy(jp)
+        goal[0] = self.grab
+        print('grab')
+        self.PSM.jaw.move_jp(goal).wait()
+        self.system.beep(0.2, 3000.0)
+        goal[0] = self.end
+        print('end')
+        self.PSM.jaw.move_jp(goal).wait()
+        self.system.beep(0.2, 3500.0)
+        goal[0] = self.grab
+        print('grab')
+        self.PSM.jaw.move_jp(goal).wait()
+        self.system.beep(0.2, 3000.0)
+        goal[0] = self.end
+        print('end')
+        self.PSM.jaw.move_jp(goal).wait()
+        self.system.beep(0.2, 3500.0)
+        goal[0] = self.start
+        print('start')
+        self.PSM.jaw.move_jp(goal).wait()
+        self.system.beep(0.5, 4000.0)
+
+
+    def half_drive(self):
+        ts = 0.0
+        while ts == 0.0:
+            jp, ts = self.PSM.jaw.setpoint_jp()
+            print('.')
+        goal = numpy.copy(jp)
+        goal[0] = self.grab
+        print('grab')
+        self.PSM.jaw.move_jp(goal).wait()
+        goal[0] = self.end
+        print('end')
+        self.PSM.jaw.move_jp(goal).wait()
+        goal[0] = self.start
+        print('start')
+        self.PSM.jaw.move_jp(goal).wait()
+
 
     # main method
     def run(self):
@@ -41,41 +122,15 @@ class example_application:
 
         done = False
 
-        jp, _ = self.arm.jaw.setpoint_jp()
-        goal = numpy.copy(jp)
-
-        # self.arm.move_jp(goal).wait()
-
-        range = 265
-        rest = 20
-        center = 7
-        grab = (center - range / 2.0) * math.pi / 180.0
-        start = grab + (rest * math.pi / 180.0)
-        end = (center + range / 2.0) * math.pi / 180.0
         while not done:
-            i = input('Press "q", "1" or "2" and [enter] to continue\n')
-            if i == 'q':
-                done = True
-            elif i == '1':
-                print("half drive")
-                goal[0] = grab
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = end
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = start
-                self.arm.jaw.move_jp(goal).wait()
-            elif i == '2':
-                print("full drive")
-                goal[0] = grab
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = end
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = grab
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = end
-                self.arm.jaw.move_jp(goal).wait()
-                goal[0] = start
-                self.arm.jaw.move_jp(goal).wait()
+            time.sleep(0.001)
+
+            if self.running:
+                if self.console.teleop_is_selected(self.teleop_name):
+                    self.console.teleop_unselect(self.teleop_name)
+                    self.full_drive()
+                    self.console.teleop_select(self.teleop_name)
+                self.running = False
 
 
 if __name__ == '__main__':
@@ -84,11 +139,18 @@ if __name__ == '__main__':
 
     # parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--arm', type=str, required=True,
-                        choices=['PSM1', 'PSM2', 'PSM3'],
-                        help = 'arm name corresponding to ROS topics without namespace.  Use __ns:= to specify the namespace')
+    parser.add_argument('-p', '--PSM', type = str, required = True,
+                        choices = ['PSM1', 'PSM2', 'PSM3'],
+                        help = 'PSM name corresponding to ROS topics without namespace.  Use __ns:= to specify the namespace')
+    parser.add_argument('-m', '--MTM', type = str, required = True,
+                        choices = ['MTML', 'MTMR'],
+                        help = 'MTM name corresponding to ROS topics without namespace.  Use __ns:= to specify the namespace')
+    parser.add_argument('-i', '--IO', type = str,
+                        default = 'IO1', help = 'IO name')
+    parser.add_argument('-c', '--console', type = str,
+                        default = 'console', help = 'IO name')
     args = parser.parse_args(argv)
 
     ral = crtk.ral('dvrk_psm_test')
-    application = example_application(ral, args.arm)
+    application = example_application(ral, args.IO, args.console, args.MTM, args.PSM)
     ral.spin_and_execute(application.run)
