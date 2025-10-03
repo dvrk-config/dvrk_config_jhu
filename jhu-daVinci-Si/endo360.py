@@ -24,11 +24,17 @@ import dvrk
 import math
 import numpy
 import sys
+import select
 import time
+import tty
+import termios
+
+# for keyboard capture
+def is_there_a_key_press():
+    return select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], [])
 
 # example of application using arm.py
 class example_application:
-
 
     def __init__(self, ral, IO_name, console_name, MTM_name, PSM_name):
         print('> configuring endo for {}'.format(PSM_name))
@@ -45,7 +51,7 @@ class example_application:
 
         self.range = 265.0
         self.rest = 20.0
-        self.center = 7.0
+        self.center = 0.0
         self.grab = (self.center - self.range / 2.0) * math.pi / 180.0
         self.start = self.grab + (self.rest * math.pi / 180.0)
         self.end = (self.center + self.range / 2.0) * math.pi / 180.0
@@ -71,6 +77,7 @@ class example_application:
 
 
     def full_drive(self):
+        print('-- full drive --')
         ts = 0.0
         while ts == 0.0:
             jp, ts = self.PSM.jaw.setpoint_jp()
@@ -99,6 +106,7 @@ class example_application:
 
 
     def half_drive(self):
+        print('-- half drive --')
         ts = 0.0
         while ts == 0.0:
             jp, ts = self.PSM.jaw.setpoint_jp()
@@ -120,19 +128,31 @@ class example_application:
         self.ral.check_connections()
         time.sleep(1)
 
-        done = False
+        old_settings = termios.tcgetattr(sys.stdin)
+        try:
+            tty.setcbreak(sys.stdin.fileno())
+            done = False
+            print('Press q to quit, h for half cycle')
+            while not done:
+                time.sleep(0.005)
+                if is_there_a_key_press():
+                    c = sys.stdin.read(1)
+                    if c == 'q':
+                        done = True
+                    elif c == 'h':
+                        self.half_drive()
 
-        while not done:
-            time.sleep(0.001)
+                if self.running:
+                    if self.console.teleop_is_selected(self.teleop_name):
+                        self.console.teleop_unselect(self.teleop_name)
+                        self.full_drive()
+                        self.console.teleop_select(self.teleop_name)
+                        self.running = False
+                        
+        finally:
+            termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
-            if self.running:
-                if self.console.teleop_is_selected(self.teleop_name):
-                    self.console.teleop_unselect(self.teleop_name)
-                    self.full_drive()
-                    self.console.teleop_select(self.teleop_name)
-                self.running = False
-
-
+            
 if __name__ == '__main__':
     # strip ros arguments
     argv = crtk.ral.parse_argv(sys.argv[1:]) # skip argv[0], script name

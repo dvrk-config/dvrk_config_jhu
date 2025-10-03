@@ -59,9 +59,10 @@
     ,
     // angles used to engage the tool, in radians
     // make sure these are within the range of motion IN the cannula
-    // max range on roll, 2, 2, 2 degrees    for endo360, don't move last joint
+    // max range on roll, 2, 2, 2 degrees. For endo360, move last joint around start/grab position
+    // 
     "tool_engage_position" : {
-        "lower" : [-4.5378, -0.034, -0.034, 0.0],
-        "upper" : [ 4.5378,  0.034,  0.034, 0.0]
+        "lower" : [-4.5378, -0.034, -0.034, 0.04],
+        "upper" : [ 4.5378,  0.034,  0.034, 0.04]
     }
 }

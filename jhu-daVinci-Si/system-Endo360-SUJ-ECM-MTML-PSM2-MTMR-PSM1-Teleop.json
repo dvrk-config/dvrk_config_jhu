@@ -57,17 +57,17 @@
         //                       [  0.0,  0.0,          0.0,          1.0]]
         //     }
         // }
-        // ,
-        // {
-        //     "name": "PSM1",
-        //     "type": "PSM",
-        //     "serial": "292409",
-        //     "IO": "IO1",
-        //     "base_frame": {
-        //         "component": "SUJ",
-        //         "interface": "PSM1"
-        //     }
-        // }
+        ,
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "292409",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM1"
+            }
+        }
         ,
         {
             "name": "PSM2",
