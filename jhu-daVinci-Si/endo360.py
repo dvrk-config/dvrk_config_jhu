@@ -71,7 +71,6 @@ class example_application:
 
 
     def update_state(self):
-        print(f'clutch: {self.clutch.value()}, coag: {self.coag.value()}')
         if self.clutch.value() == 1 and self.coag.value() == 1:
             self.running = True
 
@@ -148,11 +147,11 @@ class example_application:
                         self.full_drive()
                         self.console.teleop_select(self.teleop_name)
                         self.running = False
-                        
+
         finally:
             termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
-            
+
 if __name__ == '__main__':
     # strip ros arguments
     argv = crtk.ral.parse_argv(sys.argv[1:]) # skip argv[0], script name
