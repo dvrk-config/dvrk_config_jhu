@@ -51,8 +51,8 @@
                         },
                         "voltage_to_position" : 
                         {
-                            "offset" : 30,
-                            "scale" : -2
+                            "offset" : 4.4649455360167298,
+                            "scale" : -1.308754802582458
                         }
                     }
                 }
