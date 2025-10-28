@@ -1,0 +1,68 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    // see dVRK user guide
+    "DH": {
+        "convention": "modified",
+        "joints": [
+            {
+                "name": "roll",
+                "alpha":  0.0000, "A":  0.0000, "theta":  0.7854, "D":  0.4670,
+                "type": "revolute",
+                "mode": "active",
+                "offset":  0.0000,
+                "qmin": -4.4506, // -255 degrees
+                "qmax":  4.4506, //  255 degrees
+                "ftmax": 0.33
+            },
+            {
+                "name": "wrist_pitch",
+                "alpha": -1.5708, "A":  0.0000, "theta":  0.0000, "D":  0.0000,
+                "type": "revolute",
+                "mode": "active",
+                "offset": -1.5708,
+                "qmin": -0.5236, // -30 degrees
+                "qmax":  0.5236, //  30 degrees
+                "ftmax": 0.25
+            },
+            {
+                "name": "wrist_yaw",
+                "alpha": -1.5708, "A":  0.0000, "theta":  0.0000, "D":  0.0000,
+                "type": "revolute",
+                "mode": "active",
+                "offset": -1.5708,
+                "qmin": -0.5236, // -30 degrees
+                "qmax":  0.5236, //  30 degrees
+                "ftmax": 0.20
+            }
+        ]
+    }
+    ,
+    "jaw" : { // range for endo360
+        "qmin":  -2.35619, //  -135
+        "qmax":   2.35619,  //  135
+        "ftmax": 0.2
+    }
+    ,
+    // rotation to match ISI convention (for read-only research API on commercial da Vinci)
+    "tooltip_offset" : [[ 1.0,  0.0,  0.0,  0.0],
+                        [ 0.0,  0.0,  1.0,  0.03],
+                        [ 0.0, -1.0,  0.0,  0.0],
+                        [ 0.0,  0.0,  0.0,  1.0]]
+    ,
+    // WARNING: if we change these, also change tool_engage_position
+    "coupling" : {
+        "ActuatorToJointPosition" : [[ -1.500000,  0.000000,  0.000000,  0.000000],
+                                     [  0.000000,  0.000000,  0.300000,  0.000000],
+                                     [  0.000000,  0.000000,  0.000000,  0.300000],
+                                     [  0.000000,  1.000000,  0.000000,  0.000000]]  // coupling changed for endo360
+    }
+    ,
+    // angles used to engage the tool, in radians
+    // make sure these are within the range of motion IN the cannula
+    // max range on roll, 2, 2, 2 degrees. For endo360, move last joint around start/grab position
+    //
+    "tool_engage_position" : {
+        "lower" : [-4.5378, -0.034, -0.034, 0.04],
+        "upper" : [ 4.5378,  0.034,  0.034, 0.04]
+    }
+}

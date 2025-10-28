@@ -1,0 +1,12 @@
+{
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-psm.schema.json",
+    "$version": "1",
+    "custom_tool_index": "Endo360-tool-index.json", // ---- to add our endo list
+    "kinematic": "kinematic/PSM_Si.json",
+    "generation": "Si"
+    , "tool_detection": "MANUAL" // ----------------------- manual is needed
+    // , "tool_detection": "FIXED"
+    // , "tool_detection": "AUTOMATIC"
+    , "mounting_pitch": -0.78540 // -45 for Si PSM2 on SUJ
+}
