@@ -1,0 +1,97 @@
+{
+    "$id" : "dvrk-system.schema.json",
+    "$version" : 1,
+    "IOs" : 
+    [
+        {
+            "name" : "io",
+            "port" : "fw",
+            "protocol" : "brw"
+        }
+    ],
+    "arms" : 
+    [
+        {
+            "IO" : "io",
+            "base_frame" : 
+            {
+                "reference_frame" : "ECM",
+                "transform" : 
+                [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        -0.70710678118654746,
+                        0.70710678118654757,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        -0.70710678118654757,
+                        -0.70710678118654746,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ]
+            },
+            "name" : "PSM2",
+            "serial" : "27374",
+            "type" : "PSM"
+        },
+        {
+            "component" : "ForceDimensionSDK",
+            "interface" : "MTMR",
+            "name" : "MTMR",
+            "type" : "MTM_GENERIC"
+        }
+    ],
+    "component_manager" : 
+    {
+        "components" : 
+        [
+            {
+                "class-name" : "mtsForceDimension",
+                "configure-parameter" : "sawForceDimensionSDK-MTMR.json",
+                "constructor-arg" : 
+                {
+                    "Name" : "ForceDimensionSDK"
+                },
+                "shared-library" : "sawForceDimensionSDK"
+            }
+        ]
+    },
+    "consoles" : 
+    [
+        {
+            "input_type" : "SIMULATED",
+            "name" : "Console",
+            "teleop_ECMs" : [],
+            "teleop_PSMs" : 
+            [
+                {
+                    "MTM" : "MTMR",
+                    "PSM" : "PSM2",
+                    "configure_parameter" : 
+                    {
+                        "align_MTM" : false,
+                        "scale" : 0.5,
+			"gripper_scaling": {
+			    "zero": 0.25,
+			    "max": 0.492
+			}
+                    }
+                }
+            ]
+        }
+    ]
+}
