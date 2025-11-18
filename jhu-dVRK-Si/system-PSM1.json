@@ -15,9 +15,8 @@
         {
             "name": "PSM1",
             "type": "PSM",
-            "serial": "334809",
+            "serial": "327598",
             "IO": "IO1" // defined in IOs
         }
-    ],
-    "consoles" : []
+    ]
 }
