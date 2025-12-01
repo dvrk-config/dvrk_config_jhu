@@ -1,0 +1,21 @@
+/home/hzhou62/catkin_ws_dvrk/src/dvrk/dvrk_config_jhu/jhu-daVinci-Si/StateDataCollection-IO1-StateTable-2025-10-14-11-12-21.csv
+2025-10-14-11-13-20 1760454740.6489334106
+CSV
+,
+13
+6
+7
+Data: Ticks
+Time: PSM1_contactValue-timestamp
+Time: PSM1_contactValue-automatic-timestamp
+Data: PSM1_contactValue-valid
+Data: PSM1_contactValue-data
+Time: PSM2_contactValue-timestamp
+Time: PSM2_contactValue-automatic-timestamp
+Data: PSM2_contactValue-valid
+Data: PSM2_contactValue-data
+Time: PSM3_contactValue-timestamp
+Time: PSM3_contactValue-automatic-timestamp
+Data: PSM3_contactValue-valid
+Data: PSM3_contactValue-data
+
