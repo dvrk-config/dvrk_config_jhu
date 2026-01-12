@@ -1,0 +1,13 @@
+{
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-ecm.schema.json",
+    "$version": "1",
+    "kinematic": "kinematic/ECM_Si.json",
+    "generation": "Si"
+    // , "endoscope": "Classic_SD_STRAIGHT"
+    // , "endoscope": "Classic_SD_UP"
+    // , "endoscope": "Classic_SD_DOWN"
+    // , "endoscope": "Si_HD_STRAIGHT" // or UP or DOWN
+    , "endoscope": "Custom_STRAIGHT" // or UP or DOWN
+    , "mounting_pitch": -1.22173 // -70.0 for Si ECM on SUJ
+}

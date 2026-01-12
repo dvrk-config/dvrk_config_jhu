@@ -1,0 +1,34 @@
+{
+   "$id" : "saw-robot-io.schema.json",
+   "$version" : 6,
+   "digital_inputs" : 
+   [
+    {
+        "bit_id" : 2,
+        "board_id" : 0,
+        "debounce_time" : 0.005,
+        "name" : "PSM3_contact",
+        "pressed_value" : false,
+        "trigger_when_pressed" : true,
+        "trigger_when_released" : true
+    },
+    {
+        "bit_id" : 6,
+        "board_id" : 0,
+        "debounce_time" : 0.005,
+        "name" : "PSM1_contact",
+        "pressed_value" : false,
+        "trigger_when_pressed" : true,
+        "trigger_when_released" : true
+    },
+    {
+        "bit_id" : 10,
+        "board_id" : 0,
+        "debounce_time" : 0.005,
+        "name" : "PSM2_contact",
+        "pressed_value" : false,
+        "trigger_when_pressed" : true,
+        "trigger_when_released" : true
+    }
+   ]
+}
