@@ -6,7 +6,7 @@
         "joints": [
             {
                 "name": "roll",
-                "alpha":  0.0000, "A":  0.0000, "theta":  0.7854, "D":  0.4670,
+                "alpha":  0.0000, "A":  0.0000, "theta":  0.7854, "D":  0.41557,  // last number from ISI
                 "type": "revolute",
                 "mode": "active",
                 "offset":  0.0000,
@@ -45,16 +45,16 @@
     ,
     // rotation to match ISI convention (for read-only research API on commercial da Vinci)
     "tooltip_offset" : [[ 1.0,  0.0,  0.0,  0.0],
-                        [ 0.0,  0.0,  1.0,  0.03],
+                        [ 0.0,  0.0,  1.0,  0.0],
                         [ 0.0, -1.0,  0.0,  0.0],
                         [ 0.0,  0.0,  0.0,  1.0]]
     ,
     // WARNING: if we change these, also change tool_engage_position
     "coupling" : {
-        "ActuatorToJointPosition" : [[ -1.500000,  0.000000,  0.000000,  0.000000],
-                                     [  0.000000,  0.000000,  0.300000,  0.000000],
-                                     [  0.000000,  0.000000,  0.000000,  0.300000],
-                                     [  0.000000,  1.000000,  0.000000,  0.000000]]  // coupling changed for endo360
+        "ActuatorToJointPosition" : [[ -1.529411,  0.000000,  0.000000,  0.000000],  // from ISI
+                                     [  0.000000,  0.000000,  0.300000,  0.000000],  // JHU guess
+                                     [  0.000000,  0.000000,  0.000000,  0.300000],  // JHU guess
+                                     [  0.000000,  1.000000,  0.000000,  0.000000]]  // Custom endo 360 trigger
     }
     ,
     // angles used to engage the tool, in radians

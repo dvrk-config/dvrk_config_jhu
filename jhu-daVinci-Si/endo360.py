@@ -83,24 +83,25 @@ class example_application:
             print('.')
         goal = numpy.copy(jp)
         goal[0] = self.grab
-        print('grab')
+        print(' -> grab')
         self.PSM.jaw.move_jp(goal).wait()
         self.system.beep(0.2, 3000.0)
         goal[0] = self.end
-        print('end')
+        print(' -> end')
         self.PSM.jaw.move_jp(goal).wait()
         self.system.beep(0.2, 3500.0)
         goal[0] = self.grab
-        print('grab')
+        print(' -> grab')
         self.PSM.jaw.move_jp(goal).wait()
         self.system.beep(0.2, 3000.0)
         goal[0] = self.end
-        print('end')
+        print(' -> end')
         self.PSM.jaw.move_jp(goal).wait()
         self.system.beep(0.2, 3500.0)
         goal[0] = self.start
-        print('start')
+        print(' -> start')
         self.PSM.jaw.move_jp(goal).wait()
+        print('-- full drive done --')
         self.system.beep(0.5, 4000.0)
 
 
@@ -112,14 +113,15 @@ class example_application:
             print('.')
         goal = numpy.copy(jp)
         goal[0] = self.grab
-        print('grab')
+        print(' -> grab')
         self.PSM.jaw.move_jp(goal).wait()
         goal[0] = self.end
-        print('end')
+        print(' -> end')
         self.PSM.jaw.move_jp(goal).wait()
         goal[0] = self.start
-        print('start')
+        print(' -> start')
         self.PSM.jaw.move_jp(goal).wait()
+        print('-- half drive done --')
 
 
     # main method
@@ -131,6 +133,7 @@ class example_application:
         try:
             tty.setcbreak(sys.stdin.fileno())
             done = False
+            print('On dVRK console, press Clutch and Coag at same time to start full drive')
             print('Press q to quit, h for half cycle')
             while not done:
                 time.sleep(0.005)

@@ -8,7 +8,7 @@
         {
             "name": "IO1",
             "port": "fw",
-            "protocol": "broadcast-query-read-write"
+            "protocol": "srbw"
         }
     ]
     ,
@@ -52,25 +52,6 @@
             "base_frame": {
                 "component": "SUJ",
                 "interface": "ECM"
-            }
-        }
-    ]
-    ,
-    "consoles":
-    [
-        {
-            "name": "console",
-            "input_type": "PEDALS_ISI_HEAD_SENSOR",
-            "IO_pedals" :
-            {
-                "IO": "IO1",
-                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
-            }
-            ,
-            "IO_head_sensor":
-            {
-                "IO": "IO1",
-                "IO_file": "io/sawRobotIO1394-MTMR-dv-head-sensor-QLA1.json"
             }
         }
     ]

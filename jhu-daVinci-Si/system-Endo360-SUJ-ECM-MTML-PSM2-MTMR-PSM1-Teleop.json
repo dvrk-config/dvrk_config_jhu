@@ -61,6 +61,7 @@
         {
             "name": "PSM1",
             "type": "PSM",
+            "arm_file": "PSM2-Endo360-586288.json",   // --------------- main change
             "serial": "292409",
             "IO": "IO1",
             "base_frame": {
@@ -99,14 +100,19 @@
             [
                 {
                     "MTM": "MTMR",
-                    "PSM": "PSM1"
+                    "PSM": "PSM1",
+                    "configure_parameter": {
+                        "scale": 0.4
+                        , "ignore_jaw": true     // -------- important for the Endo 360 instrument
+                    }
                 }
                 ,
                 {
                     "MTM": "MTML",
                     "PSM": "PSM2",
                     "configure_parameter": {
-                        "ignore_jaw": true     // -------- important for the Endo 360 instrument
+                        "scale": 0.4
+                        , "ignore_jaw": true     // -------- important for the Endo 360 instrument
                     }
                 }
             ]
