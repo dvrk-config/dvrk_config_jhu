@@ -13,6 +13,20 @@
   "vertical_shift_px": -7,
   "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
-  "sinks": ["glimage"],
-  "ros_image_publishers": ["left", "right"]
+  "sinks": [
+    "glimage"
+  ],
+  "left_color": {
+    "brightness": -0.02657980468953587,
+    "contrast": 0.9633268377180697,
+    "saturation": 1.061089739456666,
+    "hue": 0.0
+  },
+  "right_color": {
+    "brightness": 0.028683644595728745,
+    "contrast": 1.0395759098075876,
+    "saturation": 0.9455615250460448,
+    "hue": 0.0
+  },
+  "preserve_size": true
 }
