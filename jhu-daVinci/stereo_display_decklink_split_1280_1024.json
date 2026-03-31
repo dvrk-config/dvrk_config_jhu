@@ -1,6 +1,6 @@
 {
-  "type": "sv::stereo_viewer_config@1.0.0",
-  "name": "dvrk_stereo_viewer",
+  "type": "dd::display_config@1.0.0",
+  "name": "dvrk_display",
   "ros_image_publishers": [
     "stereo"
   ],
@@ -14,7 +14,7 @@
   "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "sinks": [
-    "glimage"
+    "glimages"
   ],
   "left_color": {
     "brightness": -0.02657980468953587,
