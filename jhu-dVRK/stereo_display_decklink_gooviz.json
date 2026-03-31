@@ -1,0 +1,32 @@
+{
+  "type": "dd::display_config@1.0.0",
+  "name": "dvrk_display",
+  "ros_image_publishers": [
+    "stereo"
+  ],
+  "dvrk_console_namespace": "console1",
+  "original_width": 1920,
+  "original_height": 1080,
+  "crop_width": 1828,
+  "crop_height": 1028,
+  "horizontal_shift_px": 52,
+  "vertical_shift_px": 48,
+  "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+  "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+  "sinks": [
+    "glimage"
+  ],
+  "left_color": {
+    "brightness": 0.012101337997888643,
+    "contrast": 1.0655095184085863,
+    "saturation": 1.3556422009924698,
+    "hue": 0.0
+  },
+  "right_color": {
+    "brightness": -0.010699499835072077,
+    "contrast": 0.9420792079743078,
+    "saturation": 0.7921782021854719,
+    "hue": 0.0
+  },
+  "preserve_size": true
+}
