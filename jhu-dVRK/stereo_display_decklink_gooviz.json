@@ -4,29 +4,30 @@
   "ros_image_publishers": [
     "stereo"
   ],
-  "dvrk_console_namespace": "console1",
+  "dvrk_console_namespace": "console",
   "original_width": 1920,
   "original_height": 1080,
-  "crop_width": 1828,
-  "crop_height": 1028,
-  "horizontal_shift_px": 52,
-  "vertical_shift_px": 48,
+  "crop_width": 1829,
+  "crop_height": 1029,
+  "horizontal_shift_px": 40,
+  "vertical_shift_px": 21,
   "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "sinks": [
     "glimage"
   ],
   "left_color": {
-    "brightness": 0.012101337997888643,
-    "contrast": 1.0655095184085863,
-    "saturation": 1.3556422009924698,
+    "brightness": 0.023339530745876653,
+    "contrast": 1.064966300056813,
+    "saturation": 0.9371919713322582,
     "hue": 0.0
   },
   "right_color": {
-    "brightness": -0.010699499835072077,
-    "contrast": 0.9420792079743078,
-    "saturation": 0.7921782021854719,
+    "brightness": -0.0206556840147187,
+    "contrast": 0.9425042696792001,
+    "saturation": 1.0718311780478798,
     "hue": 0.0
   },
-  "preserve_size": true
+  "preserve_size": true,
+  "display_horizontal_offset_px": -15
 }
