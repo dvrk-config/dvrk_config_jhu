@@ -6,12 +6,19 @@
     [
         {
             "name": "IO1",
-            "port": "udp" // fw, udpfw or udp
+            "port": "udpfw" // fw, udpfw or udp
         }
     ]
     ,
     "arms":
     [
+        {
+            "name": "MTML",
+            "type": "MTM",
+            "serial": "28989",
+            "IO": "IO1" // defined in IOs
+        }
+	,
         {
             "name": "MTMR",
             "type": "MTM",

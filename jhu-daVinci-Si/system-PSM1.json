@@ -6,7 +6,8 @@
     [
         {
             "name": "IO1",
-            "port": "udpfw" // fw, udpfw or udp
+            "port": "udpfw", // fw, udpfw or udp
+	    "protocol": "srw"
         }
     ]
     ,
