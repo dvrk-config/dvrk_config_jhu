@@ -14,12 +14,12 @@
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : 6.2522935664428259,
+                            "offset" : 6.2526328451444702,
                             "scale" : -0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 32793.905649280663,
+                            "offset" : 32794.734912942033,
                             "scale" : -5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -51,8 +51,8 @@
                         },
                         "voltage_to_position" : 
                         {
-                            "offset" : 5.7663134488104166,
-                            "scale" : -1.7812333233465758
+                            "offset" : 6.4397388861662437,
+                            "scale" : -2.042989914868504
                         }
                     }
                 }
@@ -67,7 +67,7 @@
                 "potentiometers_type" : "ANALOG",
                 "tolerances" : null
             },
-            "serial_number" : "28247",
+            "serial_number" : "22403",
             "type" : "io-only"
         }
     ]

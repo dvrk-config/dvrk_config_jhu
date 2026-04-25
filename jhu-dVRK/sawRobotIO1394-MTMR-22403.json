@@ -10,11 +10,11 @@
                     "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.222625317853868,
+                            "offset": 6.22283637622242,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32773.75956286587,
+                            "offset": 32774.829613037145,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -39,8 +39,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -3.224444,
-                            "scale": 1.3038684058426966
+                            "offset": -2.6277090576479725,
+                            "scale": 1.3189945945664932
                         }
                     }
                 },
@@ -50,11 +50,11 @@
                     "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.220634733067335,
+                            "offset": -6.220843792879787,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32757.493744077234,
+                            "offset": 32759.068873620738,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -79,8 +79,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -2.50848,
-                            "scale": 1.2952421909326461
+                            "offset": -2.5256262970402,
+                            "scale": 1.3108330602711813
                         }
                     }
                 },
@@ -90,11 +90,11 @@
                     "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.264405846929799,
+                            "offset": -6.264764069956886,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32964.42876781197,
+                            "offset": 32966.431242095125,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -119,8 +119,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -2.831874,
-                            "scale": 1.309258254158736
+                            "offset": -2.6518382073604534,
+                            "scale": 1.3109842433937287
                         }
                     }
                 },
@@ -130,11 +130,11 @@
                     "board_id": 2,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.254880792428367,
+                            "offset": -6.255134298550596,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32934.88691051995,
+                            "offset": 32935.34730016188,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -159,8 +159,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 3.935723,
-                            "scale": -1.3406639794724058
+                            "offset": 3.621947654636782,
+                            "scale": -1.33469209998805
                         }
                     }
                 },
@@ -170,11 +170,11 @@
                     "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.248799952951289,
+                            "offset": -6.249101161361907,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32839.182450873035,
+                            "offset": 32839.03153158826,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -199,8 +199,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -2.375138,
-                            "scale": 1.3680650226776332
+                            "offset": -2.289785182063424,
+                            "scale": 1.357654635594683
                         }
                     }
                 },
@@ -210,11 +210,11 @@
                     "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": -6.244661386014327,
+                            "offset": -6.2451355373953845,
                             "scale": 0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32837.23791513905,
+                            "offset": 32838.14346260432,
                             "scale": 5242.88
                         },
                         "effort_to_current": {
@@ -239,8 +239,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": -3.222258,
-                            "scale": 1.3119795823385059
+                            "offset": -2.941204307645593,
+                            "scale": 1.3576281380049264
                         }
                     }
                 },
@@ -250,11 +250,11 @@
                     "board_id": 3,
                     "drive": {
                         "bits_to_current": {
-                            "offset": 6.240303118590258,
+                            "offset": 6.2405254390679685,
                             "scale": -0.000190735
                         },
                         "current_to_bits": {
-                            "offset": 32858.36683119475,
+                            "offset": 32859.029144505905,
                             "scale": -5242.88
                         },
                         "effort_to_current": {
@@ -279,8 +279,8 @@
                             "scale": 6.866455078125e-05
                         },
                         "voltage_to_position": {
-                            "offset": 1.383157,
-                            "scale": -0.7117907033828218
+                            "offset": -1.8473628282785945,
+                            "scale": 0.7252147281511597
                         }
                     }
                 }
@@ -397,7 +397,7 @@
                     }
                 ]
             },
-            "serial_number": "28247"
+            "serial_number": "22403"
         }
     ]
 }
