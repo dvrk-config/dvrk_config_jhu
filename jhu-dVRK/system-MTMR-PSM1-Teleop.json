@@ -32,7 +32,7 @@
             "name": "MTMR",
             "type": "MTM",
             "IO": "IO1",
-            "serial": "28247",
+            "serial": "22403",
             "base_frame": {
                 "reference_frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
