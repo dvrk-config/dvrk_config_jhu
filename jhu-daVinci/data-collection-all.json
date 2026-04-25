@@ -1,0 +1,15 @@
+{
+  "type": "dc::config@1.0.0",
+  "data_directory": "data",
+  "configuration_files": [
+    "video/stereo_display_unixfd.json",
+    "dVRK/console.json",
+    "dVRK/ECM.json",
+    "dVRK/MTML.json",
+    "dVRK/MTMR.json",
+    "dVRK/PSM1.json",
+    "dVRK/PSM2.json",
+    "dVRK/PSM3.json",
+    "dVRK/SUJ.json"
+  ]
+}
