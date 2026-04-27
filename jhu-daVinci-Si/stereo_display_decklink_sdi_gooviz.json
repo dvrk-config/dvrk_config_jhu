@@ -1,8 +1,10 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
+  "unixfdsinks": [
+    {
+      "stream": "stereo"
+    }
   ],
   "dvrk_console_namespace": "console",
   "original_width": 1920,
@@ -11,8 +13,8 @@
   "crop_height": 1029,
   "horizontal_shift_px": -4,
   "vertical_shift_px": 8,
-  "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
-  "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+  "left": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+  "right": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
   "sinks": [
     "glimage"
   ],

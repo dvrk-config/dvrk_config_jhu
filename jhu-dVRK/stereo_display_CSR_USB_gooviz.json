@@ -1,14 +1,16 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
+  "unixfdsinks": [
+    {
+      "stream": "stereo"
+    }
   ],
   "dvrk_console_namespace": "console1",
   "original_width": 1920,
   "original_height": 1080,
-  "left_stream": "v4l2src device=/dev/video0",
-  "right_stream": "v4l2src device=/dev/video2",
+  "left": "v4l2src device=/dev/video0",
+  "right": "v4l2src device=/dev/video2",
   "sinks": [
     "glimage"
   ],

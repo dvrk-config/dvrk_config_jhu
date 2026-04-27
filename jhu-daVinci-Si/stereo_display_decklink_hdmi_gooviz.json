@@ -1,8 +1,10 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
+  "unixfdsinks": [
+    {
+      "stream": "stereo"
+    }
   ],
   "dvrk_console_namespace": "console",
   "original_width": 1920,
@@ -11,8 +13,8 @@
   "crop_height": 1080,
   "horizontal_shift_px": 0,
   "vertical_shift_px": 0,
-  "left_stream": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra",
-  "right_stream": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra",
+  "left": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra",
+  "right": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra",
   "sinks": [
     "glimage"
   ],
