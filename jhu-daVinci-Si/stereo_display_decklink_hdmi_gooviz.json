@@ -1,33 +1,22 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
-  ],
   "dvrk_console_namespace": "console",
-  "original_width": 1920,
-  "original_height": 1080,
-  "crop_width": 1920,
-  "crop_height": 1080,
-  "horizontal_shift_px": 0,
-  "vertical_shift_px": 0,
-  "left_stream": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra",
-  "right_stream": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra",
-  "sinks": [
-    "glimage"
-  ],
-  "left_color": {
-    "brightness": 0.0,
-    "contrast": 1.0,
-    "saturation": 1.0,
-    "hue": 0.0
-  },
-  "right_color": {
-    "brightness": 0.0,
-    "contrast": 1.0,
-    "saturation": 1.0,
-    "hue": 0.0
+  "camera": {
+    "size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "left": {
+      "stream": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra"
+    },
+    "right": {
+      "stream": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra"
+    }
   },
   "preserve_size": true,
-  "display_horizontal_offset_px": 0
+  "display_horizontal_offset_px": 0,
+  "sinks": [
+    "glimage"
+  ]
 }

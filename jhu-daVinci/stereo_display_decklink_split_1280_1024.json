@@ -1,33 +1,38 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
-  ],
   "dvrk_console_namespace": "console",
-  "original_width": 1920,
-  "original_height": 1080,
-  "crop_width": 1354,
-  "crop_height": 1009,
-  "horizontal_shift_px": 0,
-  "vertical_shift_px": -7,
-  "left_stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
-  "right_stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
-  "sinks": [
-    "glimages"
-  ],
-  "left_color": {
-    "brightness": 0.007087338325355156,
-    "contrast": 0.950236189461373,
-    "saturation": 1.0297824418553518,
-    "hue": 0.0
-  },
-  "right_color": {
-    "brightness": -0.00787068930846481,
-    "contrast": 1.055264116594182,
-    "saturation": 0.9718918186953773,
-    "hue": 0.0
+  "camera": {
+    "size": {
+      "width": 1280,
+      "height": 1024
+    },
+    "left": {
+      "stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+      "color": {
+        "brightness": 0.007087338325355156,
+        "contrast": 0.950236189461373,
+        "saturation": 1.0297824418553518,
+        "hue": 0.0
+      }
+    },
+    "right": {
+      "stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+      "color": {
+        "brightness": -0.00787068930846481,
+        "contrast": 1.055264116594182,
+        "saturation": 0.9718918186953773,
+        "hue": 0.0
+      }
+    },
+    "alignment": {
+      "horizontal_shift_px": 0,
+      "vertical_shift_px": -7
+    }
   },
   "preserve_size": true,
-  "display_horizontal_offset_px": 22
+  "display_horizontal_offset_px": 22,
+  "sinks": [
+    "glimages"
+  ]
 }

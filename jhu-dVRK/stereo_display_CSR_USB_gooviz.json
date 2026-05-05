@@ -1,16 +1,21 @@
 {
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
-  "ros_image_publishers": [
-    "stereo"
-  ],
   "dvrk_console_namespace": "console1",
-  "original_width": 1920,
-  "original_height": 1080,
-  "left_stream": "v4l2src device=/dev/video0",
-  "right_stream": "v4l2src device=/dev/video2",
+  "camera": {
+    "size": {
+      "width": 640,
+      "height": 480
+    },
+    "left": {
+      "stream": "v4l2src device=/dev/video0"
+    },
+    "right": {
+      "stream": "v4l2src device=/dev/video2"
+    }
+  },
+  "preserve_size": true,
   "sinks": [
     "glimage"
-  ],
-  "preserve_size": true
+  ]
 }

@@ -1,0 +1,42 @@
+{
+  "type": "dd::display_config@1.0.0",
+  "name": "dvrk_display_v4l2src",
+  "dvrk_console_namespace": "console1",
+  "camera": {
+    "size": {
+      "width": 640,
+      "height": 480
+    },
+    "left": {
+      "stream": "v4l2src device=/dev/video0",
+      "color": {
+        "brightness": 0.015233855311801086,
+        "contrast": 1.0023713906304628,
+        "saturation": 0.9045162891388849,
+        "hue": 0.0
+      }
+    },
+    "right": {
+      "stream": "v4l2src device=/dev/video2 ! videoflip method=rotate-180",
+      "color": {
+        "brightness": -0.015161945520706335,
+        "contrast": 0.9976398032663776,
+        "saturation": 1.1180220839368127,
+        "hue": 0.0
+      }
+    },
+    "crop": {
+      "width": 496,
+      "height": 372
+    },
+    "alignment": {
+      "horizontal_shift_px": -143,
+      "vertical_shift_px": 0
+    }
+  },
+  "preserve_size": true,
+  "sinks": [
+    "glimage"
+  ],
+  "display_horizontal_offset_px": -74
+}
