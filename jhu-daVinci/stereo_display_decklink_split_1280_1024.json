@@ -3,7 +3,16 @@
   "name": "dvrk_display",
   "unixfdsinks": [
     {
+      "stream": "left"
+    },
+    {
+      "stream": "right"
+    },
+    {
       "stream": "stereo"
+    },
+    {
+      "stream": "overlay"
     }
   ],
   "dvrk_console_namespace": "console",
@@ -30,13 +39,17 @@
         "hue": 0.0
       }
     },
+    "crop": {
+      "width": 1067,
+      "height": 853
+    },
     "alignment": {
-      "horizontal_shift_px": 0,
-      "vertical_shift_px": -7
+      "horizontal_shift_px": 54,
+      "vertical_shift_px": -6
     }
   },
   "preserve_size": true,
-  "display_horizontal_offset_px": 22,
+  "display_horizontal_offset_px": 16,
   "sinks": [
     "glimages"
   ]

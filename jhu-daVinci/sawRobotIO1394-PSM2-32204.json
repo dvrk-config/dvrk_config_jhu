@@ -440,12 +440,12 @@
                     },
                     {
                         "axis_id" : 5,
-                        "distance" : 0.15,
+                        "distance" : 0.20,
                         "latency" : 0.05
                     },
                     {
                         "axis_id" : 6,
-                        "distance" : 0.15,
+                        "distance" : 0.20,
                         "latency" : 0.05
                     }
                 ]
