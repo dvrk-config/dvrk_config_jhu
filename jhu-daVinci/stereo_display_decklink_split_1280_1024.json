@@ -52,5 +52,8 @@
   "display_horizontal_offset_px": 16,
   "sinks": [
     "glimages"
-  ]
+  ],
+    "extra_streams": {
+  	"monos": ["videotestsrc is-live=true do-timestamp=true ! video/x-raw,framerate=30/1"]
+    }
 }
