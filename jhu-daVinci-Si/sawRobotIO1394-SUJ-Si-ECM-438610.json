@@ -1,0 +1,18 @@
+{
+    "$id": "saw-robot-io-suj-si.schema.json",
+    "$version": "1",
+    "arm_name": "ECM",
+    "serial_number": "438610",
+    "primary_measured_js": [
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 }
+    ],
+    "secondary_measured_js": [
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 },
+        { "scale": 1.0, "offset": 0.0 }
+    ]
+}
