@@ -17,7 +17,7 @@
         {
             "name": "SUJ",
             "type": "SUJ_Si",
-            "arm_file": "suj-si.json"
+            "arm_file": "kinematic/suj-si.json"
         }
         ,
         {
