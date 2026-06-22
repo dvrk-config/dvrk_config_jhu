@@ -1,0 +1,71 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    "name": "MTMR",
+    "vendor_id": "046d",
+    "product_id": "c626",
+    "linear": {
+        "scale": [
+            0.05,
+            0.05,
+            0.05
+        ],
+        "full_scale": 350.0,
+        "deadband": 0.03
+    },
+    "angular": {
+        "scale": [
+            0.8,
+            0.8,
+            0.8
+        ],
+        "full_scale": 350.0,
+        "deadband": 0.03
+    },
+    "buttons": [
+        {
+            "index": 0,
+            "name": "left"
+        },
+        {
+            "index": 1,
+            "name": "right"
+        }
+    ],
+    "gripper": {
+        "close_button": 0,
+        "open_button": 1,
+        "min": -0.2,
+        "max": 1.0,
+        "initial": 1.0,
+        "rate": 1.0
+    },
+    "base_frame": {
+        "reference_frame": "user",
+        "transform": [
+            [
+                -1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+            ],
+            [
+                0.0,
+                -1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ]
+    }
+}
