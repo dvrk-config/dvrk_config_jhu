@@ -1,0 +1,68 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "IOs":
+    [
+        {
+            "name": "IO1",
+            "port": "fw" // fw, udpfw or udp
+        }
+    ]
+    ,
+    "component_manager": {
+        "components": [
+            {
+                "shared-library": "saw3Dconnexion",
+                "class-name": "mts3Dconnexion",
+                "constructor-arg": {
+                    "Name": "SpaceMouse"
+                },
+                "configure-parameter": "saw3Dconnexion-MTMR.json"
+            }
+        ]
+    },
+    "arms": [
+        {
+            "name": "MTMR",
+            "type": "MTM_GENERIC",
+            "component": "SpaceMouse",
+            "interface": "MTMR"
+        },
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "327598",
+            "arm_file": "PSM1-Endo360-327598.json",
+            "IO": "IO1",
+            "base_frame": {
+                "reference_frame": "ECM",
+                "transform": [
+                    [  1.0,  0.0,  0.0,  0.0 ],
+                    [  0.0,  0.0,  1.0,  0.0 ],
+                    [  0.0, -1.0,  0.0,  0.0 ],
+                    [  0.0,  0.0,  0.0,  1.0 ]
+                ]
+            }
+        }
+    ],
+    "consoles": [
+        {
+            "name": "console",
+            "input_type": "SIMULATED",
+            "teleop_PSMs": [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "configure_parameter": {
+                        "MTM_is_haptic": false,
+                        "align_MTM": false,
+                        "ignore_jaw": true, // Endo 360
+                        "start_gripper_threshold": 0.0,
+                        "scale": 0.4
+                    }
+                }
+            ]
+        }
+    ]
+}
