@@ -3,7 +3,7 @@
   "name": "dvrk_display",
   "unixfdsinks": [
     {
-      "stream": "stereo"
+      "stream": "overlay"
     }
   ],
   "dvrk_console_namespace": "console",
@@ -13,7 +13,13 @@
       "height": 1080
     },
     "left": {
-      "stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom"
+      "stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+      "color": {
+        "brightness": 0.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "hue": 0.0
+      }
     },
     "right": {
       "stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
@@ -25,12 +31,16 @@
       }
     },
     "alignment": {
-      "horizontal_shift_px": -4,
-      "vertical_shift_px": 8
+      "horizontal_shift_px": 20,
+      "vertical_shift_px": -4
+    },
+    "crop": {
+      "width": 1882,
+      "height": 1059
     }
   },
   "preserve_size": true,
-  "display_horizontal_offset_px": 6,
+  "display_horizontal_offset_px": -104,
   "sinks": [
     "glimage"
   ]
