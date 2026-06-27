@@ -1,0 +1,8 @@
+{
+  "console": "console",
+  "video_source": [
+    "left",
+    "right",
+    "overlay"
+  ]
+}

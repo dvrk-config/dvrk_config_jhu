@@ -4,6 +4,12 @@
   "unixfdsinks": [
     {
       "stream": "overlay"
+    },
+    {
+      "stream": "left"
+    },
+    {
+      "stream": "right"
     }
   ],
   "dvrk_console_namespace": "console",
