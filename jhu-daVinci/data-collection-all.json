@@ -1,8 +1,19 @@
 {
-  "type": "dc::config@1.0.0",
+  "type": "dvrk_data:record@1.0.0",
   "data_directory": "data",
+  "videos": [
+    {
+      "name": "dvrk_display_stereo",
+      "stream": "unixfdsrc socket-path=/tmp/dvrk_display_stereo.sock socket-type=abstract do-timestamp=true ! videoconvert ! video/x-raw,format=NV12 ! queue name=__remote_offset_q__ max-size-buffers=2 max-size-time=0 max-size-bytes=0 leaky=downstream",
+      "record": true,
+      "timestamp_overlay": false,
+      "side_by_side": "LR",
+      "encoding": {
+        "bitrate": 20000
+      }
+    }
+  ],
   "configuration_files": [
-    "video/stereo_display_unixfd.json",
     "dVRK/console.json",
     "dVRK/ECM.json",
     "dVRK/MTML.json",

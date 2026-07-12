@@ -1,25 +1,28 @@
 {
-  "type": "dd::display_config@1.0.0",
-  "name": "dvrk_display",
-  "unixfdsinks": [
+  "type": "dvrk_data:stereo_alignment@1.0.0",
+  "name": "dvrk_display_sdi",
+  "unixfdsources": [
     {
-      "stream": "overlay"
+      "name": "left",
+      "socket_path": "/tmp/dvrk_display_sdi_left.sock"
     },
     {
-      "stream": "left"
-    },
-    {
-      "stream": "right"
+      "name": "right",
+      "socket_path": "/tmp/dvrk_display_sdi_right.sock"
     }
   ],
-  "dvrk_console_namespace": "console",
+  "unixfdsinks": [
+    {
+      "stream": "stereo",
+      "socket_path": "/tmp/dvrk_display_sdi_stereo.sock"
+    }
+  ],
   "camera": {
     "size": {
       "width": 1920,
       "height": 1080
     },
     "left": {
-      "stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
       "color": {
         "brightness": 0.0,
         "contrast": 1.0,
@@ -28,7 +31,6 @@
       }
     },
     "right": {
-      "stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
       "color": {
         "brightness": -0.012281826486949454,
         "contrast": 0.9919434316161231,
@@ -45,9 +47,5 @@
       "height": 1059
     }
   },
-  "preserve_size": true,
-  "display_horizontal_offset_px": -104,
-  "sinks": [
-    "glimage"
-  ]
+  "preserve_size": true
 }

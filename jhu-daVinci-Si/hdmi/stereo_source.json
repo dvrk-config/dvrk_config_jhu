@@ -1,12 +1,16 @@
 {
-  "type": "dd::display_config@1.0.0",
-  "name": "dvrk_display",
+  "type": "dvrk_data:stereo_source@1.0.0",
+  "name": "dvrk_display_hdmi",
   "unixfdsinks": [
     {
-      "stream": "stereo"
+      "stream": "left",
+      "socket_path": "/tmp/dvrk_display_hdmi_left.sock"
+    },
+    {
+      "stream": "right",
+      "socket_path": "/tmp/dvrk_display_hdmi_right.sock"
     }
   ],
-  "dvrk_console_namespace": "console",
   "camera": {
     "size": {
       "width": 1920,
@@ -18,10 +22,5 @@
     "right": {
       "stream": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra"
     }
-  },
-  "preserve_size": true,
-  "display_horizontal_offset_px": 0,
-  "sinks": [
-    "glimage"
-  ]
+  }
 }
