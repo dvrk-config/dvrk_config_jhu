@@ -1,0 +1,17 @@
+{
+  "type": "dvrk_console:stereo_display@1.0.0",
+  "name": "dvrk_display_sdi",
+  "dvrk_console_namespace": "console",
+  "sinks": [
+    "glimage"
+  ],
+  "stereo": {
+    "socket": "stereo_alignment:stereo",
+    "eye_size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "preserve_size": true,
+  "display_horizontal_offset_px": -104
+}
