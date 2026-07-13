@@ -5,6 +5,9 @@
   "sinks": [
     "glimage"
   ],
+  "unixfdsinks": [
+    {"socket": "overlay"}
+  ],
   "stereo": {
     "socket": "stereo_alignment:stereo",
     "eye_size": {
