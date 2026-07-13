@@ -2,9 +2,7 @@
   "type": "dd::display_config@1.0.0",
   "name": "dvrk_display",
   "unixfdsinks": [
-    {
-      "stream": "stereo"
-    }
+    {"socket": "stereo"}
   ],
   "dvrk_console_namespace": "console1",
   "camera": {

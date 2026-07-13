@@ -6,13 +6,10 @@
     "glimages"
   ],
   "unixfdsinks": [
-    {
-      "stream": "overlay",
-      "socket_path": "/tmp/dvrk_display_overlay.sock"
-    }
+    {"socket": "overlay"}
   ],
   "stereo": {
-    "stream": "unixfdsrc socket-path=/tmp/dvrk_display_stereo.sock socket-type=abstract do-timestamp=true ! video/x-raw,format=I420,width=3840,height=1080",
+    "socket": "stereo_alignment:stereo",
     "eye_size": {
       "width": 1920,
       "height": 1080

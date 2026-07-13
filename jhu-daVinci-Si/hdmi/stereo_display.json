@@ -6,7 +6,7 @@
     "glimage"
   ],
   "stereo": {
-    "stream": "unixfdsrc socket-path=/tmp/dvrk_display_hdmi_stereo.sock socket-type=abstract do-timestamp=true ! video/x-raw,format=I420,width=3840,height=1080",
+    "socket": "stereo_alignment:hdmi_stereo",
     "eye_size": {
       "width": 1920,
       "height": 1080

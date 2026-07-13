@@ -4,7 +4,7 @@
   "videos": [
     {
       "name": "dvrk_display_stereo",
-      "stream": "unixfdsrc socket-path=/tmp/dvrk_display_stereo.sock socket-type=abstract do-timestamp=true ! videoconvert ! video/x-raw,format=NV12 ! queue name=__remote_offset_q__ max-size-buffers=2 max-size-time=0 max-size-bytes=0 leaky=downstream",
+      "socket": "stereo_alignment:stereo",
       "record": true,
       "timestamp_overlay": false,
       "side_by_side": "LR",

@@ -2,14 +2,8 @@
   "type": "dvrk_data:stereo_source@1.0.0",
   "name": "dvrk_display_sdi",
   "unixfdsinks": [
-    {
-      "stream": "left",
-      "socket_path": "/tmp/dvrk_display_sdi_left.sock"
-    },
-    {
-      "stream": "right",
-      "socket_path": "/tmp/dvrk_display_sdi_right.sock"
-    }
+    {"socket": "sdi_left"},
+    {"socket": "sdi_right"}
   ],
   "camera": {
     "size": {

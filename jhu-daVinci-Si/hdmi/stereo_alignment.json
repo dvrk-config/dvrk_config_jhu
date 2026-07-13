@@ -2,20 +2,11 @@
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display_hdmi",
   "unixfdsources": [
-    {
-      "name": "left",
-      "socket_path": "/tmp/dvrk_display_hdmi_left.sock"
-    },
-    {
-      "name": "right",
-      "socket_path": "/tmp/dvrk_display_hdmi_right.sock"
-    }
+    {"socket": "stereo_source:hdmi_left"},
+    {"socket": "stereo_source:hdmi_right"}
   ],
   "unixfdsinks": [
-    {
-      "stream": "stereo",
-      "socket_path": "/tmp/dvrk_display_hdmi_stereo.sock"
-    }
+    {"socket": "hdmi_stereo"}
   ],
   "camera": {
     "size": {

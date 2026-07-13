@@ -2,20 +2,11 @@
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display",
   "unixfdsources": [
-    {
-      "name": "left",
-      "socket_path": "/tmp/dvrk_display_left.sock"
-    },
-    {
-      "name": "right",
-      "socket_path": "/tmp/dvrk_display_right.sock"
-    }
+    {"socket": "left"},
+    {"socket": "right"}
   ],
   "unixfdsinks": [
-    {
-      "stream": "stereo",
-      "socket_path": "/tmp/dvrk_display_stereo.sock"
-    }
+    {"socket": "stereo"}
   ],
   "camera": {
     "size": {
