@@ -49,12 +49,23 @@ class example_application:
         self.running = False
         self.full_drive_trigger = False
 
+        # from coupling matrices and estimated gear ratio on endo ~1.0
+        # we are now using the proper coupling matrix from ISI for a
+        # stapler.  The stapler jaw angle range is much smaller
+        # compared to the 280+ to engage the needle on the endo 360.
+        # The ratio has been determined empirically.  The Endo tool
+        # has a gear ration close to 1 between the disc and the
+        # angle/position of the needle.  The value 0.157832 comes from
+        # the coupling matrix of the stapler.
+        
+        self.stapler_endo_ratio = 0.157832 / 1.0;
+        
         self.range = 265.0
         self.rest = 20.0
         self.center = 0.0
-        self.grab = (self.center - self.range / 2.0) * math.pi / 180.0
-        self.start = self.grab + (self.rest * math.pi / 180.0)
-        self.end = (self.center + self.range / 2.0) * math.pi / 180.0
+        self.grab = self.stapler_endo_ratio * ((self.center - self.range / 2.0) * math.pi / 180.0)
+        self.start = self.grab + self.stapler_endo_ratio * (self.rest * math.pi / 180.0)
+        self.end = self.stapler_endo_ratio * ((self.center + self.range / 2.0) * math.pi / 180.0)
 
         if IO_name and IO_name != 'None':
             self.coag = crtk.joystick_button(ral, 'IO/' + IO_name + '/coag', 0)
@@ -140,7 +151,7 @@ class example_application:
             done = False
             if self.clutch and self.coag:
                 print('On dVRK console, press Clutch and Coag at same time to start full drive')
-            print('Press q to quit, h for half cycle')
+            print('Press q to quit, h for half cycle, f for full cycle')
             while not done:
                 time.sleep(0.005)
                 if is_there_a_key_press():
