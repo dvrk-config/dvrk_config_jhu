@@ -9,7 +9,7 @@
     {"socket": "overlay"}
   ],
   "stereo": {
-    "socket": "stereo_alignment:sdi_stereo",
+    "socket": "stereo_alignment:stereo",
     "eye_size": {
       "width": 1920,
       "height": 1080

@@ -25,8 +25,7 @@
         "contrast": 1.0,
         "saturation": 1.0,
         "hue": 0.0
-      },
-      "stream": "unixfdsrc socket-path=dvrk_gst:stereo_source:left socket-type=abstract do-timestamp=true ! video/x-raw,format=I420,width=1920,height=1080"
+      }
     },
     "right": {
       "color": {
@@ -34,8 +33,7 @@
         "contrast": 0.8869684549317428,
         "saturation": 0.6834494017119047,
         "hue": 0.0
-      },
-      "stream": "unixfdsrc socket-path=dvrk_gst:stereo_source:right socket-type=abstract do-timestamp=true ! video/x-raw,format=I420,width=1920,height=1080"
+      }
     },
     "alignment": {
       "horizontal_shift_px": 46,

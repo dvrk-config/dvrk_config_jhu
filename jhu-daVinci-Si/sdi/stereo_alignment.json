@@ -2,11 +2,11 @@
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display_sdi",
   "unixfdsources": [
-    {"socket": "stereo_source:sdi_left"},
-    {"socket": "stereo_source:sdi_right"}
+    {"socket": "stereo_source:left"},
+    {"socket": "stereo_source:right"}
   ],
   "unixfdsinks": [
-    {"socket": "sdi_stereo"}
+    {"socket": "stereo"}
   ],
   "camera": {
     "size": {

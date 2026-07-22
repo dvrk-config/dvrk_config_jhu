@@ -9,7 +9,7 @@
       "timestamp_overlay": false,
       "side_by_side": "LR",
       "encoding": {
-        "bitrate": 20000
+        "bitrate_kbps": 20000
       }
     }
   ],
