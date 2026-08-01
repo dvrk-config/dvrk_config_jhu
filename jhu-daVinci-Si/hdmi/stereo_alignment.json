@@ -1,17 +1,17 @@
 {
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display_hdmi",
-  "unixfdsources": [
-    {"socket": "stereo_source:left"},
-    {"socket": "stereo_source:right"}
-  ],
-  "unixfdsinks": [
-    {"socket": "stereo"}
-  ],
+  "gst_output": "@dvrk:stereo_alignment:stereo",
   "camera": {
     "size": {
       "width": 1920,
       "height": 1080
+    },
+    "left": {
+      "gst_input": "@dvrk:stereo_source:left"
+    },
+    "right": {
+      "gst_input": "@dvrk:stereo_source:right"
     },
     "crop": {
       "width": 1920,

@@ -1,20 +1,18 @@
 {
   "type": "dvrk_data:stereo_source@1.0.0",
   "name": "dvrk_display_hdmi",
-  "unixfdsinks": [
-    {"socket": "left"},
-    {"socket": "right"}
-  ],
   "camera": {
     "size": {
       "width": 1920,
       "height": 1080
     },
     "left": {
-      "stream": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra"
+      "gst_input": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra",
+      "gst_output": "@dvrk:stereo_source:left"
     },
     "right": {
-      "stream": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra"
+      "gst_input": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra",
+      "gst_output": "@dvrk:stereo_source:right"
     }
   }
 }

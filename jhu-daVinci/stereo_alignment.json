@@ -1,19 +1,13 @@
 {
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display",
-  "unixfdsources": [
-    {"socket": "stereo_source:left"},
-    {"socket": "stereo_source:right"}
-  ],
-  "unixfdsinks": [
-    {"socket": "stereo"}
-  ],
   "camera": {
     "size": {
       "width": 1920,
       "height": 1080
     },
     "left": {
+      "gst_input": "@dvrk:stereo_source:left",
       "color": {
         "brightness": 0.0,
         "contrast": 1.0,
@@ -22,6 +16,7 @@
       }
     },
     "right": {
+      "gst_input": "@dvrk:stereo_source:right",
       "color": {
         "brightness": -0.012281826486949454,
         "contrast": 0.9919434316161231,
@@ -38,5 +33,6 @@
       "height": 1059
     }
   },
-  "preserve_size": true
+  "preserve_size": true,
+  "gst_output": "@dvrk:stereo_alignment:stereo"
 }

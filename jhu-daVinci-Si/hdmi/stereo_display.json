@@ -5,15 +5,10 @@
   "sinks": [
     "glimage"
   ],
-  "unixfdsinks": [
-    {"socket": "overlay"}
-  ],
-  "stereo": {
-    "socket": "stereo_alignment:stereo",
-    "eye_size": {
-      "width": 1920,
-      "height": 1080
-    }
+  "gst_input": "@dvrk:stereo_alignment:stereo",
+  "eye_size": {
+    "width": 1920,
+    "height": 1080
   },
   "preserve_size": true,
   "display_horizontal_offset_px": 0

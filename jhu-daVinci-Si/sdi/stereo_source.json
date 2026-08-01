@@ -1,20 +1,18 @@
 {
   "type": "dvrk_data:stereo_source@1.0.0",
   "name": "dvrk_display_sdi",
-  "unixfdsinks": [
-    {"socket": "left"},
-    {"socket": "right"}
-  ],
   "camera": {
     "size": {
       "width": 1920,
       "height": 1080
     },
     "left": {
-      "stream": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom"
+      "gst_input": "decklinkvideosrc device-number=0 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+      "gst_output": "@dvrk:stereo_source:left"
     },
     "right": {
-      "stream": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom"
+      "gst_input": "decklinkvideosrc device-number=1 connection=sdi mode=1080i5994 ! deinterlace fields=bottom",
+      "gst_output": "@dvrk:stereo_source:right"
     }
   }
 }

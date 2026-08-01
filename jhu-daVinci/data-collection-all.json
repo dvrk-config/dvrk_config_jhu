@@ -4,7 +4,7 @@
   "videos": [
     {
       "name": "dvrk_display_stereo",
-      "socket": "stereo_alignment:stereo",
+      "gst_input": "@dvrk:stereo_alignment:stereo",
       "record": true,
       "timestamp_overlay": false,
       "side_by_side": "LR",
