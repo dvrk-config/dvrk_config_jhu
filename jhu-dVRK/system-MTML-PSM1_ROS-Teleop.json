@@ -48,7 +48,7 @@
     "consoles":
     [
         {
-            "name": "console1",
+            "name": "console",
             "input_type": "PEDALS_ONLY",
             "IO_pedals": {
                 "IO": "IO1",

@@ -1,7 +1,7 @@
 {
   "type": "dvrk_console:stereo_display@1.0.0",
   "name": "dvrk_display_sdi",
-  "dvrk_console_namespace": "console1",
+  "dvrk_console_namespace": "console",
   "sinks": [
     "glimage"
   ],
