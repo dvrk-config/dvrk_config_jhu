@@ -1,0 +1,149 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    // Patient-cart PSMs and ECM are provided by ROS.
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "component_manager": {
+        "components":
+        [
+            {
+                "shared-library": "dvrk_arm_from_ros",
+                "class-name": "dvrk_psm_from_ros",
+                "constructor-arg": {
+                    "Name": "PSM1",
+                    "Period": 0.001
+                }
+            },
+            {
+                "shared-library": "dvrk_arm_from_ros",
+                "class-name": "dvrk_psm_from_ros",
+                "constructor-arg": {
+                    "Name": "PSM2",
+                    "Period": 0.001
+                }
+            },
+            {
+                "shared-library": "dvrk_arm_from_ros",
+                "class-name": "dvrk_psm_from_ros",
+                "constructor-arg": {
+                    "Name": "PSM3",
+                    "Period": 0.001
+                }
+            },
+            {
+                "shared-library": "dvrk_arm_from_ros",
+                "class-name": "dvrk_arm_from_ros",
+                "constructor-arg": {
+                    "Name": "ECM",
+                    "Period": 0.001
+                }
+            }
+        ]
+    },
+    "IOs":
+    [
+        {
+            "name": "IO",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ],
+    "arms":
+    [
+        {
+            "name": "MTML",
+            "type": "MTM",
+            "serial": "34863",
+            "IO": "IO",
+            "base_frame": {
+                "reference_frame": "HRSV",
+                "transform": [[ -1.0,  0.0,          0.0,          0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        },
+        {
+            "name": "MTMR",
+            "type": "MTM",
+            "serial": "32336",
+            "IO": "IO",
+            "base_frame": {
+                "reference_frame": "HRSV",
+                "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                              [  0.0,  0.866025404,  0.5,          0.400],
+                              [  0.0,  0.5,         -0.866025404,  0.475],
+                              [  0.0,  0.0,          0.0,          1.0]]
+            }
+        },
+        {
+            "name": "PSM1",
+            "type": "PSM_GENERIC",
+            "component": "PSM1",
+            "interface": "PSM1",
+            "skip_ROS_bridge": true
+        },
+        {
+            "name": "PSM2",
+            "type": "PSM_GENERIC",
+            "component": "PSM2",
+            "interface": "PSM2",
+            "skip_ROS_bridge": true
+        },
+        {
+            "name": "PSM3",
+            "type": "PSM_GENERIC",
+            "component": "PSM3",
+            "interface": "PSM3",
+            "skip_ROS_bridge": true
+        },
+        {
+            "name": "ECM",
+            "type": "ECM_GENERIC",
+            "component": "ECM",
+            "interface": "ECM",
+            "skip_ROS_bridge": true
+        }
+    ],
+    "consoles":
+    [
+        {
+            "name": "console",
+            "input_type": "PEDALS_ISI_HEAD_SENSOR",
+            "IO_pedals": {
+                "IO": "IO",
+                "IO_file": "io/sawRobotIO1394-MTMR-foot-pedals-QLA1.json"
+            },
+            "IO_head_sensor": {
+                "IO": "IO",
+                "IO_file": "io/sawRobotIO1394-MTMR-dv-head-sensor.json"
+            },
+            "teleop_PSMs":
+            [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "configure_parameter": {
+                        "use_MTM_velocity": true
+                    }
+                },
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM2"
+                },
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM3"
+                }
+            ],
+            "teleop_ECMs":
+            [
+                {
+                    "MTML": "MTML",
+                    "MTMR": "MTMR",
+                    "ECM": "ECM"
+                }
+            ]
+        }
+    ]
+}

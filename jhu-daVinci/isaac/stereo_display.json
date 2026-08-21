@@ -1,0 +1,15 @@
+{
+  "type": "dvrk_console:stereo_display@1.0.0",
+  "name": "dvrk_display_isaac",
+  "dvrk_console_namespace": "console",
+  "sinks": [
+    "glimages"
+  ],
+  "gst_input": "rtspsrc location=rtsp://127.0.0.1:8554/ECM/stereo protocols=udp latency=0 drop-on-latency=true ! rtph264depay wait-for-keyframe=true ! h264parse ! nvh264dec ! queue max-size-buffers=1 leaky=downstream ! videoconvert",
+  "eye_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "preserve_size": true,
+  "display_horizontal_offset_px": -150
+}
