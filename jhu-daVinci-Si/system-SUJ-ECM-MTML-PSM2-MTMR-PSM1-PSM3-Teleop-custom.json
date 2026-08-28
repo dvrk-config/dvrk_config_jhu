@@ -16,14 +16,14 @@
     [
         {
             "name": "SUJ",
-            "type": "SUJ_Fixed",
-            "arm_file": "suj-fixed.json"
+            "type": "SUJ_Si",
+            "arm_file": "suj-si.json"
         }
         ,
-
         {
             "name": "ECM",
             "type": "ECM",
+            "arm_file": "ECM-438610-custom.json",
             "serial": "438610",
             "IO": "IO1",
             "base_frame": {
@@ -81,6 +81,17 @@
                 "interface": "PSM2"
             }
         }
+        ,
+        {
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "698534",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM3"
+            }
+        }
     ]
     ,
     "consoles":
@@ -107,6 +118,11 @@
                 {
                     "MTM": "MTML",
                     "PSM": "PSM2"
+                }
+                ,
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM3"
                 }
             ]
             ,

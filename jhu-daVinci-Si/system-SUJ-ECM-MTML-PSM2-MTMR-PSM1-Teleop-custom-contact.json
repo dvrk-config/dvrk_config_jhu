@@ -8,7 +8,8 @@
         {
             "name": "IO1",
             "port": "udpfw",
-            "protocol": "broadcast-query-read-write"
+            "protocol": "broadcast-query-read-write",
+            "configuration_files": ["sawRobotIO1394-contact-sensor.json"]
         }
     ]
     ,
@@ -16,14 +17,14 @@
     [
         {
             "name": "SUJ",
-            "type": "SUJ_Fixed",
-            "arm_file": "suj-fixed.json"
+            "type": "SUJ_Si",
+            "arm_file": "suj-si.json"
         }
         ,
-
         {
             "name": "ECM",
             "type": "ECM",
+            "arm_file": "ECM-438610-custom.json",
             "serial": "438610",
             "IO": "IO1",
             "base_frame": {
@@ -92,8 +93,16 @@
             {
                 "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
-            }
-            ,
+            },
+            // "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
+            // "IO_pedals" :
+            // {
+            //     "IO": "IO1",
+            //     "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
+            // }
+            // ,
+            // "HID_file": "hid/goovis-hd.json"
+            // ,
             "teleop_PSMs":
             [
                 {
