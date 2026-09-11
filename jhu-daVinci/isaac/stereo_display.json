@@ -5,7 +5,7 @@
   "sinks": [
     "glimages"
   ],
-  "gst_input": "rtspsrc location=rtsp://127.0.0.1:8554/ECM/stereo protocols=udp latency=0 drop-on-latency=true ! rtph264depay wait-for-keyframe=true ! h264parse ! nvh264dec ! queue max-size-buffers=1 leaky=downstream ! videoconvert",
+  "gst_input": "rtspsrc location=rtsp://127.0.0.1:8554/ECM protocols=udp buffer-mode=none latency=0 drop-on-latency=true ntp-sync=false do-retransmission=false ! rtph264depay wait-for-keyframe=true ! h264parse ! queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream ! nvh264dec max-display-delay=0 ! queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream ! videoconvert",
   "eye_size": {
     "width": 1280,
     "height": 720
