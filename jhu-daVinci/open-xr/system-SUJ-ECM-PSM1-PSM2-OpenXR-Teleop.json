@@ -1,0 +1,139 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+/*
+  Real JHU da Vinci patient cart controlled by the sawOpenXR Quest interface.
+
+  This configuration deliberately does not instantiate the physical MTMs or
+  the physical console pedals/head sensor.  sawOpenXR supplies MTML, MTMR,
+  operator presence, clutch, and camera events instead.
+*/
+{
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "component_manager": {
+        "components": [
+            {
+                "shared-library": "sawOpenXR",
+                "class-name": "mtsOpenXR",
+                "constructor-arg": {"Name": "OpenXR"},
+                "configure-parameter": "sawOpenXR-dvrk-socket.json"
+            }
+        ]
+    },
+    "IOs": [
+        {
+            "name": "IO1",
+            "port": "fw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ],
+    "arms": [
+        {
+            "name": "SUJ",
+            "type": "SUJ_Classic",
+            "IO": "IO1",
+            "IO_file": "../sawRobotIO1394-SUJ.json",
+            "arm_file": "../suj-ECM-1-2-3.json"
+        },
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "49695",
+            "IO": "IO1",
+            "base_frame": {"component": "SUJ", "interface": "PSM1"}
+        },
+        {
+            "name": "PSM2",
+            "type": "PSM",
+            "serial": "32204",
+            "IO": "IO1",
+            "base_frame": {"component": "SUJ", "interface": "PSM2"}
+        },
+        {
+            "name": "ECM",
+            "type": "ECM",
+            "serial": "29738",
+            "IO": "IO1",
+            "base_frame": {"component": "SUJ", "interface": "ECM"}
+        },
+        {
+            "name": "MTML",
+            "type": "MTM_GENERIC",
+            "component": "OpenXR",
+            "interface": "MTML"
+        },
+        {
+            "name": "MTMR",
+            "type": "MTM_GENERIC",
+            "component": "OpenXR",
+            "interface": "MTMR"
+        }
+    ],
+    "consoles": [
+        {
+            "name": "console",
+            "input_type": "COMPONENTS",
+            "operator_present": {"component": "OpenXR", "interface": "Console/operator_present"},
+            "clutch": {"component": "OpenXR", "interface": "Console/clutch"},
+            "camera": {"component": "OpenXR", "interface": "Console/camera"},
+            "teleop_PSMs": [
+                {
+                    "MTM": "MTMR",
+                    "PSM": "PSM1",
+                    "PSM_base_frame": {"component": "ECM", "interface": "Arm"},
+                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTMR_PSM1"},
+                    "configure_parameter": {
+                        "MTM_is_haptic": false,
+                        "align_MTM": false,
+                        "use_MTM_linear_velocity": false,
+                        "use_MTM_angular_velocity": false,
+                        "ignore_jaw": false,
+                        "start_gripper_threshold": 0.0,
+                        // sawOpenXR sends 0 degrees fully pulled and 60 degrees
+                        // released.  With the PSM tool's 80-degree jaw maximum,
+                        // zero=20 and max=100 degrees maps that input linearly
+                        // to a -20 degree closed and +40 degree open jaw range.
+                        // Values below are radians.
+                        "gripper_scaling": {
+                            "zero": 0.3490658504,
+                            "max": 1.7453292520
+                        },
+                        "scale": 0.2
+                    }
+                },
+                {
+                    "MTM": "MTML",
+                    "PSM": "PSM2",
+                    "PSM_base_frame": {"component": "ECM", "interface": "Arm"},
+                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTML_PSM2"},
+                    "configure_parameter": {
+                        "MTM_is_haptic": false,
+                        "align_MTM": false,
+                        "use_MTM_linear_velocity": false,
+                        "use_MTM_angular_velocity": false,
+                        "ignore_jaw": false,
+                        "start_gripper_threshold": 0.0,
+                        // Same OpenXR 0-to-60 degree input mapping as PSM1:
+                        // output is -20 to +40 degrees; values are radians.
+                        "gripper_scaling": {
+                            "zero": 0.3490658504,
+                            "max": 1.7453292520
+                        },
+                        "scale": 0.2
+                    }
+                }
+            ],
+            "teleop_ECMs": [
+                {
+                    "MTML": "MTML",
+                    "MTMR": "MTMR",
+                    "ECM": "ECM",
+                    "configure_parameter": {
+                        "MTM_is_haptic": false,
+                        "check_MTMs_workspace": false,
+                        "haptic_feedback_ratio": 0.0
+                    }
+                }
+            ]
+        }
+    ]
+}
