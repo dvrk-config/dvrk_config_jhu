@@ -3,7 +3,7 @@
   "name": "dvrk_openxr",
   "dvrk_console_namespace": "console",
   "sinks": [
-    "glimage"
+    "headless"
   ],
   "gst_input": "@dvrk:stereo_alignment:stereo",
   "gst_output": "@dvrk:stereo_display:openxr-overlay",

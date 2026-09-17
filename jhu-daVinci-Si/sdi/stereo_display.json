@@ -3,7 +3,7 @@
   "name": "dvrk_display_sdi",
   "dvrk_console_namespace": "console",
   "sinks": [
-    "glimage"
+    "side_by_side"
   ],
   "gst_input": "@dvrk:stereo_alignment:stereo",
   "eye_size": {

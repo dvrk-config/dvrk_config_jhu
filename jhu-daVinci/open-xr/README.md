@@ -28,7 +28,7 @@ console inputs with the `sawOpenXR` component:
 
 The `stereo_source.json`, `stereo_alignment.json`, and `stereo_display.json`
 files in this directory preserve the JHU capture and alignment settings. The
-display configuration uses the single combined `glimage` preview and publishes
+display configuration uses the `headless` sink and publishes
 the composited stereo image, including dVRK console overlays, on
 `@dvrk:stereo_display:openxr-overlay`. sawOpenXR consumes that post-overlay
 3840x1080 side-by-side stream and scales it to the 2560x720 side-by-side frame
