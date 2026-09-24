@@ -80,7 +80,7 @@
                     "MTM": "MTMR",
                     "PSM": "PSM1",
                     "PSM_base_frame": {"component": "ECM", "interface": "Arm"},
-                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTMR_PSM1"},
+                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTMR"},
                     "configure_parameter": {
                         "MTM_is_haptic": false,
                         "align_MTM": false,
@@ -104,7 +104,7 @@
                     "MTM": "MTML",
                     "PSM": "PSM2",
                     "PSM_base_frame": {"component": "ECM", "interface": "Arm"},
-                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTML_PSM2"},
+                    "clutch": {"component": "OpenXR", "interface": "Console/clutch/MTML"},
                     "configure_parameter": {
                         "MTM_is_haptic": false,
                         "align_MTM": false,
