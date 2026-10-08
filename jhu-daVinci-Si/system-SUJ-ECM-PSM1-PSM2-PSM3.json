@@ -34,7 +34,7 @@
         {
             "name": "PSM1",
             "type": "PSM",
-            "serial": "292409",
+            "serial": "334809",
             "IO": "IO1",
             "base_frame": {
                 "component": "SUJ",

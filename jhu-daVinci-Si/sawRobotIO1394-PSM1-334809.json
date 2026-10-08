@@ -7,7 +7,7 @@
             "hardware_version": "dRA1",
             "number_of_actuators": 7,
             "number_of_brakes": 3,
-            "serial_number": "292409",
+            "serial_number": "334809",
             "actuators": [
                 {
                     "actuator_id": 0,
@@ -318,7 +318,7 @@
                         "latency": 0.01
                     }
                 ],
-                "lookup_table_file": "sawRobotIO1394-PSM1-292409-PotentiometerLookupTable.json"
+                "lookup_table_file": "sawRobotIO1394-PSM1-334809-PotentiometerLookupTable.json"
             }
         }
     ],

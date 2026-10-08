@@ -6,8 +6,7 @@
     [
         {
             "name": "IO1",
-            "port": "udpfw", // fw, udpfw or udp
-	    "protocol": "srw"
+            "port": "fw" // fw, udpfw or udp
         }
     ]
     ,
@@ -16,7 +15,7 @@
         {
             "name": "PSM1",
             "type": "PSM",
-            "serial": "292409",
+            "serial": "334809",
             "IO": "IO1" // defined in IOs
         }
     ]
