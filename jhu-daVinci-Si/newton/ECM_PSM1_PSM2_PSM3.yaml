@@ -1,0 +1,76 @@
+scene:
+  name: ECM_PSM1_PSM2_PSM3
+  frames:
+    PSM1:
+      position:
+      - -0.1
+      - 0.0
+      - 0.17320508075688776
+      orientation_xyzw:
+      - 0.0
+      - -0.2588190451025207
+      - 0.0
+      - 0.9659258262890682
+    PSM2:
+      position:
+      - 0.1
+      - 0.0
+      - 0.17320508075688776
+      orientation_xyzw:
+      - 0.0
+      - 0.2588190451025207
+      - 0.0
+      - 0.9659258262890682
+    PSM3:
+      position:
+      - 0.17320508075688773
+      - 0.0
+      - 0.1
+      orientation_xyzw:
+      - 0.0
+      - 0.5
+      - 0.0
+      - 0.8660254037844387
+    ECM:
+      position:
+      - 0.0
+      - 0.1414213562373095
+      - 0.14142135623730953
+      orientation_xyzw:
+      - -0.3826834323650897
+      - 0.0
+      - 0.0
+      - 0.9238795325112867
+  camera:
+    mode: stereo
+    owner: ECM
+    frame: ECM_optical
+    renderer: warp_raytrace
+    width:  1900
+    height: 1024
+    horizontal_fov_deg: 60.0
+    near_clip_m: 0.005
+    far_clip_m: 10.0
+    encoding: rgba8
+    baseline_m: 0.006
+    publish_rate_hz: 15.0
+    light:
+      enabled: false
+    transports:
+    - unixfd
+    - rtsp
+    unixfd:
+      socket_path: '@dvrk:simulator:stereo_source'
+    rtsp:
+      port: 8554
+      mount_path: /ECM
+      encoding: raw
+  robots:
+  - config: PSM1.yaml
+    instrument: '420006'
+  - config: PSM2.yaml
+    instrument: '420006'
+  - config: PSM3.yaml
+    instrument: '420006'
+  - config: ECM.yaml
+    endoscope: Si_straight

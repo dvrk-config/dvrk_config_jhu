@@ -6,7 +6,8 @@
   <maintainer email="anton.deguet@jhu.edu">Anton Deguet</maintainer>
   <license>MIT</license>
   <url>https://github.com/jhu-dvrk/dvrk-config-jhu</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>
   <export>
-    <build_type>cmake</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
