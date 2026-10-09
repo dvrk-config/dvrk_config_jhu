@@ -4,4 +4,4 @@ from dvrk_simulator_base.launch import jhu_launch
 
 
 def generate_launch_description():
-    return jhu_launch("jhu-daVinci-Si", "isaac_sim")
+    return jhu_launch("jhu-daVinci-Si", "dvrk_isaac_sim")
