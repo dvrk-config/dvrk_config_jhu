@@ -9,7 +9,7 @@ The Goovis display uses one `side_by_side` window and the Si display's
 `display_horizontal_offset_px: -150` setting. It reads Newton's stereo Unix
 socket directly; the hardware HDMI/SDI capture and stereo alignment processes
 are not required for simulated video. `eye_size: auto` detects the stream
-resolution. The default scene retains the example's 800×600 per eye at 15 fps.
+resolution. The default scene renders 1900×1024 per eye at 15 fps.
 The display offset can be adjusted in `stereo_display_simulator.json` for the
 rendered resolution and the operator's view.
 
@@ -25,13 +25,15 @@ ros2 launch dvrk_config_jhu daVinciSi_MTML_MTMR_newton.launch.py
 The rest of the dVRK workspace, including `dvrk_robot`, `dvrk_console`, and
 `dvrk_model`, must already be built and sourced. The launch starts the Newton
 ROS frontend and its separate simulation worker, dvrk_system with the Si
-calibration directory, stereo display, control panel, and start_dvrk_system.
+calibration directory, stereo display, and control panel.
 
 The workspace `.venv-newton` is selected automatically for the simulation
 worker. Activating it is optional; the ROS frontend uses the launch Python.
-Override `newton_python` if needed. Other launch arguments are `exercise`
-(default `tray_cubes.yaml`), `cart_scene`, `headless`, `console`, `rqt`,
-`newton_config`, and `display_config`.
+The launch accepts only `exercise` (default `tray_cubes.yaml`), `rqt`
+(default `false`), and `headless` (default `true`). Use the control panel to
+home the system and enable teleoperation. Edit the configuration files in this
+directory for simulator and display settings. Set `DVRK_NEWTON_PYTHON` to
+select another worker interpreter if needed.
 
 This configuration controls the physical masters and console inputs. The
 patient-cart arms and SUJ are supplied by simulation rather than hardware.

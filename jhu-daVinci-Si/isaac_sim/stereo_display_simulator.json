@@ -1,0 +1,12 @@
+{
+  "type": "dvrk_console:stereo_display@1.0.0",
+  "name": "dvrk_display_isaac_si",
+  "dvrk_console_namespace": "console",
+  "sinks": [
+    "side_by_side"
+  ],
+  "gst_input": "rtspsrc location=rtsp://127.0.0.1:8554/ECM protocols=udp buffer-mode=none latency=0 drop-on-latency=true ntp-sync=false do-retransmission=false ! rtph264depay wait-for-keyframe=true ! h264parse ! queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream ! nvh264dec max-display-delay=0 ! queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream ! videoconvert",
+  "eye_size": "auto",
+  "preserve_size": true,
+  "display_horizontal_offset_px": -150
+}

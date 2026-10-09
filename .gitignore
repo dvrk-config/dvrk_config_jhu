@@ -5,3 +5,6 @@ cisstLog.txt
 CMakeLists.txt.user
 *-new
 *-backup-*
+
+__pycache__/
+*.pyc

@@ -9,28 +9,16 @@ endif ()
 install (
   DIRECTORY jhu-dVRK jhu-daVinci jhu-dVRK-Si jhu-daVinci-Si
   DESTINATION share
-  )
-
-install (
-  DIRECTORY newton pybullet
-  DESTINATION share/${PROJECT_NAME}
   PATTERN "launch" EXCLUDE
   PATTERN "*.launch.py" EXCLUDE
   PATTERN "*.pyc" EXCLUDE
   )
 
 install (
-  FILES newton/launch/daVinci_MTML_MTMR_newton.launch.py
-  DESTINATION share/${PROJECT_NAME}/launch
-  )
-
-install (
-  FILES jhu-daVinci-Si/newton/launch/daVinciSi_MTML_MTMR_newton.launch.py
-  DESTINATION share/${PROJECT_NAME}/launch
-  )
-
-install (
-  FILES pybullet/launch/daVinci_MTML_MTMR_pybullet.launch.py
+  FILES jhu-daVinci/newton/launch/daVinci_MTML_MTMR_newton.launch.py
+        jhu-daVinci/pybullet/launch/daVinci_MTML_MTMR_pybullet.launch.py
+        jhu-daVinci-Si/newton/launch/daVinciSi_MTML_MTMR_newton.launch.py
         jhu-daVinci-Si/pybullet/launch/daVinciSi_MTML_MTMR_pybullet.launch.py
+        jhu-daVinci-Si/isaac_sim/launch/daVinciSi_MTML_MTMR_isaac_sim.launch.py
   DESTINATION share/${PROJECT_NAME}/launch
   )

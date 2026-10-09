@@ -7,6 +7,8 @@
   <license>MIT</license>
   <url>https://github.com/jhu-dvrk/dvrk-config-jhu</url>
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>dvrk_simulator_base</exec_depend>
+  <exec_depend>rqt_dvrk</exec_depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>

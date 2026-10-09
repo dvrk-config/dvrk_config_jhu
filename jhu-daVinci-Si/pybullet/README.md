@@ -13,8 +13,8 @@ source install/setup.bash
 ros2 launch dvrk_config_jhu daVinciSi_MTML_MTMR_pybullet.launch.py
 ```
 
-The remaining dVRK workspace, including `dvrk_robot`, `dvrk_console`, and `dvrk_model`, must already be built and sourced. The launch starts the ROS frontend, separate PyBullet simulation and camera workers, dvrk_system with the hardware calibration directory, stereo display, control panel, and start_dvrk_system. Closing the simulator or dvrk_system shuts down the launch.
+The remaining dVRK workspace, including `dvrk_robot`, `dvrk_console`, and `dvrk_model`, must already be built and sourced. The launch starts the ROS frontend, separate PyBullet simulation and camera workers, dvrk_system with the hardware calibration directory, stereo display, and control panel. Closing the simulator or dvrk_system shuts down the launch.
 
-The workspace `.venv-pybullet` is selected by the runtime resolver; activating it is optional. Override `pybullet_python` if needed. Other launch arguments are `exercise` (default `tray_cubes.yaml`), `cart_scene`, `gui` (default `false`), `console`, `rqt`, `pybullet_config`, and `display_config`.
+The workspace `.venv-pybullet` is selected by the runtime resolver; activating it is optional. Set `DVRK_PYBULLET_PYTHON` to select another worker interpreter if needed. The launch accepts only `exercise` (default `tray_cubes.yaml`), `rqt` (default `false`), and `headless` (default `true`). Use the control panel to home the system and enable teleoperation. Edit the configuration files in this directory for simulator and display settings.
 
 `pybullet_patient_cart.yaml` selects EGL rendering. Set `renderer: tiny` for CPU rendering. The scene and stereo display use the same `@dvrk:simulator:stereo_source` socket. Run one simulator for this console at a time.

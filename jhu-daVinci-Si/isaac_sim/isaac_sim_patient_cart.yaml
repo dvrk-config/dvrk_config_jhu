@@ -1,0 +1,6 @@
+command_queue_capacity: 32
+renderer: RaytracedLighting
+headless: true
+simulation_rate_hz: 120.0
+render_rate_hz: 30.0
+state_publish_rate_hz: 100.0

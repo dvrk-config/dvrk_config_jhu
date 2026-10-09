@@ -1,4 +1,4 @@
-"""Run the JHU da Vinci Si console with the Newton virtual patient cart and stereo display."""
+"""Run the JHU da Vinci Si console with the Isaac Sim virtual patient cart and stereo display."""
 
 from pathlib import Path
 from tempfile import gettempdir
@@ -20,18 +20,18 @@ PACKAGE_NAME = "dvrk_config_jhu"
 
 def generate_launch_description():
     package_share = Path(get_package_share_directory(PACKAGE_NAME))
-    newton_share = Path(get_package_share_directory("dvrk_newton"))
-    si_directory = package_share.parent / "jhu-daVinci-Si"
-    newton_directory = si_directory / "newton"
-    default_config = newton_directory / "newton_patient_cart.yaml"
-    system_config = newton_directory / "system-MTMR-MTML-Newton-Teleop.json"
-    display_config = newton_directory / "stereo_display_simulator.json"
-    cart_scene = newton_directory / "ECM_PSM1_PSM2_PSM3.yaml"
+    isaac_share = Path(get_package_share_directory("dvrk_isaac_sim"))
+    calibration_directory = package_share.parent / "jhu-daVinci-Si"
+    isaac_directory = calibration_directory / "isaac_sim"
+    default_config = isaac_directory / "isaac_sim_patient_cart.yaml"
+    system_config = isaac_directory / "system-MTMR-MTML-IsaacSim-Teleop.json"
+    display_config = isaac_directory / "stereo_display_simulator.json"
+    cart_scene = isaac_directory / "ECM_PSM1_PSM2_PSM3.yaml"
 
     simulator = ExecuteProcess(
         cmd=[
             sys.executable,
-            str(newton_share / "scripts" / "simulator.py"),
+            str(isaac_share / "scripts" / "simulator.py"),
             "--config", str(default_config),
             "--scene", str(cart_scene),
             "--scene", LaunchConfiguration("exercise"),
@@ -43,7 +43,7 @@ def generate_launch_description():
         package="dvrk_robot",
         executable="dvrk_system",
         output="screen",
-        cwd=str(si_directory),
+        cwd=str(calibration_directory),
         arguments=["--json-config", str(system_config)],
     )
     stereo_display = Node(
@@ -77,7 +77,7 @@ def generate_launch_description():
     stop_with_simulator = RegisterEventHandler(
         OnProcessExit(
             target_action=simulator,
-            on_exit=[EmitEvent(event=Shutdown(reason="NVIDIA Newton simulator exited"))],
+            on_exit=[EmitEvent(event=Shutdown(reason="Isaac Sim simulator exited"))],
         )
     )
     stop_with_system = RegisterEventHandler(
@@ -94,7 +94,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             "headless", default_value="true",
-            description="Run Newton without its desktop viewer window.",
+            description="Run Isaac Sim without its desktop viewer window.",
         ),
         DeclareLaunchArgument(
             "rqt", default_value="false",

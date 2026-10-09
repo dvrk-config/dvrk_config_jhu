@@ -6,10 +6,7 @@
     "side_by_side"
   ],
   "gst_input": "@dvrk:stereo_alignment:stereo",
-  "eye_size": {
-    "width": 1920,
-    "height": 1080
-  },
+  "eye_size": "auto",
   "preserve_size": true,
   "display_horizontal_offset_px": -150
 }

@@ -7,10 +7,7 @@
   ],
   "gst_input": "@dvrk:stereo_alignment:stereo",
   "gst_output": "@dvrk:stereo_display:openxr-overlay",
-  "eye_size": {
-    "width": 1920,
-    "height": 1080
-  },
+  "eye_size": "auto",
   "preserve_size": true,
   "display_horizontal_offset_px": -104
 }

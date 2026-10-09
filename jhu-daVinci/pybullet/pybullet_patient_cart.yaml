@@ -22,5 +22,5 @@ generated_root: null
 scene: null
 simulation_rate_hz: 120.0
 state_publish_rate_hz: 100.0
-gui: false
+headless: true
 renderer: egl

@@ -2,10 +2,7 @@
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_openxr",
   "camera": {
-    "size": {
-      "width": 1920,
-      "height": 1080
-    },
+    "size": "auto",
     "left": {
       "gst_input": "@dvrk:stereo_source:left",
       "color": {

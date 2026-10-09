@@ -1,9 +1,10 @@
 """Run the JHU console with the Newton virtual patient cart and stereo display."""
 
 from pathlib import Path
+from tempfile import gettempdir
+import sys
 
 from ament_index_python.packages import get_package_share_directory
-from dvrk_newton.python_runtime import resolve_newton_python
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, RegisterEventHandler
 from launch.conditions import IfCondition
@@ -11,26 +12,28 @@ from launch.event_handlers import OnProcessExit
 from launch.events import Shutdown
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from dvrk_simulator_base.rqt_perspective import write_monitor_perspective
 
 
 PACKAGE_NAME = "dvrk_config_jhu"
 
 
 def generate_launch_description():
-    newton_python = resolve_newton_python()
     package_share = Path(get_package_share_directory(PACKAGE_NAME))
     newton_share = Path(get_package_share_directory("dvrk_newton"))
-    default_config = package_share / "newton" / "newton_patient_cart.yaml"
-    system_config = package_share / "newton" / "system-MTMR-MTML-Newton-Teleop.json"
-    display_config = package_share / "newton" / "stereo_display_simulator.json"
-    cart_scene = package_share / "newton" / "ECM_PSM1_PSM2_PSM3.yaml"
+    classic_directory = package_share.parent / "jhu-daVinci"
+    newton_directory = classic_directory / "newton"
+    default_config = newton_directory / "newton_patient_cart.yaml"
+    system_config = newton_directory / "system-MTMR-MTML-Newton-Teleop.json"
+    display_config = newton_directory / "stereo_display_simulator.json"
+    cart_scene = newton_directory / "ECM_PSM1_PSM2_PSM3.yaml"
 
     simulator = ExecuteProcess(
         cmd=[
-            LaunchConfiguration("newton_python"),
+            sys.executable,
             str(newton_share / "scripts" / "simulator.py"),
-            "--config", LaunchConfiguration("newton_config"),
-            "--scene", LaunchConfiguration("cart_scene"),
+            "--config", str(default_config),
+            "--scene", str(cart_scene),
             "--scene", LaunchConfiguration("exercise"),
             "--headless", LaunchConfiguration("headless"),
         ],
@@ -40,7 +43,7 @@ def generate_launch_description():
         package="dvrk_robot",
         executable="dvrk_system",
         output="screen",
-        cwd=str(package_share.parent / "jhu-daVinci"),
+        cwd=str(classic_directory),
         arguments=["--json-config", str(system_config)],
     )
     stereo_display = Node(
@@ -56,17 +59,16 @@ def generate_launch_description():
         name="control_panel",
         output="screen",
     )
-    start_system = Node(
-        package="dvrk_simulator_base",
-        executable="start_dvrk_system",
-        output="screen",
-        arguments=["--console", LaunchConfiguration("console")],
+    perspective = write_monitor_perspective(
+        Path(gettempdir()) / "dvrk_config_jhu" / "monitor.perspective",
+        ("ECM", "PSM1", "PSM2", "PSM3"),
+        include_console=True,
     )
     rqt_monitor = ExecuteProcess(
-        cmd=["rqt"],
+        cmd=["rqt", "--perspective-file", str(perspective)],
         additional_env={
             "DVRK_RQT_ARMS": "ECM,PSM1,PSM2,PSM3",
-            "DVRK_RQT_CONSOLE": LaunchConfiguration("console"),
+            "DVRK_RQT_CONSOLE": "console",
         },
         condition=IfCondition(LaunchConfiguration("rqt")),
         output="screen",
@@ -91,35 +93,17 @@ def generate_launch_description():
             description="Exercise scene YAML path or installed exercise filename.",
         ),
         DeclareLaunchArgument(
-            "cart_scene", default_value=str(cart_scene),
-            description="Newton patient-cart scene YAML file.",
-        ),
-        DeclareLaunchArgument(
             "headless", default_value="true",
             description="Run Newton without its desktop viewer window.",
-        ),
-        DeclareLaunchArgument(
-            "console", default_value="console",
-            description="dVRK console ROS namespace.",
         ),
         DeclareLaunchArgument(
             "rqt", default_value="false",
             description="Start rqt for console and arm monitoring.",
         ),
-        DeclareLaunchArgument(
-            "newton_config", default_value=str(default_config),
-            description="Newton runtime YAML configuration.",
-        ),
-        DeclareLaunchArgument(
-            "newton_python",
-            default_value=str(newton_python.path),
-            description="Python interpreter selected by dvrk_newton's runtime resolver.",
-        ),
         simulator,
         stereo_display,
         control_panel,
         dvrk_system,
-        start_system,
         rqt_monitor,
         stop_with_simulator,
         stop_with_system,
