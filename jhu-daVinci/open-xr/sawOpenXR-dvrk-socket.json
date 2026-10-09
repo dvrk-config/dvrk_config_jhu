@@ -1,5 +1,4 @@
 {
-  "name": "OpenXR",
   "gst_input": "@dvrk:stereo_display:openxr-overlay ! videoscale ! videoconvert",
   "eye_size": "auto"
 }
