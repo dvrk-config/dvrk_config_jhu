@@ -1,0 +1,68 @@
+/* -*- Mode: Javascript; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+{
+    // see https://dvrk.readthedocs.io
+    "$id": "dvrk-system.schema.json",
+    "$version": "1",
+    "IOs":
+    [
+        {
+            "name": "IO1",
+            "port": "udpfw",
+            "protocol": "broadcast-query-read-write"
+        }
+    ]
+    ,
+    "arms":
+    [
+        {
+            "name": "SUJ",
+            "type": "SUJ_Si",
+            "arm_file": "suj-si.json"
+        }
+        ,
+        {
+            "name": "ECM",
+            "type": "ECM",
+            "serial": "438610",
+            "arm_file": "ECM-438610-custom.json",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "ECM"
+            }
+        }
+        ,
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "serial": "292409",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM1"
+            }
+        }
+        ,
+        {
+            "name": "PSM2",
+            "type": "PSM",
+            "serial": "586288",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM2"
+            }
+        }
+        ,
+        {
+            "name": "PSM3",
+            "type": "PSM",
+            "serial": "698534",
+            "IO": "IO1",
+            "base_frame": {
+                "component": "SUJ",
+                "interface": "PSM3"
+            }
+        }
+    ]
+}

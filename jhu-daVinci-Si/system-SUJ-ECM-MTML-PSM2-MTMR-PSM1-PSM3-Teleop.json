@@ -97,14 +97,12 @@
     [
         {
             "name": "console",
-            "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
+            "input_type": "PEDALS_ONLY",
             "IO_pedals" :
             {
                 "IO": "IO1",
                 "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
             }
-            ,
-            "HID_file": "hid/goovis-hd.json"
             ,
             "teleop_PSMs":
             [

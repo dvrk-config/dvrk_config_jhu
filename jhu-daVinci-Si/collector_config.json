@@ -1,0 +1,68 @@
+{
+    "state-collectors":
+    [
+        {
+            "component": "IO1",
+            "tables":
+            [
+                {
+                    "sampling": 5,
+                    "table": "StateTable",
+                    "signals": ["PSM1_contactValue", "PSM2_contactValue", "PSM3_contactValue"]
+                }
+            ]
+        }
+        ,
+        {
+            "component": "ECM",
+            "tables":
+            [
+                {
+                    "sampling": 1,
+                    "table": "StateTable",
+                    "signals": ["measured_cp", "setpoint_cp", "measured_cv", "local/measured_cp", 
+                    "kin/measured_js", "kin/setpoint_js"]
+                }
+            ]
+        }
+        ,
+        {
+            "component": "PSM1",
+            "tables":
+            [
+                {
+                    "sampling": 1,
+                    "table": "StateTable",
+                    "signals": ["measured_cp", "setpoint_cp", "measured_cv", "local/measured_cp", 
+                    "kin/measured_js", "kin/setpoint_js", "jaw/measured_js", "jaw/setpoint_js"]
+                }
+            ]
+        }
+        ,
+        {
+            "component": "PSM2",
+            "tables":
+            [
+                {
+                    "sampling": 1,
+                    "table": "StateTable",
+                    "signals": ["measured_cp", "setpoint_cp", "measured_cv", "local/measured_cp", 
+                    "kin/measured_js", "kin/setpoint_js", "jaw/measured_js", "jaw/setpoint_js"]
+                }
+            ]
+        }
+        // ,
+        // {
+        //     "component": "PSM3",
+        //     "tables":
+        //     [
+        //         {
+        //             "sampling": 1,
+        //             "table": "StateTable",
+        //             "signals": ["measured_cp", "setpoint_cp", "measured_cv", "local/measured_cp", 
+        //             "kin/measured_js", "kin/setpoint_js", "jaw/measured_js", "jaw/setpoint_js"]
+        //         }
+        //     ]
+        // }
+    ]
+}
