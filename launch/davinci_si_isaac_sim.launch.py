@@ -1,4 +1,4 @@
-"""Run the jhu-daVinci-Si console with the isaac_sim patient cart."""
+"""Run the jhu-daVinci-Si console with the isaac sim patient cart."""
 
 from dvrk_simulator_base.launch import jhu_launch
 

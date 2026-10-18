@@ -15,10 +15,6 @@ install (
   )
 
 install (
-  FILES jhu-daVinci/newton/launch/daVinci_MTML_MTMR_newton.launch.py
-        jhu-daVinci/pybullet/launch/daVinci_MTML_MTMR_pybullet.launch.py
-        jhu-daVinci-Si/newton/launch/daVinciSi_MTML_MTMR_newton.launch.py
-        jhu-daVinci-Si/pybullet/launch/daVinciSi_MTML_MTMR_pybullet.launch.py
-        jhu-daVinci-Si/isaac_sim/launch/daVinciSi_MTML_MTMR_isaac_sim.launch.py
+  DIRECTORY launch/
   DESTINATION share/${PROJECT_NAME}/launch
   )
