@@ -1,11 +1,9 @@
 {
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display_sdi",
-  "gst_output": "@dvrk:stereo_alignment:stereo",
   "camera": {
     "size": "auto",
     "left": {
-      "gst_input": "@dvrk:stereo_source:left",
       "color": {
         "brightness": 0.0,
         "contrast": 1.0,
@@ -14,7 +12,6 @@
       }
     },
     "right": {
-      "gst_input": "@dvrk:stereo_source:right",
       "color": {
         "brightness": -0.011160155181325945,
         "contrast": 0.8869684549317428,

@@ -1,15 +1,10 @@
 {
   "type": "dvrk_data:stereo_alignment@1.0.0",
   "name": "dvrk_display_hdmi",
-  "gst_output": "@dvrk:stereo_alignment:stereo",
   "camera": {
     "size": "auto",
-    "left": {
-      "gst_input": "@dvrk:stereo_source:left"
-    },
-    "right": {
-      "gst_input": "@dvrk:stereo_source:right"
-    },
+    "left": {},
+    "right": {},
     "crop": {
       "width": 1920,
       "height": 1080

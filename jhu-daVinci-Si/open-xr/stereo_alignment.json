@@ -4,7 +4,6 @@
   "camera": {
     "size": "auto",
     "left": {
-      "gst_input": "@dvrk:stereo_source:left",
       "color": {
         "brightness": 0.0,
         "contrast": 1.0,
@@ -13,7 +12,6 @@
       }
     },
     "right": {
-      "gst_input": "@dvrk:stereo_source:right",
       "color": {
         "brightness": -0.012281826486949454,
         "contrast": 0.9919434316161231,
@@ -30,6 +28,5 @@
       "height": 1059
     }
   },
-  "preserve_size": true,
-  "gst_output": "@dvrk:stereo_alignment:stereo"
+  "preserve_size": true
 }

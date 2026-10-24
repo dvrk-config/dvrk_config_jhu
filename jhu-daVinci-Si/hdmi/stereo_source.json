@@ -7,12 +7,10 @@
       "height": 1080
     },
     "left": {
-      "gst_input": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra",
-      "gst_output": "@dvrk:stereo_source:left"
+      "gst_input": "decklinkvideosrc device-number=0 connection=hdmi mode=1080p60 video-format=8bit-bgra"
     },
     "right": {
-      "gst_input": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra",
-      "gst_output": "@dvrk:stereo_source:right"
+      "gst_input": "decklinkvideosrc device-number=1 connection=hdmi mode=1080p60 video-format=8bit-bgra"
     }
   }
 }
