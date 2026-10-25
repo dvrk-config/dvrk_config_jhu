@@ -5,27 +5,27 @@
     "size": "auto",
     "left": {
       "color": {
-        "brightness": 0.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
+        "brightness": -0.002825707560807291,
+        "contrast": 1.0315297594292068,
+        "saturation": 1.0217444542930154,
         "hue": 0.0
       }
     },
     "right": {
       "color": {
-        "brightness": -0.011160155181325945,
-        "contrast": 0.8869684549317428,
-        "saturation": 0.6834494017119047,
+        "brightness": 0.0026580897030504392,
+        "contrast": 0.9703405511451837,
+        "saturation": 0.9791617772703689,
         "hue": 0.0
       }
     },
     "alignment": {
-      "horizontal_shift_px": 46,
-      "vertical_shift_px": 54
+      "horizontal_shift_px": 53,
+      "vertical_shift_px": 27
     },
     "crop": {
-      "width": 1811,
-      "height": 1019
+      "width": 1867,
+      "height": 1053
     }
   },
   "preserve_size": true

@@ -6,5 +6,5 @@
   "gst_input": "unixfdsrc socket-path=dvrk:simulator:stereo_source socket-type=abstract do-timestamp=true",
   "eye_size": "auto",
   "preserve_size": true,
-  "display_horizontal_offset_px": -40
+  "widget_horizontal_disparity_px": 40
 }

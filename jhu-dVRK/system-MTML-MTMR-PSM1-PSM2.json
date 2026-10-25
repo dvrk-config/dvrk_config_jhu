@@ -7,7 +7,7 @@
     [
         {
             "name": "IO1",
-            "port": "fw",
+            "port": "udpfw",
             "protocol": "broadcast-query-read-write"
         }
     ]

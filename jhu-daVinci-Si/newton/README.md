@@ -6,11 +6,11 @@ Newton supplies the ECM and PSM1–PSM3 through ROS. The console pairs MTMR with
 PSM1 and MTML with PSM2/PSM3, matching the existing Si system configuration.
 
 The Goovis display uses one `side_by_side` window and the Si display's
-`display_horizontal_offset_px: -150` setting. It reads Newton's stereo Unix
+`widget_horizontal_disparity_px: 150` setting. It reads Newton's stereo Unix
 socket directly; the hardware HDMI/SDI capture and stereo alignment processes
 are not required for simulated video. `eye_size: auto` detects the stream
 resolution. The default scene renders 1900×1024 per eye at 15 fps.
-The display offset can be adjusted in `stereo_display_simulator.json` for the
+The widget disparity can be adjusted in `stereo_display_simulator.json` for the
 rendered resolution and the operator's view.
 
 From the workspace root, bootstrap and build:
