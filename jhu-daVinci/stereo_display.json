@@ -7,5 +7,6 @@
   ],
   "eye_size": "auto",
   "preserve_size": true,
-  "widget_horizontal_disparity_px": 104
+  "widget_horizontal_disparity_px": 120,
+  "display_horizontal_shift_px": 0
 }
