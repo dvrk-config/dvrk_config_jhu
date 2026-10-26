@@ -1,0 +1,9 @@
+{
+  "type": "dvrk_calibration:charuco_board@1.0.0",
+  "squares_x": 8,
+  "squares_y": 6,
+  "square_length_mm": 5.0,
+  "marker_length_mm": 3.5,
+  "dictionary": "DICT_4X4_50",
+  "description": "ChArUco 8x6 calibration board (5.0mm squares, 3.5mm markers, DICT_4X4_50)"
+}
