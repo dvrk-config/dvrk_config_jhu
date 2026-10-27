@@ -8,3 +8,6 @@ CMakeLists.txt.user
 
 __pycache__/
 *.pyc
+
+# Raw image archives saved by the stereo calibrator.
+stereo_calibration_20*/
