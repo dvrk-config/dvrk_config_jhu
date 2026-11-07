@@ -1,0 +1,21 @@
+# ROS 2 CameraInfo configuration
+image_width: 1920
+image_height: 1080
+camera_name: left
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1620.9129, 0, 943.48765, 0, 1625.5982, 618.94739, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.31319245, 0.84769997, -0.016240597, 0.0016423066, -0.91486278]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [0.99617117, -0.062378583, 0.061252835, 0.062228406, 0.99805242, 0.0043581815, -0.061405397, -0.00052982847, 0.99811277]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [1796.1835, 0, 880.09939, 0, 0, 1796.1835, 597.73929, 0, 0, 0, 1, 0]
