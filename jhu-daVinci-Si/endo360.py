@@ -57,11 +57,26 @@ class example_application:
         # has a gear ration close to 1 between the disc and the
         # angle/position of the needle.  The value 0.157832 comes from
         # the coupling matrix of the stapler.
+
+
+        # for couple 2nd column, last term: original from ISI is
+        # 0.157832.  The original pulley in Stapler is 4.5mm
+        # Wheel/pulley diameter in Endo is 10mm.  So new coupling is
+        # 0.157832 * 10 / 4.5 = 0.35074
+
+        self.stapler_endo_ratio = (10.0 / 4.5) * 0.157832 / 1.0; # to convert to
+                                                  # radians at disk
+                                                  # not jaw -- we
+                                                  # assume this is a
+                                                  # constant we can
+                                                  # determine with
+                                                  # pitch/yaw = 0 and
+                                                  # doesn't vary if
+                                                  # applied after
+                                                  # coupling matrix
         
-        self.stapler_endo_ratio = 0.157832 / 1.0;
-        
-        self.range = 265.0
-        self.rest = 20.0
+        self.range = 195.0 #  physical disk range for full cycle when instrument straight
+        self.rest = 13.0   # see above
         self.center = 0.0
         self.grab = self.stapler_endo_ratio * ((self.center - self.range / 2.0) * math.pi / 180.0)
         self.start = self.grab + self.stapler_endo_ratio * (self.rest * math.pi / 180.0)

@@ -37,10 +37,10 @@
         ]
     }
     ,
-    "jaw" : { // range for endo360
-        "qmin":  -2.35619, //  -135
-        "qmax":   2.35619,  //  135
-        "ftmax": 0.2
+    "jaw" : {
+        "qmin":  -0.628319,        //  36 degrees ~ not a real angle, based on new coupling 0.37074
+        "qmax":   0.628319,
+        "ftmax": 0.1
     }
     ,
     // rotation to match ISI convention (for read-only research API on commercial da Vinci)
@@ -49,15 +49,15 @@
                         [ 0.0, -1.0,  0.0,  0.0],
                         [ 0.0,  0.0,  0.0,  1.0]]
     ,
-    // For the ENDO_360, we use the coupling matrix of the stapler
-    // as-is.  But the user has to scale the angle for the jaws since
-    // the travel of the endo 360 is not the same as the stapler
-    // opening.
+    // WARNING: if we change these, also change tool_engage_position
     "coupling" : {
         "ActuatorToJointPosition" : [[ -1.529411,  0.000000,  0.000000,  0.000000],
                                      [  0.000000,  0.000000,  0.284979,  0.284979],
                                      [  0.000000,  0.000000, -0.415594,  0.415594],
-                                     [  0.000000,  0.157832, -0.035139, -0.035139]]
+                                     [  0.000000,  0.35074 /* ENDO */, -0.035139, -0.035139]]
+
+        // for couple 2nd column, last term: original from ISI is 0.157832.  The original pulley in Stapler is 4.5mm
+        // Wheel/pulley diameter in Endo is 10mm.  So new coupling is 0.157832 * 10 / 4.5 = 0.35074
     }
     ,
     // angles used to engage the tool, in radians
@@ -65,7 +65,7 @@
     // max range on roll, 2, 2, 2 degrees. For endo360, move last joint around start/grab position
     //
     "tool_engage_position" : {
-        "lower" : [-4.5378, -0.034, -0.034, 0.04],
-        "upper" : [ 4.5378,  0.034,  0.034, 0.04]
+        "lower" : [-4.5378, -0.034, -0.034, 0.0],
+        "upper" : [ 4.5378,  0.034,  0.034, 0.034]
     }
 }
