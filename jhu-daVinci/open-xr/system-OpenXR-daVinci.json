@@ -9,6 +9,9 @@
 {
     "$id": "dvrk-system.schema.json",
     "$version": "1",
+    "settings": {
+        "path": [".."]
+    },
     "component_manager": {
         "components": [
             {
