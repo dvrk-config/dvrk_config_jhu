@@ -150,7 +150,7 @@
             "input_type": "PEDALS_GOOVIS_HEAD_SENSOR",
             "IO_pedals": {
                 "IO": "IO1",
-                "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-QLA1.json"
+                "IO_file": "io/sawRobotIO1394-MTML-foot-pedals-DQLA.json"
             },
             "HID_file": "hid/goovis-hd.json",
             "teleop_PSMs": [

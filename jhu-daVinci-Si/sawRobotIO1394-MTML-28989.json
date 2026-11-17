@@ -14,12 +14,12 @@
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : 6.2741973547742029,
+                            "offset" : 6.2727770962640719,
                             "scale" : -0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 33081.679921911207,
+                            "offset" : 32967.536322443018,
                             "scale" : -5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -64,12 +64,12 @@
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : -6.2721044378690385,
+                            "offset" : -6.2645078642246235,
                             "scale" : 0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 33011.825370040126,
+                            "offset" : 32876.623295819089,
                             "scale" : 5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -114,12 +114,12 @@
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : -6.2974045769616147,
+                            "offset" : -6.2834681915159321,
                             "scale" : 0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 33164.204188878633,
+                            "offset" : 33096.124515812371,
                             "scale" : 5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -164,12 +164,12 @@
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : -6.27986933885549,
+                            "offset" : -6.2435969613091498,
                             "scale" : 0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 33034.176576784448,
+                            "offset" : 32885.741792508532,
                             "scale" : 5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -208,18 +208,18 @@
                 },
                 {
                     "actuator_id" : 4,
-                    "axis_id" : 0,
-                    "board_id" : 1,
+                    "axis_id" : 4,
+                    "board_id" : 0,
                     "drive" : 
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : 6.2559339536395715,
+                            "offset" : 6.2627090195485122,
                             "scale" : -0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 32904.965496404257,
+                            "offset" : 32874.849760627447,
                             "scale" : -5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -258,18 +258,18 @@
                 },
                 {
                     "actuator_id" : 5,
-                    "axis_id" : 1,
-                    "board_id" : 1,
+                    "axis_id" : 5,
+                    "board_id" : 0,
                     "drive" : 
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : -6.240663471591871,
+                            "offset" : -6.2455592918283722,
                             "scale" : 0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 32862.622322169816,
+                            "offset" : 32840.496321417391,
                             "scale" : 5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -308,18 +308,18 @@
                 },
                 {
                     "actuator_id" : 6,
-                    "axis_id" : 2,
-                    "board_id" : 1,
+                    "axis_id" : 6,
+                    "board_id" : 0,
                     "drive" : 
                     {
                         "bits_to_current" : 
                         {
-                            "offset" : 6.2450714258114592,
+                            "offset" : 6.2550432721756346,
                             "scale" : -0.00019073500000000001
                         },
                         "current_to_bits" : 
                         {
-                            "offset" : 32867.531971818273,
+                            "offset" : 32798.758119475649,
                             "scale" : -5242.8800000000001
                         },
                         "effort_to_current" : 
@@ -358,7 +358,7 @@
                 }
             ],
             "brakes" : [],
-            "hardware_version" : "QLA1",
+            "hardware_version" : "DQLA",
             "name" : "MTML",
             "number_of_actuators" : 7,
             "number_of_brakes" : 0,

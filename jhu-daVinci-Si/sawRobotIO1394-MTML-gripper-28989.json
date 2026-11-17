@@ -8,8 +8,8 @@
             [
                 {
                     "actuator_id" : 0,
-                    "axis_id" : 3,
-                    "board_id" : 1,
+                    "axis_id" : 7,
+                    "board_id" : 0,
                     "drive" : 
                     {
                         "bits_to_current" : 
@@ -58,7 +58,7 @@
                 }
             ],
             "brakes" : [],
-            "hardware_version" : "QLA1",
+            "hardware_version" : "DQLA",
             "name" : "MTML_gripper",
             "number_of_actuators" : 1,
             "number_of_brakes" : 0,
