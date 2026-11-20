@@ -1,0 +1,15 @@
+{
+    "type": "dvrk_data:stereo_color_adjustment@1.0.0",
+    "left": {
+        "brightness": 0.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "hue": 0.0
+    },
+    "right": {
+        "brightness": -0.012281826486949454,
+        "contrast": 0.9919434316161231,
+        "saturation": 0.9796635228969304,
+        "hue": 0.0
+    }
+}

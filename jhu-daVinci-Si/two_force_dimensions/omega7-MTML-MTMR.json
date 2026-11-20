@@ -1,0 +1,32 @@
+{
+    "devices": [
+        {
+            "name": "MTML",
+            "serial": 11773,
+            "force_initialization": false,
+            "base_frame": {
+                "reference_frame": "user",
+                "transform": [
+                    [ 0.0,-1.0,  0.0, 0.0],
+                    [ 0.0, 0.0,  1.0, 0.0],
+                    [-1.0, 0.0,  0.0, 0.0],
+                    [ 0.0, 0.0,  0.0, 1.0]
+                ]
+            }
+        },
+        {
+            "name": "MTMR",
+            "serial": 11311,
+            "force_initialization": false,
+            "base_frame": {
+                "reference_frame": "user",
+                "transform": [
+                    [ 0.0,-1.0,  0.0, 0.0],
+                    [ 0.0, 0.0,  1.0, 0.0],
+                    [-1.0, 0.0,  0.0, 0.0],
+                    [ 0.0, 0.0,  0.0, 1.0]
+                ]
+            }
+        }
+    ]
+}

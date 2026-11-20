@@ -1,0 +1,5 @@
+{
+    "name": "control_panel_two_force_dimensions",
+    "console": "console",
+    "video_source": ["@dvrk:stereo_alignment:stereo"]
+}

@@ -1,0 +1,18 @@
+{
+    "type": "dvrk_data:stereo_alignment@1.0.0",
+    "name": "dvrk_display_sdi",
+    "gst_input": "@dvrk:stereo_source:stereo",
+    "gst_output": "@dvrk:stereo_alignment:stereo",
+    "camera": {
+        "size": "auto",
+        "alignment": {
+            "horizontal_shift_px": 20,
+            "vertical_shift_px": -4
+        },
+        "crop": {
+            "width": 1882,
+            "height": 1059
+        }
+    },
+    "preserve_size": true
+}
